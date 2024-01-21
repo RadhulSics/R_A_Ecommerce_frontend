@@ -2,41 +2,38 @@ import React from 'react'
 import './NavbarAdmin.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
-function NavbarAdmin() {
 
+function NavbarAdmin() {
 
   return (
     <div>
       
       <nav >
-        <ul className='nav-flex'>
-
-          {/* <div>
-              <img className="sics-logo" src={logo} alt="BanImg" />
-          </div> */}
           <div>
             <h4 className='nav-title'>SICS-kart</h4>
           </div>
 
+        <ul className='nav-flex'>
+
           <div>
-          <li><a href='#'>HOME</a></li>
+          <li className='nav-li'><a className='nav-a' href='#'>HOME</a></li>
           </div>
           <div>
-          <li><a href='#'>PENDING</a></li>
+          <li className='nav-li'><a className='nav-a' href='#'>PENDING</a></li>
           </div>
           <div>
-          <li><a href='#'>USERS</a></li>
+          <li className='nav-li'><a className='nav-a' href='#'>USERS</a></li>
           </div>
           <div>
-          <li><a href='#'>SELLERS</a></li>
+          <li className='nav-li'><a className='nav-a' href='#'>SELLERS</a></li>
           </div>
           <div>
-          <li><a href='#'>BANNED</a></li>
+          <li className='nav-li'><a className='nav-a' href='#'>BANNED</a></li>
           </div>
 
           <div>
               <form>
-               <input className="form-control mr-sm-2 nav-searchbar nav-searchbar" type="search" placeholder="Search" aria-label="Search" />
+               <input className="form-control mr-sm-2 nav-searchbar nav-searchbar" type="search" placeholder="Search . . ." aria-label="Search" />
                </form>
           </div>
           <div>
@@ -48,7 +45,10 @@ function NavbarAdmin() {
           <div>
             <button type="button" className="nav-logout">LOGOUT</button>
           </div>
-         
+
+          <div>
+            <button type="button" className="nav-toggle">=</button>
+          </div>
         </ul>
       </nav>
       
