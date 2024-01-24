@@ -8,7 +8,7 @@ function NavbarAdmin() {
   return (
     <div>
       
-      <nav >
+      <nav  className='nav-admin' >
           <div>
             <h4 className='nav-title'>SICS-kart</h4>
           </div>
