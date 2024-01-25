@@ -3,11 +3,9 @@ import './App.css';
 import Login from './components/Login';
 import NavAdmin from './components/NavbarAdmin.js';
 import Register from './components/Registration.js';
-
 import Navbaruser from './components/Navbaruser.js';
-
 import FullProdAdmin from './components/FullProductsAdmin.js'
-
+import Ban from './components/BanAdmin.js'
 
 function App() {
   return (
@@ -21,7 +19,8 @@ function App() {
 
          {/* <Login/>  */}
              <NavAdmin/>
-            <FullProdAdmin/>  
+             <Ban/>
+            {/* <FullProdAdmin/>   */}
     </div>
   );
 }
