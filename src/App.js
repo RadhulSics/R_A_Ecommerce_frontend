@@ -20,7 +20,7 @@ function App() {
             
 
          {/* <Login/>  */}
-             <NavbarAdmin/>
+             {/* <NavbarAdmin/> */}
             <FullProdAdmin/>  
 
     </div>
