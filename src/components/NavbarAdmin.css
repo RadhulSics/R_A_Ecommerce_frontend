@@ -1,5 +1,21 @@
+  html {
+    overflow: scroll;
+    overflow-x: hidden;
+  }
+  ::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+  }
+    
    /* ----- Navbar of admin Starts ----- */
-  
+  .nav-admin{
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    top: 0;
+  }
+
+
   .nav-flex{
     display: flex;
     justify-content: flex-end;
@@ -305,3 +321,44 @@
       margin: 0; 
   }
    /* ----- Registration Ends ----- */
+
+   /* ----- Full products Admin starts ----- */
+
+   .fullA-main{
+    position: relative;
+    right: -2rem;
+   top: 5rem;
+   width: 100%;
+   padding: 1rem;
+  }
+
+  .fullA-col {
+    margin: .5rem; 
+    width: 12rem !important;
+    height: 11rem;
+  }
+
+  .fullA-img{
+    width: 12rem;
+    height: 10rem;
+    object-fit: contain;
+    padding-top: .25rem;
+    margin: 0;
+  }
+
+  .fullA-name{
+    font-size: small ;
+    color: rgba(51, 49, 49, 0.812) !important;
+    font-weight: bold;
+    width: 9rem;
+    height: 2.5rem;
+    overflow: hidden;
+  }
+
+  .fullA-price{
+    text-align: center;
+    font-weight: 660;
+  }
+
+
+   /* ----- Full products Admin Ends ----- */
