@@ -1,6 +1,6 @@
 import React from 'react'
 import './login.css';
-import './NavbarAdmin.css'
+import './StyleR.css';
 
 function Registration() {
   return (
