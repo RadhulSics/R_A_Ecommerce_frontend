@@ -91,4 +91,70 @@
 .a-tag{
     text-decoration: none;
 }
+/* ..... login ends...... */
 
+.nav-position{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: 70px;
+    gap: 6%;
+    padding: 10px;
+    margin: 0;
+    background-color: #28373A;
+    padding-top: 15px;
+  }
+  .nav-ahref{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+   }
+   .nav-ahref:hover{
+    color: #EE9F43;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .nav-heading{
+    color: #EE9F43;
+    font-family:courier; 
+    font-weight: bold;
+    font-size: 35px;
+    position: absolute;
+    margin: 20px 35px 0px 20px;
+  }
+  .nav-out{
+    color: white;
+    background-color: #44949F;
+    border: 1px solid transparent;
+    border-radius: 60px;
+    padding: 6px;
+    width: 80px;
+    height: 40px;
+    font-size: small;
+    font-weight: bold;
+    margin-top: 0px;
+  }
+  .nav-out:hover{
+    background-color: #EE9F43;
+  }
+  .search-barnav{
+    color:black;
+    width: 200px;
+    display: flex;
+    margin-left: 5px;
+    border-radius: 6px;
+
+  }
+  /* .search-barnav:hover{
+    color: #EE9F43; */
+  /* } */
+  .btn-search{
+   margin: auto;
+   border-radius: 10px;
+   color: #EE9F43;
+   background-color: #44949F;
+   font-weight: bold;
+  }
+  /* ......navbaruser ends...... */
+  /* ......selleruser starts...... */
+  
