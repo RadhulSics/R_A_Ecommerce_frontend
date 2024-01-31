@@ -35,6 +35,9 @@ function BanAdmin() {
               <p>Reason : lorem ipsum</p>
               </div>
               <div>
+              <button className='ban-profButton' >VIEW PROFILE</button>
+              </div>
+              <div>
               <button className='ban-button' >UNBAN</button>
               </div>
               
