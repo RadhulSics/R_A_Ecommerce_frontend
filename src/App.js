@@ -7,6 +7,8 @@ import Register from './components/Registration.js';
 import Navbaruser from './components/Navbaruser.js';
 
 import FullProdAdmin from './components/FullProductsAdmin.js'
+import Selleruser from './components/Selleruser.js';
+import Indproducts from './components/Indproducts.js';
 
 
 function App() {
@@ -14,14 +16,12 @@ function App() {
     <div>
        {/* <Register/> */}
 
-       {/* <Navbaruser/>
-         <Login/>  */}
+        {/* <Navbaruser/> */}
+         {/* <Login/>   */}
             {/* <NavbarAdmin/> */}
-            
-
-         {/* <Login/>  */}
-             {/* <NavbarAdmin/> */}
-            <FullProdAdmin/>  
+            {/* <FullProdAdmin/>   */}
+            {/* <Selleruser/> */}
+            <Indproducts/>
 
     </div>
   );
