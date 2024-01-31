@@ -46,6 +46,7 @@ function Indproducts() {
   <hr/>
 
   <div class="radio-toolbar">
+    <h5>Select Size</h5>
     <input className='ind-input' type="radio" id="radioS" name="radiosize" value="S"/>
     <label className='ind-label' for="radioS">S</label>
 
@@ -98,7 +99,7 @@ Number of Items
 1
  
 </div>
-
+<hr/>
 <div>
   <h6>RATING </h6>
   <p>4.2 ⭐</p>

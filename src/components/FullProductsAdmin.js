@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
-import './NavbarAdmin.css';
+import './StyleR.css';
+import { Link } from 'react-router-dom';
 
 function FullProductsAdmin() {
 
@@ -20,7 +21,9 @@ function FullProductsAdmin() {
 console.log(Products)
   return (
     <div >
-    <div className="row fullA-main">
+      
+    <div >
+    <Link to='/' className="row fullA-main">
       {Products.map((a)=>{
         return(
           <div className="card col-2 fullA-col">
@@ -38,7 +41,9 @@ console.log(Products)
           </div>
         )
       })}
+       </Link>
     </div>
+   
     </div>
    
   )

@@ -1,7 +1,8 @@
 import React from 'react'
-import './NavbarAdmin.css';
+import './StyleR.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import { Link } from 'react-router-dom';
 
 function NavbarAdmin() {
 
@@ -16,7 +17,8 @@ function NavbarAdmin() {
         <ul className='nav-flex'>
 
           <div>
-          <li className='nav-li'><a className='nav-a' href='#'>HOME</a></li>
+            
+          <li className='nav-li'><Link className='nav-a' to='/' >HOME</Link></li>
           </div>
           <div>
           <li className='nav-li'><a className='nav-a' href='#'>PENDING</a></li>
@@ -28,7 +30,7 @@ function NavbarAdmin() {
           <li className='nav-li'><a className='nav-a' href='#'>SELLERS</a></li>
           </div>
           <div>
-          <li className='nav-li'><a className='nav-a' href='#'>BANNED</a></li>
+          <li className='nav-li'><Link className='nav-a' to='/Ban' >BANNED</Link></li>
           </div>
 
           <div>
