@@ -92,6 +92,7 @@
     text-decoration: none;
 }
 /* ..... login ends...... */
+/* ...... navbaruser starts...... */
 
 .nav-position{
     display: flex;
@@ -156,12 +157,14 @@
    font-weight: bold;
   }
   /* ......navbaruser ends...... */
+
   /* ......individualproduct starts...... */
   .caro-change{
+    margin-top: 20px;
     width: 50%;
-    position: relative;
+    /* position: relative;
     margin-left: 70px;
-    margin-top: 50px;
+    margin-top: 50px; */
   }
   .caro-flex{
     display: flex;
@@ -176,7 +179,8 @@
     font-size: large;
     border-style: solid;
     border-color: #EE9F43;
-    margin-top: 10px;
+    position: relative;
+    top: -70px;
   }
   .buy-btn:hover{
     background-color: #44949F;
@@ -214,4 +218,96 @@
     font-size: large;
     font-weight: bold;
     margin-left: 40px;
+  }
+  /* ......individualproducts ends...... */
+
+  /* selleruser starts */
+  .selleruser-main{
+    position: relative;
+    right: -2rem;
+    top: 3.5rem;
+    width: 90%;
+    height: auto;
+    padding: 1rem;
+    margin-left: 2rem;
+   }
+ 
+   .selleruser-flex{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     flex-wrap: wrap;
+     color: #E35F14;
+     font-weight: bold;
+     font-size: large;
+     border-bottom: 2px double black;
+     border-bottom-style: dotted;
+     border-left: 2px double black;
+     border-left-style: dotted;
+     border-right: 2px double black;
+     border-right-style: dotted;
+   }
+ 
+   .selleruser-image{
+     width: 8rem;
+     height: 8rem;
+     margin: 1rem;
+     border-radius: 50%;
+     overflow: hidden;
+     background-color: #e3601484;
+     border: 1px solid black;
+   }
+ 
+   
+ 
+   .selleruser-banbutton{
+     color: white;
+     background-color: #44949F;
+     border: 1px solid transparent;
+     border-radius: 100px;
+     padding: 8px;
+     width: 6rem;
+     height: 40px;
+     font-size: small;
+     font-weight: bold;
+     margin: 10px 150px 10px 0px;
+   }
+   
+   .selleruser-banbutton:hover{
+     background-color: #E35F14;
+   }
+   
+   .selleruser-banbutton:active { 
+     transform: scale(0.98); 
+     box-shadow: 3px 2px 22px 1px #E35F14; 
+   }
+   .view-button{
+    color: white;
+     background-color: #44949F;
+     border: 1px solid transparent;
+     border-radius: 100px;
+     padding: 8px;
+     width: 6rem;
+     height: 40px;
+     font-size: small;
+     font-weight: bold;
+     margin: 10px 15px 10px 0px;
+   }
+   .view-button:hover{
+    background-color: #E35F14;
+   }
+   .view-button:active { 
+    transform: scale(0.98); 
+    box-shadow: 3px 2px 22px 1px #E35F14; 
+  }
+  .select-reason{
+    color: #E35F14;
+    border-radius: 10px;
+    margin-left: 5px;
+    border-color: #44949F;
+  } 
+  /* ......selleruser ends...... */
+  /* ......productapproval starts...... */
+  .proapp-card{
+    width: 30% !important;
   }

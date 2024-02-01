@@ -12,15 +12,15 @@ function Indproducts() {
 
   return (
     <div className='row'>
-      <div id="carouselExample" class="carousel slide col-6" style={{width:'50%'}}>
+      <div id="carouselExample" class="carousel slide col-6 " style={{width:'50%'}}>
   <div class="carousel-inner">
-    <div class="carousel-item active">
+    <div class="carousel-item active caro-change">
       <img src={image1} class="d-block w-100" alt="..."/>
     </div>
-    <div class="carousel-item">
+    <div class="carousel-item caro-change">
       <img src={image2} class="d-block w-100" alt="..."/>
     </div>
-    <div class="carousel-item">
+    <div class="carousel-item caro-change">
       <img src={image3} class="d-block w-100" alt="..."/>
     </div>
   </div>

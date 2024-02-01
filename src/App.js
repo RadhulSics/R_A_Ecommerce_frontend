@@ -9,12 +9,17 @@ import Ban from './components/BanAdmin.js'
 import OrderDetails from './components/OrderDetailsAdmin.js'
 import { Route,Routes,BrowserRouter } from 'react-router-dom';
 import Indproducts from './components/Indproducts.js';
+import Selleruser from './components/Selleruser.js';
+import ProductApproval from './components/Productapproval.js';
 
 
 function App() {
   return (
     <div>
+      <Navbaruser/>
       <Indproducts/>
+      {/* <Selleruser/> */}
+      {/* <ProductApproval/> */}
     </div>
 
     // <BrowserRouter>
