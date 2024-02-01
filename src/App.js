@@ -8,16 +8,22 @@ import FullProdAdmin from './components/FullProductsAdmin.js'
 import Ban from './components/BanAdmin.js'
 import OrderDetails from './components/OrderDetailsAdmin.js'
 import { Route,Routes,BrowserRouter } from 'react-router-dom';
+import Indproducts from './components/Indproducts.js';
+
 
 function App() {
   return (
-    <BrowserRouter>
-    <Routes>
-      <Route path='/' element={<><NavAdmin/><FullProdAdmin/></>} />
-      <Route path='/Ban' element={<><NavAdmin/><Ban/></>} />
-      <Route path='OrderDetails' element={<><NavAdmin/><OrderDetails/></>}/>
-    </Routes>
-    </BrowserRouter>
+    <div>
+      <Indproducts/>
+    </div>
+
+    // <BrowserRouter>
+    // <Routes>
+    //   <Route path='/' element={<><NavAdmin/><FullProdAdmin/></>} />
+    //   <Route path='/Ban' element={<><NavAdmin/><Ban/></>} />
+    //   <Route path='OrderDetails' element={<><NavAdmin/><OrderDetails/></>}/>
+    // </Routes>
+    // </BrowserRouter>
   );
 }
 
