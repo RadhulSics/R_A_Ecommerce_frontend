@@ -7,6 +7,7 @@ import Navbaruser from './components/Navbaruser.js';
 import FullProdAdmin from './components/FullProductsAdmin.js'
 import Ban from './components/BanAdmin.js'
 import OrderDetails from './components/OrderDetailsAdmin.js'
+import ProfUser from './components/ProfileUser.js'
 import { Route,Routes,BrowserRouter } from 'react-router-dom';
 import Indproducts from './components/Indproducts.js';
 import Selleruser from './components/Selleruser.js';
