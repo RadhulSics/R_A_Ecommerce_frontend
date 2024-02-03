@@ -17,10 +17,10 @@ import ProductApproval from './components/Productapproval.js';
 function App() {
   return (
     <div>
-      <Navbaruser/>
-      <Indproducts/>
+      {/* <Navbaruser/> */}
+      {/* <Indproducts/> */}
       {/* <Selleruser/> */}
-      {/* <ProductApproval/> */}
+      <ProductApproval/>
     </div>
 
     // <BrowserRouter>

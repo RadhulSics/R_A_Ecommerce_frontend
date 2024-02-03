@@ -7,7 +7,7 @@ import axios from 'axios';
 function ProductApproval() {
     const [state,setState]=useState([])
     useEffect(()=>{
-        axios.get('https://api.escuelajs.co/api/v1/users')
+        axios.get('https://fakestoreapi.com/products')
         .then((res)=>{
             setState(res.data)
 
@@ -20,17 +20,18 @@ function ProductApproval() {
     console.log(state)
 
   return (
-    <div>
-        <div>
+    <div className='pro-main'>
+        <div className='row proapp-main'>
             {state.map((a)=>{
               return(
-                 
-             
-
-<div class="card proapp-card" >
-  <img src={a.avatar} class="card-img-top" alt="..."/>
+<div class="card proapp-card col-4" >
+  <img src={a.image} class="card-img-top proapp-img" alt="..."/>
   <div class="card-body">
-    <p class="card-text">Rs : 199</p>
+    <h4 className='proapp-name'>{a.name}</h4>
+    <hr/>
+    <p class="card-text proapp-price">Rs : 199</p>
+    <hr/>
+    <p className='proapp-det'>Details : </p>
     <p>Black T-shirt for men
 Graphic printed
 Regular length
@@ -48,6 +49,15 @@ Material & Care
 100% Cotton
 Machine Wash
     </p>
+    <hr/>
+    <div className='proapp-btnflex'>
+    <div>
+      <button className='proapp-accept' type='submit'>ACCEPT</button>
+    </div>
+    <div> 
+    <button className='proapp-decline' type='submit'>DECLINE</button>
+    </div>
+    </div>
   </div>
 </div>
               )
