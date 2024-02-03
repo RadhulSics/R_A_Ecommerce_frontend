@@ -10,12 +10,17 @@ import OrderDetails from './components/OrderDetailsAdmin.js'
 import ProfUser from './components/ProfileUser.js'
 import { Route,Routes,BrowserRouter } from 'react-router-dom';
 import Indproducts from './components/Indproducts.js';
+import Selleruser from './components/Selleruser.js';
+import ProductApproval from './components/Productapproval.js';
 
 
 function App() {
   return (
     <div>
-      <Indproducts/>
+      {/* <Navbaruser/> */}
+      {/* <Indproducts/> */}
+      {/* <Selleruser/> */}
+      <ProductApproval/>
     </div>
 
     // <BrowserRouter>

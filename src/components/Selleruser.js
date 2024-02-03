@@ -45,7 +45,7 @@ function Selleruser() {
                 <button className='view-button'>View-profile</button>
               </div>
               <div>
-              <button className='selleruser-banbutton' >BAN</button>
+              <button className='selleruser-banbutton'>BAN</button>
               </div>
               
           </div>
