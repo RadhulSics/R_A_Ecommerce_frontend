@@ -12,15 +12,15 @@ function Indproducts() {
 
   return (
     <div className='row'>
-      <div id="carouselExample" class="carousel slide col-6" style={{width:'50%'}}>
+      <div id="carouselExample" class="carousel slide col-6 " style={{width:'50%'}}>
   <div class="carousel-inner">
-    <div class="carousel-item active">
+    <div class="carousel-item active caro-change">
       <img src={image1} class="d-block w-100" alt="..."/>
     </div>
-    <div class="carousel-item">
+    <div class="carousel-item caro-change">
       <img src={image2} class="d-block w-100" alt="..."/>
     </div>
-    <div class="carousel-item">
+    <div class="carousel-item caro-change">
       <img src={image3} class="d-block w-100" alt="..."/>
     </div>
   </div>
@@ -34,8 +34,8 @@ function Indproducts() {
   </button>
 </div>
 
-<div className='col-6'>
-  <h2>Stormborn</h2>
+<div className='col-6 ind-part'>
+  <h2 className='ind-title'>Stormborn</h2>
   <p>Graphic Printed Oversized t-shirt </p>
   
   <hr/>
@@ -43,6 +43,10 @@ function Indproducts() {
   <div>
   <p className='ind-price'>Rs : 299 </p>
   </div>
+  <div className='ind-rating'>
+  <h6>RATING : </h6>
+  <p>4.2 ⭐</p>
+</div>
   <hr/>
 
   <div class="radio-toolbar">
@@ -59,7 +63,7 @@ function Indproducts() {
     <input className='ind-input' type="radio" id="radioXL" name="radiosize" value="XL"/>
     <label className='ind-label'  for="radioXL">XL</label> 
 </div>
-<div>
+<div className='ind-details'>
   <h5 className='ind-det'>
   PRODUCT DETAILS 
   </h5>
@@ -78,11 +82,11 @@ The model (height 6') is wearing a size M
 Material & Care
 100% Cotton
 Machine Wash
+<br/>
 
-<h6>
-Specifications
+<h6 className='ind-spec'>
+Specifications :
 </h6>
-
 Fabric
 Cotton
 Fit
@@ -100,10 +104,7 @@ Number of Items
  
 </div>
 <hr/>
-<div>
-  <h6>RATING </h6>
-  <p>4.2 ⭐</p>
-</div>
+
 
 </div>
 <div>

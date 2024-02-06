@@ -681,3 +681,36 @@ input.reg-number::-webkit-outer-spin-button {
   }
 
   /* ----- Profile Edit User Ends ----- */
+
+
+  /* ----- Individual products user Starts ----- */
+
+  .carousel-control-next,
+  .carousel-control-prev {
+      filter: invert(100%);
+  }
+
+  .indprodU-img{
+    width: 40rem;
+    height: 30rem;
+    object-fit: contain;
+  }
+
+  
+  .indprodU-buy-btn{
+    margin-left: 330px;
+    width: 120px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #EE9F43;
+    color: #fff;
+    font-size: large;
+    border-style: solid;
+    border-color: #EE9F43;
+    position: relative;
+    top: -70px;
+  }
+  .indprodU-buy-btn:hover{
+    background-color: #44949F;
+  }
+  /* ----- Individual products user Ends ----- */
