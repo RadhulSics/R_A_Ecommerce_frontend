@@ -1,15 +1,15 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import img1 from '../images/person.png'
+import profilepic from '../images/profileseller.jpg'
 
 function ProfileUser() {
   return (
     <div className='row'>
       <div className='col-4'>
         <div className='profU-name row'>
-        <img className='col-4 profU-img' src={img1} />
-          <p className='col-8 profU-left1'>Robin Abraham</p>
+        <img className='col-5 profU-img' src={profilepic} />
+          <p className='col-5 profU-left1'>Robin Abraham</p>
         </div>
         <div className='profU-name1'>
           <p className='profU-left'>Products ➡️</p>

@@ -537,8 +537,8 @@ input.reg-number::-webkit-outer-spin-button {
     border: black;
     border-radius: 50%;
     object-fit: contain;
-    width: 1rem;
-    height: 1rem;
+    width: 9rem;
+    height: 9rem;
   
   }
 
@@ -550,9 +550,9 @@ input.reg-number::-webkit-outer-spin-button {
   }
 
   .profU-left1{
-    margin: auto;
+    margin: 40px;
     font-size: large;
-    font-weight: 500;
+    font-weight: bold;
     text-align: left;
   }
 

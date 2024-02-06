@@ -19,20 +19,20 @@ import NavbarSeller from './components/NavbarSeller.js';
 
 function App() {
   return (
-    <div>
-      {[<NavbarSeller/>,<ProdApproval/>]}
-    </div>
+    // <div>
+    //   {[<Navbaruser/>,<IndProductsU/>]}
+    // </div>
 
-    // <BrowserRouter>
-    // <Routes>
-    //   <Route path='/' element={[<NavAdmin/>,<FullProdAdmin/>]} />
-    //   <Route path='/Ban' element={[<NavAdmin/>,<Ban/>]} />
-    //   <Route path='/OrderDetails' element={[<NavAdmin/>,<OrderDetails/>]}/>
-    //   <Route path='/ProdApproval' element={[<NavAdmin/>,<ProdApproval/>]} />
-    //   <Route path='/UserAdmin' element={[<NavAdmin/>,<Selleruser/>]} />
-    //   <Route path='/SellerAdmin' element={[<NavAdmin/>,<Selleruser/>]} />
-    // </Routes>
-    // </BrowserRouter>
+    <BrowserRouter>
+    <Routes>
+      <Route path='/' element={[<NavAdmin/>,<FullProdAdmin/>]} />
+      <Route path='/Ban' element={[<NavAdmin/>,<Ban/>]} />
+      <Route path='/OrderDetails' element={[<NavAdmin/>,<OrderDetails/>]}/>
+      <Route path='/ProdApproval' element={[<NavAdmin/>,<ProdApproval/>]} />
+      <Route path='/UserAdmin' element={[<NavAdmin/>,<Selleruser/>]} />
+      <Route path='/SellerAdmin' element={[<NavAdmin/>,<Selleruser/>]} />
+    </Routes>
+    </BrowserRouter>
   );
 }
 
