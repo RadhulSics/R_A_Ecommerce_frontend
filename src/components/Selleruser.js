@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './login.css';
 import axios from 'axios'
+import { Link } from 'react-router-dom';
 
 function Selleruser() {
 
@@ -43,6 +44,9 @@ function Selleruser() {
               </div>
               <div>
                 <button className='view-button'>View-profile</button>
+              </div>
+              <div>
+                <Link className='view-button' to='/OrderDetails'>Order detsils</Link>
               </div>
               <div>
               <button className='selleruser-banbutton'>BAN</button>

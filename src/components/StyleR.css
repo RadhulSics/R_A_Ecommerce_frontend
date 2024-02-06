@@ -697,8 +697,38 @@ input.reg-number::-webkit-outer-spin-button {
   }
 
   
+  .radio-toolbar {
+    margin: 20px;
+  }
+  
+  .indprodU-input[type="radio"] {
+    opacity: 0;
+    position: fixed;
+    width: 0;
+  }
+  
+  .indprodU-label {
+      display: inline-block;
+      background-color: transparent;
+      padding: 10px 20px;
+      font-family: sans-serif, Arial;
+      font-size: 16px;
+      border: 2px solid #444;
+      border-radius: 50%;
+      margin: .2rem;
+  }
+  
+  .indprodU-input[type="radio"]:focus + label {
+      border: 2px solid #444;
+  }
+  
+  .indprodU-input[type="radio"]:checked + label {
+      background-color: #EE9F43;
+      border-color: #44949F;
+  }
+  
   .indprodU-buy-btn{
-    margin-left: 330px;
+    margin-left: 18rem;
     width: 120px;
     height: 50px;
     border-radius: 10px;
@@ -713,4 +743,168 @@ input.reg-number::-webkit-outer-spin-button {
   .indprodU-buy-btn:hover{
     background-color: #44949F;
   }
+
+  .indprodU-price{
+    font-size: large;
+    font-weight: bold;
+    margin-left: 40px;
+  }
+
+  .indprodU-rating{
+    font-size: large;
+    font-weight: bold;
+    margin-left: 40px;
+  }
+  .indprodU-details{
+    border: 1px solid rgb(180, 179, 179);
+    border-radius: .5rem;
+    background-color: rgba(209, 209, 209, 0.515);
+    box-shadow: 2px 2px 10px rgb(143, 144, 144);
+    padding: 1rem;
+    width: 50rem;
+  }
+  .indprodU-spec{
+    font-weight: bold;
+    font-style: italic;
+  }
+  .indprodU-part{
+    margin-top: 20px;
+  }
+
+  .indprodU-title{
+    text-transform:uppercase;
+    margin-top: 2rem;
+  }
   /* ----- Individual products user Ends ----- */
+
+ /* ----- Navbar seller Starts ----- */
+  .nav-Seller{
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    top: 0;
+  }
+  
+  
+  .navS-flex{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: 70px;
+    flex-wrap: wrap;
+    gap: 4%;
+    padding: 15px;
+    margin: 0;
+    background-color: gray;
+  }
+  .navS-li{
+    list-style: none;
+  }
+  
+  .navS-a{
+   text-decoration: none;
+   color: white;
+   font-weight: bold;
+  }
+  
+  .navS-a:hover{
+    color: #EE9F43;
+    text-decoration: underline;
+    text-underline-offset: .5em
+  }
+  
+  .navS-search{
+    margin-left: -50px;
+    color: white;
+    border: 1px solid #EE9F43;
+    border-radius: 100px;
+    width: 80px;
+    height: 25px;
+    font-size: small;
+    font-weight: bold;
+    margin-top: 4px;
+    background-color: gray;
+  }
+  
+  .navS-search:hover{
+    background-color: #EE9F43;
+  }
+  
+  .navS-search:active { 
+    transform: scale(0.98); 
+    box-shadow: 3px 2px 22px 1px #EE9F43; 
+  }
+  
+  .navS-logout{
+    color: white;
+    background-color: #44949F;
+    border: 1px solid transparent;
+    border-radius: 100px;
+    padding: 8px;
+    width: 85px;
+    height: 40px;
+    font-size: small;
+    font-weight: bold;
+    margin-top: 0px;
+  }
+  
+  .navS-logout:hover{
+    background-color: #EE9F43;
+  }
+  
+  .navS-logout:active { 
+    transform: scale(0.98); 
+    box-shadow: 3px 2px 22px 1px #E35F14; 
+  }
+  
+  .sics-logo{
+    padding: 0%;
+    width: 100px;
+    height: 85px;
+    position: absolute;
+    top: 0px;
+    left: 20px;
+  }
+  
+  .navS-title{
+    color: #EE9F43;
+    font-family:courier; 
+    font-weight: bold;
+    font-size: 35px;
+    position: absolute;
+    margin: .5rem 0rem 0rem 5rem;
+    
+  }
+  
+  input.navS-searchbar:focus {
+    background-color: #EE9F43;
+    color:white;
+  }
+  
+  input.navS-searchbar{
+    height: 30px;
+    width: 250px;
+  }
+  
+  .navS-toggle{
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    background-color: transparent;
+    pointer-events: none;
+  }
+  
+  
+  .navS-close{
+    display: none;
+    padding: 0%;
+    margin: 0%;
+    visibility: hidden;
+    opacity: 0;
+    background-color: transparent;
+    pointer-events: none;
+  }
+  
+
+  
+ /* ----- Navbar seller Ends ----- */

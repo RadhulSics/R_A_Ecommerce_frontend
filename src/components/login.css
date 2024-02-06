@@ -185,6 +185,7 @@
   .buy-btn:hover{
     background-color: #44949F;
   }
+  
   .radio-toolbar {
     margin: 20px;
   }
@@ -316,6 +317,7 @@
      font-size: small;
      font-weight: bold;
      margin: 10px 15px 10px 0px;
+     text-decoration: none;
    }
    .view-button:hover{
     background-color: #E35F14;
