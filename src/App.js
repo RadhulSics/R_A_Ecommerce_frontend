@@ -16,20 +16,22 @@ import ProductApproval from './components/Productapproval.js';
 
 function App() {
   return (
-    <div>
+    // <div>
       {/* <Navbaruser/> */}
       {/* <Indproducts/> */}
       {/* <Selleruser/> */}
-      <ProductApproval/>
-    </div>
+      {/* <ProductApproval/> */}
+      {/* <ProfUser/> */}
+    
+    //  </div>
 
-    // <BrowserRouter>
-    // <Routes>
-    //   <Route path='/' element={<><NavAdmin/><FullProdAdmin/></>} />
-    //   <Route path='/Ban' element={<><NavAdmin/><Ban/></>} />
-    //   <Route path='OrderDetails' element={<><NavAdmin/><OrderDetails/></>}/>
-    // </Routes>
-    // </BrowserRouter>
+    <BrowserRouter>
+    <Routes>
+      <Route path='/' element={<><NavAdmin/><FullProdAdmin/></>} />
+      <Route path='/Ban' element={<><NavAdmin/><Ban/></>} />
+      <Route path='OrderDetails' element={<><NavAdmin/><OrderDetails/></>}/>
+    </Routes>
+    </BrowserRouter>
   );
 }
 
