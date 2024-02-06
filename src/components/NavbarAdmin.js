@@ -21,13 +21,13 @@ function NavbarAdmin() {
           <li className='nav-li'><Link className='nav-a' to='/' >HOME</Link></li>
           </div>
           <div>
-          <li className='nav-li'><a className='nav-a' href='#'>PENDING</a></li>
+          <li className='nav-li'><Link className='nav-a' to='ProdApproval'>PENDING</Link></li>
           </div>
           <div>
-          <li className='nav-li'><a className='nav-a' href='#'>USERS</a></li>
+          <li className='nav-li'><Link className='nav-a' to='UserAdmin'>USERS</Link></li>
           </div>
           <div>
-          <li className='nav-li'><a className='nav-a' href='#'>SELLERS</a></li>
+          <li className='nav-li'><Link className='nav-a' to='SellerAdmin'>SELLERS</Link></li>
           </div>
           <div>
           <li className='nav-li'><Link className='nav-a' to='/Ban' >BANNED</Link></li>
