@@ -537,8 +537,8 @@ input.reg-number::-webkit-outer-spin-button {
     border: black;
     border-radius: 50%;
     object-fit: contain;
-    width: 1rem;
-    height: 1rem;
+    width: 9rem;
+    height: 9rem;
   
   }
 
@@ -550,9 +550,9 @@ input.reg-number::-webkit-outer-spin-button {
   }
 
   .profU-left1{
-    margin: auto;
+    margin: 40px;
     font-size: large;
-    font-weight: 500;
+    font-weight: bold;
     text-align: left;
   }
 
@@ -624,3 +624,93 @@ input.reg-number::-webkit-outer-spin-button {
 
 
   /* ----- Profile User Ends ----- */
+
+
+  /* ----- Profile Edit User Starts ----- */
+
+  .profeditU-main{
+    width: 30rem;
+    margin: 2rem;
+    margin-left: 30rem;
+    border: 1px solid rgb(180, 179, 179);
+    border-radius: .5rem;
+    background-color: rgba(209, 209, 209, 0.515);
+    box-shadow: 2px 2px 10px rgb(143, 144, 144);
+    align-items: center;
+    padding: 5rem;
+  }
+
+  .profeditU-input{
+    width: 280px;
+    height: 50px;
+    border-radius:.3rem;
+    box-shadow: inset 0px 0px 20px 0px white;
+    border: none;
+    outline: none;
+    background-color: #fff;
+    margin: .5rem 0rem;
+  }
+
+  .profeditU-label{
+    color: #E35F14;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0rem 2rem;
+  }
+
+  .profeditU-button{
+    color: white;
+    background-color: #44949F;
+    border: 1px solid transparent;
+    border-radius: 100px;
+    padding: 8px;
+    width: 13rem;
+    height: 40px;
+    font-size: small;
+    font-weight: bold;
+    margin: 30px 0px 10px 40px;
+  }
+  
+  .profeditU-button:hover{
+    background-color: #E35F14;
+  }
+  
+  .profeditU-button:active { 
+    transform: scale(0.98); 
+    box-shadow: 3px 2px 22px 1px #E35F14; 
+  }
+
+  /* ----- Profile Edit User Ends ----- */
+
+
+  /* ----- Individual products user Starts ----- */
+
+  .carousel-control-next,
+  .carousel-control-prev {
+      filter: invert(100%);
+  }
+
+  .indprodU-img{
+    width: 40rem;
+    height: 30rem;
+    object-fit: contain;
+  }
+
+  
+  .indprodU-buy-btn{
+    margin-left: 330px;
+    width: 120px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #EE9F43;
+    color: #fff;
+    font-size: large;
+    border-style: solid;
+    border-color: #EE9F43;
+    position: relative;
+    top: -70px;
+  }
+  .indprodU-buy-btn:hover{
+    background-color: #44949F;
+  }
+  /* ----- Individual products user Ends ----- */

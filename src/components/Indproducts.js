@@ -15,13 +15,13 @@ function Indproducts() {
       <div id="carouselExample" class="carousel slide col-6 " style={{width:'50%'}}>
   <div class="carousel-inner">
     <div class="carousel-item active caro-change">
-      <img src={image1} class="d-block w-100" alt="..."/>
+      <img src={image1} class="d-block w-100 indprod-img" alt="..."/>
     </div>
     <div class="carousel-item caro-change">
-      <img src={image2} class="d-block w-100" alt="..."/>
+      <img src={image2} class="d-block w-100 indprod-img" alt="..."/>
     </div>
     <div class="carousel-item caro-change">
-      <img src={image3} class="d-block w-100" alt="..."/>
+      <img src={image3} class="d-block w-100 indprod-img" alt="..."/>
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">

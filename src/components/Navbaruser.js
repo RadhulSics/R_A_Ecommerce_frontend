@@ -12,13 +12,13 @@ function Navbaruser() {
             </div>
             <ul className='nav-position'>
                 <div>
-                    <li><a className='nav-ahref' href='#'>HOME</a></li>
+                    <li className='navuser-li'><a className='nav-ahref' href='#'>HOME</a></li>
                 </div>
                 <div>
-                    <li><a className='nav-ahref' href='#'>PROFILE</a></li>
+                    <li className='navuser-li'><a className='nav-ahref' href='#'>PROFILE</a></li>
                 </div>
                 <div>
-                    <li><a className='nav-ahref'href='#'>HISTORY</a></li>
+                    <li className='navuser-li'><a className='nav-ahref'href='#'>HISTORY</a></li>
                 </div>
                 <div>
                     <form>
