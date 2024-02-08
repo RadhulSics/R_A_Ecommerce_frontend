@@ -95,16 +95,18 @@
 /* ...... navbaruser starts...... */
 
 .nav-position{
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
-    height: 70px;
-    gap: 6%;
-    padding: 10px;
-    margin: 0;
-    background-color: #28373A;
-    padding-top: 15px;
-    text-decoration: none;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  height: 80px;
+  gap: 6%;
+  padding: 10px;
+  margin: 0;
+  background-color: #28373A;
+  padding-top: 15px;
+  text-decoration: none;
+  flex-wrap: wrap;
+  align-content: center;
   }
   .navuser-li{
     list-style-type: none;
@@ -128,16 +130,18 @@
     margin: 20px 35px 0px 20px;
   }
   .nav-out{
+    display: flex;
     color: white;
     background-color: #44949F;
     border: 1px solid transparent;
     border-radius: 60px;
-    padding: 6px;
+    padding-left: 13px;
+    padding-top: 4px;
     width: 80px;
-    height: 40px;
+    height: 30px;
     font-size: small;
     font-weight: bold;
-    margin-top: 0px;
+    text-align: center;
   }
   .nav-out:hover{
     background-color: #EE9F43;
@@ -532,4 +536,212 @@
 
 /* ----- Profile Seller Ends ----- */
 
+/* ------profileedit seller starts------ */
+.profeditS-main{
+  width: 30rem;
+  margin: 2rem;
+  margin-left: 30rem;
+  border: 1px solid rgb(180, 179, 179);
+  border-radius: .5rem;
+  background-color: #44949F;
+  box-shadow: 2px 2px 10px rgb(143, 144, 144);
+  align-items: center;
+  padding: 5rem;
+}
 
+.profeditS-input{
+  width: 300px;
+  height: 50px;
+  border-radius:.5rem;
+  box-shadow: inset 0px 0px 20px 0px white;
+  border: none;
+  outline: none;
+  background-color: #fff;
+  margin: .5rem 0rem;
+}
+
+.profeditS-label{
+  color:black;
+  text-transform: uppercase;
+  font-weight: bolder;
+  margin: 0rem 2rem;
+}
+
+.profeditS-button{
+  color: white;
+  background-color: #E35F14;
+  border: 1px solid transparent;
+  border-radius: 100px;
+  padding: 8px;
+  width: 13rem;
+  height: 40px;
+  font-size: small;
+  font-weight: bold;
+  margin: 30px 0px 10px 40px;
+}
+
+
+.profeditS-button:active { 
+  transform: scale(0.98); 
+  box-shadow: 3px 2px 22px 1px #E35F14; 
+}
+.profeditS-input::placeholder{
+  text-align: center;
+}
+/* ----profile edit seller ends----- */
+/* ----- fullproducts user starts---- */
+.fullU-main{
+  position: relative;
+  right: -2rem;
+ top: 5rem;
+ width: 100%;
+ padding: 1rem;
+ text-decoration: none;
+}
+
+.fullU-col {
+  margin: .5rem; 
+  width: 12rem !important;
+  height: 11rem;
+}
+
+.fullU-img{
+  width: 12rem;
+  height: 10rem;
+  object-fit: contain;
+  padding-top: .25rem;
+  margin: 0;
+}
+
+.fullU-name{
+  font-size: small ;
+  color: rgba(51, 49, 49, 0.812) !important;
+  font-weight: bold;
+  width: 9rem;
+  height: 2.5rem;
+  overflow: hidden;
+}
+
+.fullU-price{
+  text-align: center;
+  font-weight: 660;
+}
+/* ----- orderdetails seller starts----- */
+.orderS-main{
+  position: relative;
+  right: -2rem;
+  top: 2rem;
+  width: 100%;
+  padding: 1rem;
+  text-decoration: none;
+ }
+
+ .orderS-img{
+   width: 12rem;
+   height: 10rem;
+   object-fit: contain;
+   padding: 1rem;
+ }
+ 
+ .orderS-flex {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   align-items: center;
+   border-top: 1px solid rgba(0, 0, 0, 0.455);
+   margin: 0.5rem;
+   width: 90rem;
+}
+
+.orderS-details{
+ color: #E35F14 !important;
+ font-weight: bold;
+ height: 2.5rem;
+ width: 20rem;
+}
+
+.orderS-price{
+ text-align: center;
+ font-weight: 660;
+ color: black;
+}
+
+.orderS-rating{
+ color: black;
+}
+.orderS-date{
+ margin-right: 2rem;
+ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+/* -----orderhistory starts------- */
+
+.orderH-main{
+  position: relative;
+  right: -2rem;
+  top: 8rem;
+  width: 100%;
+  padding: 1rem;
+  text-decoration: none;
+ }
+ .orderH-input{
+  height: 40px;
+  width:40%;
+  margin-left: 350px;
+  border-radius: 5px;
+  border: 1px solid ;
+ }
+ .orderH-input::placeholder{
+  text-align: center;
+ }
+ .orderH-btn{
+  margin-left: 30px;
+  border-radius: 10px;
+  height: 40px;
+  width: 70px;
+  color: #fff;
+  background-color: #44949F;
+  border: 1px solid transparent;
+ }
+ .orderH-btn:hover{
+  background-color: #E35F14;
+ }
+
+ .orderH-img{
+   width: 12rem;
+   height: 10rem;
+   object-fit: contain;
+   padding: 1rem;
+ }
+ 
+ .orderH-flex {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   align-items: center;
+   border-top: 1px solid rgba(0, 0, 0, 0.455);
+   margin: 0.5rem;
+   width: 90rem;
+}
+
+.orderH-details{
+ color: #E35F14 !important;
+ font-weight: bold;
+ height: 2.5rem;
+ width: 20rem;
+}
+
+.orderH-price{
+ text-align: center;
+ font-weight: 660;
+ color: black;
+}
+
+.orderH-rating{
+ color: black;
+}
+.orderH-date{
+ margin-right: 2rem;
+ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
