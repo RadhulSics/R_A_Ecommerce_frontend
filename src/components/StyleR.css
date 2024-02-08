@@ -537,8 +537,8 @@ input.reg-number::-webkit-outer-spin-button {
     border: black;
     border-radius: 50%;
     object-fit: contain;
-    width: 9rem;
-    height: 9rem;
+    width: 7rem;
+    height: 7rem;
   
   }
 
@@ -550,10 +550,10 @@ input.reg-number::-webkit-outer-spin-button {
   }
 
   .profU-left1{
-    margin: 40px;
-    font-size: large;
-    font-weight: bold;
-    text-align: left;
+  margin-left: 1rem;
+  font-size: large;
+  font-weight: bold;
+  text-align: left;
   }
 
   .profU-logout{
@@ -796,6 +796,7 @@ input.reg-number::-webkit-outer-spin-button {
     padding: 15px;
     margin: 0;
     background-color: gray;
+    gap: 3.2rem;
   }
   .navS-li{
     list-style: none;
@@ -883,7 +884,7 @@ input.reg-number::-webkit-outer-spin-button {
   
   input.navS-searchbar{
     height: 30px;
-    width: 250px;
+    width: 10rem;
   }
   
   .navS-toggle{
@@ -908,3 +909,64 @@ input.reg-number::-webkit-outer-spin-button {
 
   
  /* ----- Navbar seller Ends ----- */
+
+ 
+ /* ----- Full products Seller starts ----- */
+
+ .fullS-main{
+ position: relative;
+ right: -2rem;
+ top: 5rem;
+ width: 100%;
+ padding: 1rem;
+ text-decoration: none;
+}
+
+.fullS-col {
+  margin: .5rem; 
+  width: 12rem !important;
+  height: 11rem;
+}
+
+.fullS-img{
+  width: 12rem;
+  height: 10rem;
+  object-fit: contain;
+  padding-top: .25rem;
+  margin: 0;
+}
+
+.fullS-name{
+  font-size: small ;
+  color: rgba(51, 49, 49, 0.812) !important;
+  font-weight: bold;
+  width: 9rem;
+  height: 2.5rem;
+  overflow: hidden;
+}
+
+.fullS-price{
+  text-align: center;
+  font-weight: 660;
+}
+
+
+ /* ----- Full products Seller Ends ----- */
+
+  /* -----Buying prod user Starts ----- */
+
+.buying-main{
+  margin: 2rem;
+  width: 90rem; 
+  border: 1px solid rgb(180, 179, 179);
+  border-radius: .5rem;
+  background-color: rgba(209, 209, 209, 0.515);
+  box-shadow: 2px 2px 10px rgb(143, 144, 144);
+}
+
+.buying-img{
+  width: 5rem;
+  object-fit: contain;
+  margin-left: 10rem;
+}
+  /* ----- Buying prod user Ends ----- */
