@@ -19,13 +19,16 @@ function NavbarSeller() {
         <li className='navS-li'><a className='navS-a' href='#'>HOME</a></li>
         </div>
         <div>
-        <li className='navS-li'><a className='navS-a' href='#'>Own PRODUCTS</a></li>
+        <li className='navS-li'><a className='navS-a' href='#'>OWN PRODUCTS</a></li>
         </div>
         <div>
         <li className='navS-li'><a className='navS-a' href='#'>ORDER DETAILS</a></li>
         </div>
         <div>
         <li className='navS-li'><a className='navS-a' href='#'>PROFILE</a></li>
+        </div>
+        <div>
+        <li className='navS-li'><a className='navS-a' href='#'>NEW PRODUCT</a></li>
         </div>
         
         <div>
