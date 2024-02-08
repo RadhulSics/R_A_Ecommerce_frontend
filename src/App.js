@@ -16,24 +16,32 @@ import ProfeditU from './components/ProfeditUser.js'
 import IndProductsU from './components/IndProductsUser.js';
 import ProdApproval from './components/Productapproval.js'
 import NavbarSeller from './components/NavbarSeller.js';
+import ProfeditSeller from './components/ProfeditSeller.js';
+import FullproductsUser from './components/FullproductsUser.js';
+import OrderdetailsS from './components/OrderdetailsSeller.js';
+import OrderHistory from './components/orderHistory.js';
+
 
 function App() {
   return (
-    // <div>
-    //   {[<Navbaruser/>,<IndProductsU/>]}
-    // </div>
+    <div>
+      <Navbaruser/>
+      {/* <FullproductsUser/> */}
+      <OrderdetailsS/>
+      {/* <OrderHistory/> */}
+      </div>
 
-    <BrowserRouter>
-    <Routes>
-      <Route path='/' element={[<NavAdmin/>,<FullProdAdmin/>]} />
-      <Route path='/Ban' element={[<NavAdmin/>,<Ban/>]} />
-      <Route path='/OrderDetails' element={[<NavAdmin/>,<OrderDetails/>]}/>
-      <Route path='/ProdApproval' element={[<NavAdmin/>,<ProdApproval/>]} />
-      <Route path='/UserAdmin' element={[<NavAdmin/>,<Selleruser/>]} />
-      <Route path='/SellerAdmin' element={[<NavAdmin/>,<Selleruser/>]} />
-    </Routes>
-    </BrowserRouter>
-  );
-}
+    //  <BrowserRouter>
+    //  <Routes>
+    //    <Route path='/' element={[<NavAdmin/>,<FullProdAdmin/>]} />
+    //    <Route path='/Ban' element={[<NavAdmin/>,<Ban/>]} />
+    //    <Route path='/OrderDetails' element={[<NavAdmin/>,<OrderDetails/>]}/>
+    //    <Route path='/ProdApproval' element={[<NavAdmin/>,<ProdApproval/>]} />
+    //    <Route path='/UserAdmin' element={[<NavAdmin/>,<Selleruser/>]} />
+    //    <Route path='/SellerAdmin' element={[<NavAdmin/>,<Selleruser/>]} />
+    //  </Routes>
+    //  </BrowserRouter>
+   )
+  }
 
 export default App;
