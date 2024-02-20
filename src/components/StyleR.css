@@ -6,7 +6,10 @@ html {
   width: 0;
   background: transparent;
 }
-  
+
+.Link-decoration{
+  text-decoration: none;
+}
  /* ----- Navbar of admin Starts ----- */
 .nav-admin{
   position: fixed;
@@ -955,6 +958,12 @@ input.reg-number::-webkit-outer-spin-button {
 
   /* -----Buying prod user Starts ----- */
 
+.buy-maindiv{
+  position: relative;
+  top: 2rem;
+  left: 5rem; 
+}
+
 .buying-main{
   margin: 2rem;
   width: 90rem; 
@@ -968,5 +977,156 @@ input.reg-number::-webkit-outer-spin-button {
   width: 5rem;
   object-fit: contain;
   margin-left: 10rem;
+  height: 20rem;
 }
+
+.buying-payment{
+  width: 49rem !important;
+  margin: 2rem;
+  border: 1px solid rgb(180, 179, 179);
+  border-radius: .5rem;
+  background-color: rgba(209, 209, 209, 0.515);
+  box-shadow: 2px 2px 10px rgb(143, 144, 144);
+  padding: 1rem;
+}
+
+.buy-input{
+  color: white;
+  border: 1px solid #EE9F43;
+  border-radius: 100px;
+  width: 22rem;
+  height: 3rem;
+  font-size: small;
+  font-weight: bold;
+  margin-top: 1rem;
+  margin-right: 1rem;
+}
+
+.buy-input::placeholder{
+  text-indent: 2rem;
+}
+
+.buy-savebtn{
+  color: white;
+  background-color: #44949F;
+  border: 1px solid transparent;
+  border-radius: 100px;
+  padding: 8px;
+  width: 85px;
+  height: 40px;
+  font-size: small;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-left: 20rem;
+}
+
+.buy-savebtn:hover{
+  background-color: #EE9F43;
+}
+
+.buy-savebtn:active { 
+  transform: scale(0.98); 
+  box-shadow: 3px 2px 22px 1px #E35F14; 
+}
+
   /* ----- Buying prod user Ends ----- */
+
+    /* -----Individual prod seller Starts ----- */
+
+    .main-div{
+      position: relative;
+      top:4rem;
+    }
+
+    .carousel-control-next,
+  .carousel-control-prev {
+      filter: invert(100%);
+  }
+
+  .indprodS-img{
+    width: 40rem;
+    height: 30rem;
+    object-fit: contain;
+  }
+
+  
+  .radio-toolbar {
+    margin: 20px;
+  }
+  
+  .indprodS-input[type="radio"] {
+    opacity: 0;
+    position: fixed;
+    width: 0;
+  }
+  
+  .indprodS-label {
+      display: inline-block;
+      background-color: transparent;
+      padding: 10px 20px;
+      font-family: sans-serif, Arial;
+      font-size: 16px;
+      border: 2px solid #444;
+      border-radius: 50%;
+      margin: .2rem;
+  }
+  
+  .indprodS-input[type="radio"]:focus + label {
+      border: 2px solid #444;
+  }
+  
+  .indprodS-input[type="radio"]:checked + label {
+      background-color: #EE9F43;
+      border-color: #44949F;
+  }
+  
+  .indprodS-buy-btn{
+    margin-left: 18rem;
+    width: 120px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #EE9F43;
+    color: #fff;
+    font-size: large;
+    border-style: solid;
+    border-color: #EE9F43;
+    position: relative;
+    top: -70px;
+  }
+  .indprodS-buy-btn:hover{
+    background-color: #44949F;
+  }
+
+  .indprodS-price{
+    font-size: large;
+    font-weight: bold;
+    margin-left: 40px;
+  }
+
+  .indprodS-rating{
+    font-size: large;
+    font-weight: bold;
+    margin-left: 40px;
+  }
+  .indprodS-details{
+    border: 1px solid rgb(180, 179, 179);
+    border-radius: .5rem;
+    background-color: rgba(209, 209, 209, 0.515);
+    box-shadow: 2px 2px 10px rgb(143, 144, 144);
+    padding: 1rem;
+    width: 50rem;
+  }
+  .indprodS-spec{
+    font-weight: bold;
+    font-style: italic;
+  }
+  .indprodS-part{
+    margin-top: 20px;
+  }
+
+  .indprodS-title{
+    text-transform:uppercase;
+    margin-top: 2rem;
+  }
+
+      /* -----Individual prod seller  Ends ----- */

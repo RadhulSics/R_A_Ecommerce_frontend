@@ -6,6 +6,7 @@ import './login.css';
 import image1 from '../images/image1.jpg'
 import image2 from '../images/image2.jpg'
 import image3 from '../images/image3.jpg'
+import { Link } from 'react-router-dom';
 
 function Indproducts() {
   
@@ -107,9 +108,7 @@ Number of Items
 
 
 </div>
-<div>
-  <button className='buy-btn'type='submit'>BUY NOW</button>
-</div>
+
        
     </div>
   )
