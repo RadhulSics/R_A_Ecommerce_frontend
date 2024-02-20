@@ -45,7 +45,7 @@ function IndProductsUser() {
         </button>
         <br/> <br/> <br/> <br/>
         <div>
-        <button className='indprodU-buy-btn'type='submit'><Link to='/BuyingprodUser'>BUY NOW</Link></button>
+        <button className='indprodU-buy-btn'type='submit'><Link className="Link-decoration" to='/BuyingprodUser'>BUY NOW</Link></button>
         </div>
       </div>
 

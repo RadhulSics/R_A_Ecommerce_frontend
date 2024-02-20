@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './login.css';
 import './StyleR.css';
-
+import { Link } from 'react-router-dom';
 function Registration() {
 
   const [data,SetData]=useState({username:'',email:'',number:'',password:''})
@@ -86,7 +86,7 @@ function Registration() {
 
        <div className='row reg-oldUser'>
         <p className='col-9 reg-loginText'>Already have an account?</p>
-        <button className='col-3 reg-login'>LOG IN</button>
+        <button className='col-3 reg-login'><Link className='Link-decoration' to='/'>LOG IN</Link></button>
        </div>
        
         <div className='reg-submain'>
