@@ -16,14 +16,16 @@ import ProfeditU from './components/ProfeditUser.js'
 import IndProductsU from './components/IndProductsUser.js';
 import ProdApproval from './components/Productapproval.js'
 import NavbarSeller from './components/NavbarSeller.js';
-<<<<<<< HEAD
 import ProfileUser from './components/ProfileUser.js';
 import ProfileSeller from './components/profileSeller.js';
 import BuyingprodUser from './components/BuyingprodUser.js';
+import OwnprodSeller from './components/ownprodSeller.js';
+import NewprodSeller from './components/NewprodSeller.js';
 function App() {
   return (
     <div>
-      {[<Navbaruser/>,<BuyingprodUser/>]}
+      <NavbarSeller/>
+     <NewprodSeller/>
     </div>
 
     // <BrowserRouter>
@@ -38,34 +40,5 @@ function App() {
     // </BrowserRouter>
   );
 }
-=======
-import ProfeditSeller from './components/ProfeditSeller.js';
-import FullproductsUser from './components/FullproductsUser.js';
-import OrderdetailsS from './components/OrderdetailsSeller.js';
-import OrderHistory from './components/orderHistory.js';
-
-
-function App() {
-  return (
-    <div>
-      <Navbaruser/>
-      {/* <FullproductsUser/> */}
-      <OrderdetailsS/>
-      {/* <OrderHistory/> */}
-      </div>
-
-    //  <BrowserRouter>
-    //  <Routes>
-    //    <Route path='/' element={[<NavAdmin/>,<FullProdAdmin/>]} />
-    //    <Route path='/Ban' element={[<NavAdmin/>,<Ban/>]} />
-    //    <Route path='/OrderDetails' element={[<NavAdmin/>,<OrderDetails/>]}/>
-    //    <Route path='/ProdApproval' element={[<NavAdmin/>,<ProdApproval/>]} />
-    //    <Route path='/UserAdmin' element={[<NavAdmin/>,<Selleruser/>]} />
-    //    <Route path='/SellerAdmin' element={[<NavAdmin/>,<Selleruser/>]} />
-    //  </Routes>
-    //  </BrowserRouter>
-   )
-  }
->>>>>>> 8664806b0f5506b243e8bda42ad3f31855cefa32
 
 export default App;
