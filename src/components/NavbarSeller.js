@@ -16,10 +16,10 @@ function NavbarSeller() {
       <ul className='navS-flex'>
 
         <div>
-        <li className='navS-li'><Link className='navS-a' to='/Seller'>HOME</Link></li>
+        <li className='navS-li'><Link  className='navS-a' to='/Seller'>HOME</Link></li>
         </div>
         <div>
-        <li className='navS-li'><Link className='navS-a' to='/IndProductsSeller'>OWN PRODUCTS</Link></li>
+        <li className='navS-li'><Link className='navS-a' to='/OwnprodSeller'>OWN PRODUCTS</Link></li>
         </div>
         <div>
         <li className='navS-li'><Link className='navS-a' to='/OrderDetailsSeller'>ORDER DETAILS</Link></li>

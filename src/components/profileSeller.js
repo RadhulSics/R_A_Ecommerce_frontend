@@ -1,6 +1,7 @@
 import React from 'react'
 import './login.css'
 import profilepic from '../images/profileseller.jpg'
+import { Link } from 'react-router-dom'
 
 function ProfileSeller() {
   return (
@@ -36,7 +37,7 @@ function ProfileSeller() {
           <p>DOB : 11/02/1993</p>
         </div>
         <div>
-          <button className='profS-edit'>EDIT</button>
+          <button className='profS-edit'><Link className='Link-decoration' to='/profileeditSeller'> EDIT</Link></button>
         </div>
       </div>
     </div>
