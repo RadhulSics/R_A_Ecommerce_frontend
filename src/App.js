@@ -21,23 +21,14 @@ import ProfileSeller from './components/profileSeller.js';
 import BuyingprodUser from './components/BuyingprodUser.js';
 import OwnprodSeller from './components/ownprodSeller.js';
 import NewprodSeller from './components/NewprodSeller.js';
+import ProducteditSeller from './components/ProducteditSeller.js';
 function App() {
   return (
     <div>
-      <NavbarSeller/>
-     <NewprodSeller/>
+     
     </div>
 
-    // <BrowserRouter>
-    // <Routes>
-    //   <Route path='/' element={[<NavAdmin/>,<FullProdAdmin/>]} />
-    //   <Route path='/Ban' element={[<NavAdmin/>,<Ban/>]} />
-    //   <Route path='/OrderDetails' element={[<NavAdmin/>,<OrderDetails/>]}/>
-    //   <Route path='/ProdApproval' element={[<NavAdmin/>,<ProdApproval/>]} />
-    //   <Route path='/UserAdmin' element={[<NavAdmin/>,<Selleruser/>]} />
-    //   <Route path='/SellerAdmin' element={[<NavAdmin/>,<Selleruser/>]} />
-    // </Routes>
-    // </BrowserRouter>
+    
   );
 }
 

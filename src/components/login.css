@@ -861,4 +861,33 @@
   margin-left: 10px;
   justify-content: center;
 }
+/* -----newprod seller ends----- */
+.editprodseller-main{
 
+  height: 500px;
+  width: 33%;
+  padding-top: 30px;
+  background-color: #EE9F43;
+  border-radius: 10px;
+   margin-top: 8rem;
+  margin-left: 32rem; 
+}
+.editprod-sellerhead{
+margin-left: 5rem;
+color: #44949F;
+font-weight: bold;
+text-decoration: underline;
+
+}
+.editprod-sellerlabel{
+margin-left: 5rem;
+margin-top: 25px;
+font-weight: 400;
+
+}
+.editprod-sellerinput{
+border-radius: 5px;
+border-color: transparent;
+margin-left: 10px;
+justify-content: center;
+}
