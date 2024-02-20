@@ -18,7 +18,7 @@ function NavbarAdmin() {
 
           <div>
             
-          <li className='nav-li'><Link className='nav-a' to='/' >HOME</Link></li>
+          <li className='nav-li'><Link className='nav-a' to='/Admin' >HOME</Link></li>
           </div>
           <div>
           <li className='nav-li'><Link className='nav-a' to='/ProdApproval'>PENDING</Link></li>
@@ -45,7 +45,7 @@ function NavbarAdmin() {
           </div>
           
           <div>
-            <button type="button" className="nav-logout">LOGOUT</button>
+            <button type="button" className="nav-logout"><Link className='nav-a' to='/'>LOG OUT</Link></button>
           </div>
 
           <div>

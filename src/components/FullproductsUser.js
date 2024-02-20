@@ -3,6 +3,7 @@ import axios from 'axios';
 import './login.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
+import { Link } from 'react-router-dom';
 
 function FullproductsUser() {
     const [state,setState]=useState([]);
@@ -20,6 +21,7 @@ function FullproductsUser() {
 
   return (
     <div >
+        <Link to='/IndProductsUser' className='Link-decoration' >
         <div className='row fullU-main'>
             {state.map((c)=>{
                 return(
@@ -39,6 +41,7 @@ function FullproductsUser() {
 
             })}
         </div>
+        </Link>
     </div>
   )
 }

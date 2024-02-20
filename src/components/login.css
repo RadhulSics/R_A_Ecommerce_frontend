@@ -76,9 +76,17 @@
     color:white;
     font-size: 20px;
     border: none;
-    
-
 }
+.buttons:hover{
+  background-color: #E35F14;
+}
+.buttons:active{
+  background-color: #44949F;
+}
+.input-validation{
+  z-index: 999;
+}
+
 .login-button{
     padding-top: 40px;
 }
