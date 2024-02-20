@@ -6,7 +6,10 @@ html {
   width: 0;
   background: transparent;
 }
-  
+
+.Link-decoration{
+  text-decoration: none;
+}
  /* ----- Navbar of admin Starts ----- */
 .nav-admin{
   position: fixed;

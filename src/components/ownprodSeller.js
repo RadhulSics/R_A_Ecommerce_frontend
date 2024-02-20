@@ -3,9 +3,8 @@ import axios from 'axios';
 import './login.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
-import { Link } from 'react-router-dom';
 
-function FullproductsUser() {
+function OwnprodSeller() {
     const [state,setState]=useState([]);
     useEffect(()=>{
         axios.get('https://fakestoreapi.com/products')
@@ -21,19 +20,18 @@ function FullproductsUser() {
 
   return (
     <div >
-        <Link to='/IndProductsUser' className='Link-decoration' >
-        <div className='row fullU-main'>
-            {state.map((c)=>{
+        <div className='row ownS-main'>
+            {state.map((d)=>{
                 return(
-                    <div className="card col-2 fullU-col">
-           <img className="card-img-top fullU-img" src={c.image+" "} />
+                    <div className="card col-2 ownS-col">
+           <img className="card-img-top ownS-img" src={d.image+" "} />
            <div className="card-body">
-            <div className='fullU-name'>
-            {c.title+" "}
+            <div className='ownS-name'>
+            {d.title+" "}
             </div> 
             <hr/>
-            <div className='fullU-price'>
-            {'Rs. '+c.price+" "}
+            <div className='ownS-price'>
+            {'Rs. '+d.price+" "}
             </div> 
             </div> 
           </div>
@@ -41,9 +39,8 @@ function FullproductsUser() {
 
             })}
         </div>
-        </Link>
     </div>
   )
 }
 
-export default FullproductsUser
+export default OwnprodSeller

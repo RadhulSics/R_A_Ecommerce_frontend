@@ -5,6 +5,7 @@ import image1 from "../images/image1.jpg";
 import image2 from "../images/image2.jpg";
 import image3 from "../images/image3.jpg";
 import './StyleR.css'
+import { Link } from 'react-router-dom';
 
 function IndProductsUser() {
   return (
@@ -44,7 +45,7 @@ function IndProductsUser() {
         </button>
         <br/> <br/> <br/> <br/>
         <div>
-        <button className='indprodU-buy-btn'type='submit'>BUY NOW</button>
+        <button className='indprodU-buy-btn'type='submit'><Link to='/BuyingprodUser'>BUY NOW</Link></button>
         </div>
       </div>
 

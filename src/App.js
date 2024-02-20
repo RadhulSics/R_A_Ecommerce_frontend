@@ -13,27 +13,24 @@ import { Route,Routes,BrowserRouter } from 'react-router-dom';
 import Indproducts from './components/Indproducts.js';
 import Selleruser from './components/Selleruser.js';
 import ProductApproval from './components/Productapproval.js';
-import ProfeditU from './components/ProfeditUser.js'
+import ProfileeditUser from './components/ProfeditUser.js'
 import IndProductsU from './components/IndProductsUser.js';
 import ProdApproval from './components/Productapproval.js'
 import OrderDetailsUSer from './components/orderHistory.js'
 import NavbarSeller from './components/NavbarSeller.js';
-import ProfileUser from './components/ProfileUser.js';
 import ProfileSeller from './components/profileSeller.js';
-import BuyingprodUser from './components/BuyingprodUser.js';
 import IndProductsSeller from './components/IndProductsSeller.js';
 import FullProductsAdmin from './components/FullProductsAdmin.js';
 import FullProductsSeller from './components/FullProductsSeller.js';
 import OrderdetailsSeller from './components/OrderdetailsSeller.js';
 import NavbarAdmin from './components/NavbarAdmin.js';
+import NewprodSeller from './components/NewprodSeller.js';
+import IndProductsUser from './components/IndProductsUser.js'
+import BuyingprodUser from './components/BuyingprodUser.js'
 
 
 function App() {
   return (
-    
-    // <div>
-    //   {[<NavbarSeller/>,<IndProductsSeller/>]}
-    // </div>
 
     <BrowserRouter>
     <Routes>
@@ -52,8 +49,11 @@ function App() {
       <Route path='/IndProductsSeller' element={[<NavbarSeller/>,<FullProductsSeller/>]} />
       <Route path='/OrderDetailsSeller' element={[<NavbarSeller/>,<OrderdetailsSeller/>]} />
       <Route path='/ProfileSeller' element={[<NavbarSeller/>,<ProfileSeller/>]} />
-      {/* <Route path='/NewprodSeller' element={[<NavbarSeller/>,<NewprodSeller/>]} /> */}
+      <Route path='/NewprodSeller' element={[<NavbarSeller/>,<NewprodSeller/>]} />
       <Route path='/IndProductsAdmin' element={[<NavbarAdmin/>,<Indproducts/>]} />
+      <Route path='/IndProductsUser' element={[<Navbaruser/>,<IndProductsUser/>]} />
+      <Route path='/BuyingprodUser' element={[<Navbaruser/>,<BuyingprodUser/>]} />
+      <Route path='/ProfileeditUser' element={[<Navbaruser/>,<ProfileeditUser/>]} />
     </Routes>
     </BrowserRouter>
   );

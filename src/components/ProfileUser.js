@@ -2,7 +2,7 @@ import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import profilepic from '../images/profileseller.jpg'
-
+import { Link } from 'react-router-dom';
 function ProfileUser() {
   return (
     <div className='row'>
@@ -36,7 +36,7 @@ function ProfileUser() {
           <p>DOB : 02/02/2001</p>
         </div>
         <div>
-          <button className='profU-edit'>EDIT</button>
+          <button className='profU-edit'><Link to='/ProfileeditUser'>EDIT</Link></button>
         </div>
       </div>
     </div>
