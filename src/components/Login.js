@@ -19,7 +19,7 @@ function Login() {
               <input type='password' placeholder='password' className='password login-input' />
             </div>
             <div className='login-button'>
-              <button className='buttons'>login</button>
+              <button className='buttons' type='submit'>login</button>
             </div>
             <div className='forgotlink'>
               <a className='a-tag' href='#'>forgot password? </a>or<a href='#'> Sign up</a>
