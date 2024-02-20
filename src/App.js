@@ -27,6 +27,8 @@ import NavbarAdmin from './components/NavbarAdmin.js';
 import NewprodSeller from './components/NewprodSeller.js';
 import IndProductsUser from './components/IndProductsUser.js'
 import BuyingprodUser from './components/BuyingprodUser.js'
+import OwnprodSeller from './components/ownprodSeller.js';
+import ProfileeditSeller from './components/ProfeditSeller.js'
 
 
 function App() {
@@ -46,7 +48,7 @@ function App() {
       <Route path='/ProfileUser' element={[<Navbaruser/>,<ProfUser/>]} />
       <Route path='/OrderDetailsUSer' element={[<Navbaruser/>,<OrderDetailsUSer/>]} />
       <Route path='/Seller' element={[<NavbarSeller/>,<FullProductsSeller/>]} />
-      <Route path='/IndProductsSeller' element={[<NavbarSeller/>,<FullProductsSeller/>]} />
+      <Route path='/IndProductsSeller' element={[<NavbarSeller/>,<IndProductsSeller/>]} />
       <Route path='/OrderDetailsSeller' element={[<NavbarSeller/>,<OrderdetailsSeller/>]} />
       <Route path='/ProfileSeller' element={[<NavbarSeller/>,<ProfileSeller/>]} />
       <Route path='/NewprodSeller' element={[<NavbarSeller/>,<NewprodSeller/>]} />
@@ -54,6 +56,12 @@ function App() {
       <Route path='/IndProductsUser' element={[<Navbaruser/>,<IndProductsUser/>]} />
       <Route path='/BuyingprodUser' element={[<Navbaruser/>,<BuyingprodUser/>]} />
       <Route path='/ProfileeditUser' element={[<Navbaruser/>,<ProfileeditUser/>]} />
+      <Route path='/OwnprodSeller' element={[<NavbarSeller/>,<OwnprodSeller/>]} />
+      <Route path='/ProfileeditSeller' element={[<NavbarSeller/>,<ProfileeditSeller/>]} />
+      
+      
+
+
     </Routes>
     </BrowserRouter>
   );
