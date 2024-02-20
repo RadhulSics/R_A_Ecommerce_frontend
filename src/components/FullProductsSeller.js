@@ -23,7 +23,7 @@ console.log(Products)
     <div >
       
     <div >
-    <Link to='/' className="row fullS-main">
+    <Link to='/IndproductsSeller' className="row fullS-main">
       {Products.map((a)=>{
         return(
           <div className="card col-2 fullS-col">
