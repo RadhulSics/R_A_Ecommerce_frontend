@@ -42,9 +42,7 @@ function Selleruser() {
                 <option>other</option>
               </select>
               </div>
-              <div>
-                <button className='view-button'>View-profile</button>
-              </div>
+            
               <div>
                 <Link className='view-button' to='/OrderDetails'>Order detsils</Link>
               </div>

@@ -16,19 +16,19 @@ function NavbarSeller() {
       <ul className='navS-flex'>
 
         <div>
-        <li className='navS-li'><a className='navS-a' href='#'>HOME</a></li>
+        <li className='navS-li'><Link className='navS-a' to='/Seller'>HOME</Link></li>
         </div>
         <div>
-        <li className='navS-li'><a className='navS-a' href='#'>OWN PRODUCTS</a></li>
+        <li className='navS-li'><Link className='navS-a' to='/IndProductsSeller'>OWN PRODUCTS</Link></li>
         </div>
         <div>
-        <li className='navS-li'><a className='navS-a' href='#'>ORDER DETAILS</a></li>
+        <li className='navS-li'><Link className='navS-a' to='/OrderDetailsSeller'>ORDER DETAILS</Link></li>
         </div>
         <div>
-        <li className='navS-li'><a className='navS-a' href='#'>PROFILE</a></li>
+        <li className='navS-li'><Link className='navS-a' to='/ProfileSeller'>PROFILE</Link></li>
         </div>
         <div>
-        <li className='navS-li'><a className='navS-a' href='#'>NEW PRODUCT</a></li>
+        <li className='navS-li'><Link className='navS-a' to='/NewprodSeller'>NEW PRODUCT</Link></li>
         </div>
         
         <div>
@@ -46,7 +46,7 @@ function NavbarSeller() {
         </div>
         
         <div>
-          <button type="button" className="navS-logout">LOGOUT</button>
+          <button type="button" className="navS-logout"><Link className='nav-a' to='/'>LOG OUT</Link></button>
         </div>
 
         <div>
