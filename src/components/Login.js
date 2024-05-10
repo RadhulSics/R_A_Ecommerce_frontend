@@ -46,11 +46,11 @@ let signin=(a)=>{
 }
 
   return (
-   
+   <div className='login-main-bg'>
       <form onSubmit={signin} className='main'>
         <div className='submain'>
           <div class className="login">
-            <h1 className='login-title'>LOG IN</h1>
+            <p className='login-title'>LOG IN</p>
             <div className='firstinput'>
               <img src={user_icon} alt="user_icon" className='user' />
               <input type='text' placeholder='username' className='username login-input'   name='username' value={data.username} onChange={change}/>
@@ -68,11 +68,12 @@ let signin=(a)=>{
               <button type='submit' className='buttons'>login</button>
             </div>
             <div className='forgotlink'>
-              <a className='a-tag' href='#'>forgot password? </a>or<Link to='/Register'> Sign up</Link>
+              <a className='a-tag' href='#'>forgot password? </a>or<Link to='/Register' className='a-tag'> Sign up</Link>
             </div>
           </div>
         </div>
       </form>
+      </div>
   )
 }
 

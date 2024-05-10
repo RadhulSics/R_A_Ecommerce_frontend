@@ -36,7 +36,7 @@ function ProfileUser() {
           <p>DOB : 02/02/2001</p>
         </div>
         <div>
-          <button className='profU-edit'><Link to='/ProfileeditUser'>EDIT</Link></button>
+          <button className='profU-edit'><Link className='Link-decoration' to='/ProfileeditUser'>EDIT</Link></button>
         </div>
       </div>
     </div>

@@ -11,6 +11,7 @@ html {
   text-decoration: none;
   color: white;
 }
+
  /* ----- Navbar of admin Starts ----- */
 .nav-admin{
   position: fixed;
@@ -195,15 +196,28 @@ input.nav-searchbar{
 /* ----- Navbar of admin Ends ----- */
 
 /* ----- Registration Starts ----- */
+.reg-main-bg{
+  margin-top: 0rem;
+  width: 100%;
+  height: 775px;
+  background-image: url('../images/bgecom1.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  /* background-size: cover; */
 
+}
 .reg-main{
   width: 30%;
-  height: 50%;
+  height: 68%;
   padding: 20px;
-  margin: auto;
-  margin-top: 5%;
+  /* margin-left: 35rem; */
+  margin-top: 9rem;
   border-radius: 10px;
-  background-color: #EE9F43;
+  /* float: left; */
+  position:absolute;
+  right: 9rem;
+  background-color:hsla(222, 50%, 72%, 0.921);
+  box-shadow: 8px 8px 20px rgb(143, 144, 144);
 }
 
 .reg-title{
@@ -285,7 +299,7 @@ input.reg-input{
 }
 
 input.reg-input:focus {
-  background-color: #44949F;
+  background-color: #44959f49;
   color:white;
   font-size: large;
   text-indent: 1.5rem;
