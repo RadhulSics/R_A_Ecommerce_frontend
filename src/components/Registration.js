@@ -2,87 +2,50 @@ import React, { useState } from 'react'
 import './login.css';
 import './StyleR.css';
 import { Link } from 'react-router-dom';
+import axios from 'axios'
+
 function Registration() {
 
-  const [data,SetData]=useState({username:'',email:'',number:'',password:''})
-  const [errors, setErrors] = useState({username:'',email:'',number:'',password:''});
+  const [data,SetData]=useState({name:'',email:'',number:'',password:''})
+  const [userType, setUserType] = useState('user');
+  
   const change=(b)=>{
-    const { name, value } = b.target;
-    SetData(prevData => ({
-        ...prevData,
-        [name]: value
-    }));
-    setErrors(prevErrors => ({
-      ...prevErrors,
-      [name]: ''
-  }));
-    }
-    const validateField = (fieldName, value) => {
-      if (!value.trim()) {
-          return `${fieldName} is required`;
-      }
-      return '';
-    };
-    const validateNumber =(fieldName,value)=>{
+    setUserType(b.target.value);
+    SetData({...data,[b.target.name]:b.target.value})
+    console.log(data);
+  }
 
-      if (!value.trim()) {
-        return `${fieldName} is required`;
-    }
-  
-      else if(value.toString().length!==10){
-        return `${fieldName}  10 digits required`;
-   }
-    }
-    const validatePassword =(fieldName,value)=>{
-      var erorrsPassword=[]
-       if (!value.trim()) {
-         erorrsPassword.push(`${fieldName} is required and include any`);
-     }
-     
-        if(value.search(/[\!\@\#\$\%\^\&\*\(\)\_\+\.\,\;\:\-]/) < 0){
-         erorrsPassword.push(`special character ,`);
-     }
-     
-        if (value.length < 7) {
-         erorrsPassword.push(`length minimum 8 ,`);
-       }
-        if (value.search(/[a-z]/) < 0) {
-         erorrsPassword.push(`one small letter ,`);
-       }
-       if (value.search(/[A-Z]/) < 0) {
-       erorrsPassword.push(`one capital letter ,`);
-       }
-       if (value.search(/[0-9]/) < 0) {
-         erorrsPassword.push(`and any number.`);
-       }
-       if (erorrsPassword.length > 0) {
-         return `${erorrsPassword.join("\n")}`;
-     }
-     return true;
-     }
-     
-  
   let signup=(a)=>{
     a.preventDefault()
-    let errors = {};
-      let formIsValid = true;
+  
+      console.log("data", data);
 
-     
-      errors.username= validateField('username', data.username);
-      errors.email= validateField('email', data.email);
-      errors.number= validateNumber('number', data.number);
-      errors.password = validatePassword('password', data.password);
-
-
-      setErrors(errors);
-
-      if (formIsValid) {
-          console.log("data", data);
+      if(userType === 'user'){
+        axios.post('http://localhost:3000/newuser',data)
+        .then((rec)=>{
+          console.log(rec);
+        })
+        .catch((err)=>{
+          console.log(err)
+        })
       }
+      else if(userType === 'seller'){
+        axios.post('http://localhost:3000/newseller',data)
+        .then((rec)=>{
+          console.log(rec);
+        })
+        .catch((err)=>{
+          console.log(err)
+        })
+  }
+       else{
+        alert('Please select account type')
+       }
     }
   return (
-    <div>
-       <form onSubmit={signup} className='reg-main'>
+    <div className='reg-main-bg'>
+    <div className='reg-main'>
+       <form onSubmit={signup} >
 
        <div className='row reg-oldUser'>
         <p className='col-9 reg-loginText'>Already have an account?</p>
@@ -92,34 +55,26 @@ function Registration() {
         <div className='reg-submain'>
             <h2 className='reg-title'>SIGN UP</h2>
               <div>
-                <label className='reg-label'>Buyer</label>
-                <input type='radio' name='usertype' />
+                <label className='reg-label'>User</label>
+              <input type='radio'  name='usertype' value={'user'}  checked={userType === 'user'} onChange={change}/>
                 <label  className='reg-label'>Seller</label>
-                <input type='radio' name='usertype' />
+                <input type='radio' name='usertype' value={"seller"}  checked={userType === 'seller'} onChange={change} />
               </div>
 
-              <input className='reg-input'  type='text' placeholder='Username...' value={data.username} name='username' onChange={change}/>
-          {errors.username&& (
-                <div className="text-danger signupWorkshop-validation">{errors.username}</div>
-              )}
+              <input className='reg-input'  type='text' placeholder='Username...' value={data.name} name='name' onChange={change}/>
+         
       
               <input className='reg-input reg-number' type='number' placeholder='Phone number...' value={data.number} name='number' onChange={change}/>
-          {errors.number && (
-                <div className="text-danger signupWorkshop-validation">{errors.number}</div>
-              )}
+          
               <input className='reg-input'  type='email' placeholder='Email...'  value={data.email} name='email' onChange={change}/>
-          {errors.email && (
-                <div className="text-danger signupWorkshop-validation">{errors.email}</div>
-              )}
+          
               <input className='reg-input'  type='password' placeholder='Password...'value={data.password} name='password' onChange={change}/>
-          {errors.password && (
-                <div className="text-danger signupWorkshop-validation">{errors.password}</div>
-              )}
+         
               <div>
                 <label  className='reg-label'>Male</label>
-                <input type='radio' name='gender' />
+                <input type='radio' name='gender' value={'male'}/>
                 <label  className='reg-label'>Female</label>
-                <input type='radio' name='gender' />
+                <input type='radio' name='gender' value={'female'} />
               </div>
 
             <div >
@@ -128,7 +83,7 @@ function Registration() {
         </div>
       </form>
     </div>
-   
+    </div>
   )
 }
 

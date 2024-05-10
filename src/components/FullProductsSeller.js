@@ -10,14 +10,17 @@ function FullProductsSeller() {
   const [Products,SetProducts]=useState([]);
 
   useEffect(()=>{
-    axios.get('https://fakestoreapi.com/products')
-    .then((rec)=>{
-      SetProducts(rec.data)
+    axios.post('http://localhost:3000/viewproducts')
+    .then((res)=>{
+     console.log('successful');
+     console.log(res);
+     SetProducts(res.data)
     })
     .catch((err)=>{
       console.log(err)
     })
   },[])
+  
 console.log(Products)
   return (
     <div >
@@ -27,11 +30,11 @@ console.log(Products)
       {Products.map((a)=>{
         return(
           <div className="card col-2 fullS-col">
-           <img className="card-img-top fullS-img" src={a.image+" "} />
+           <img className="card-img-top fullS-img" src={a.image+" "} alt='image' />
            <div className="card-body">
           
             <div className='fullS-name'>
-            {a.title+" "}
+            {a.name+" "}
             </div> 
             <hr/>
             <div className='fullS-price'>
