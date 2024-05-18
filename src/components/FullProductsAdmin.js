@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
-import './StyleR.css';
+import './FullProductsAdmin.css';
 import { Link } from 'react-router-dom';
 
 function FullProductsAdmin() {
@@ -27,7 +27,7 @@ console.log(Products)
       {Products.map((a)=>{
         return(
           <div className="card col-2 fullA-col">
-           <img className="card-img-top fullA-img" src={a.image+" "} />
+           <img className="card-img-top fullA-img" src={`http://localhost:3000/${a.image.filename}`} alt='image' />
            <div className="card-body">
           
             <div className='fullA-name'>

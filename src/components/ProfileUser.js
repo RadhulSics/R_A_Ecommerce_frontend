@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import profilepic from '../images/profileseller.jpg'
 import { Link } from 'react-router-dom';
+import './ProfileUser.css'
 function ProfileUser() {
   return (
     <div className='row'>

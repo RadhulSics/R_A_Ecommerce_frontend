@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import './StyleR.css';
+import './BanAdmin.css';
 import axios from 'axios'
 
 function BanAdmin() {

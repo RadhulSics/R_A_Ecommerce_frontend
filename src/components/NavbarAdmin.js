@@ -1,5 +1,5 @@
 import React from 'react'
-import './StyleR.css';
+import './NavbarAdmin.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import { Link } from 'react-router-dom';

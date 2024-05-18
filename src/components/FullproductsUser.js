@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
-import './login.css';
+import './FullproductsUser.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import { Link } from 'react-router-dom';
@@ -8,15 +8,16 @@ import { Link } from 'react-router-dom';
 function FullproductsUser() {
     const [state,setState]=useState([]);
     useEffect(()=>{
-        axios.get('https://fakestoreapi.com/products')
+        axios.post('http://localhost:3000/viewproducts')
         .then((res)=>{
-            setState(res.data)
+         console.log('successful');
+         console.log(res);
+         setState(res.data)
         })
-        .catch((error)=>{
-            console.log(error)
+        .catch((err)=>{
+          console.log(err)
         })
-
-    },[])
+      },[])
     console.log(state)
 
   return (
@@ -26,15 +27,16 @@ function FullproductsUser() {
             {state.map((c)=>{
                 return(
                     <div className="card col-2 fullU-col">
-           <img className="card-img-top fullU-img" src={c.image+" "} />
+           <img className="card-img-top fullU-img" src={`http://localhost:3000/${c.image.filename}`} alt='image' />
            <div className="card-body">
             <div className='fullU-name'>
-            {c.title+" "}
+            {c.name+" "}
             </div> 
             <hr/>
             <div className='fullU-price'>
             {'Rs. '+c.price+" "}
             </div> 
+           
             </div> 
           </div>
                 )

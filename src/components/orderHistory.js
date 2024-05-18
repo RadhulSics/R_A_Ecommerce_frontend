@@ -1,6 +1,6 @@
 import React,{ useEffect,useState } from 'react'
 import axios from 'axios'
-import './login.css'
+import './OrderHistory.css'
 
 function OrderHistory() {
     const [Order,SetOrder] = useState([])

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './login.css';
-import './StyleR.css';
+import './Registration.css';
 import { Link } from 'react-router-dom';
 import axios from 'axios'
 
