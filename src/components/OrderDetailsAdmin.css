@@ -1,0 +1,51 @@
+
+
+  /* ----- Order Details Admin Starts ----- */
+
+  .orderD-main{
+    position: relative;
+    right: -2rem;
+    top: 5rem;
+    width: 100%;
+    padding: 1rem;
+    text-decoration: none;
+   }
+ 
+   .orderD-img{
+     width: 12rem;
+     height: 10rem;
+     object-fit: contain;
+     padding: 1rem;
+   }
+   
+   .orderD-flex {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-between;
+     align-items: center;
+     border-top: 1px solid rgba(0, 0, 0, 0.455);
+     margin: 0.5rem;
+     width: 90rem;
+ }
+ 
+ .orderD-details{
+   color: #E35F14 !important;
+   font-weight: bold;
+   height: 2.5rem;
+   width: 20rem;
+ }
+ 
+ .orderD-price{
+   text-align: center;
+   font-weight: 660;
+   color: black;
+ }
+ 
+ .orderD-rating{
+   color: black;
+ }
+ .orderD-date{
+   margin-right: 2rem;
+ }
+ 
+   /* ----- Order Details Admin Ends ----- */

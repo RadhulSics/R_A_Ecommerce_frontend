@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
-import './StyleR.css';
+import './FullProductsSeller.css';
 import { Link } from 'react-router-dom';
 
 function FullProductsSeller() {
@@ -26,25 +26,28 @@ console.log(Products)
     <div >
       
     <div >
-    <Link to='/IndproductsSeller' className="row fullS-main">
-      {Products.map((a)=>{
-        return(
-          <div className="card col-2 fullS-col">
-           <img className="card-img-top fullS-img" src={a.image+" "} alt='image' />
+    <Link to='/IndProductsSeller' className='Link-decoration' >
+        <div className='row fullU-main'>
+            {Products.map((c)=>{
+                return(
+                    <div className="card col-2 fullU-col">
+           <img className="card-img-top fullU-img" src={`http://localhost:3000/${c.image.filename}`} alt='image' />
            <div className="card-body">
-          
-            <div className='fullS-name'>
-            {a.name+" "}
+            <div className='fullU-name'>
+            {c.name+" "}
             </div> 
             <hr/>
-            <div className='fullS-price'>
-            {'Rs. '+a.price+" "}
+            <div className='fullU-price'>
+            {'Rs. '+c.price+" "}
             </div> 
+           
             </div> 
           </div>
-        )
-      })}
-       </Link>
+                )
+
+            })}
+        </div>
+        </Link>
     </div>
    
     </div>

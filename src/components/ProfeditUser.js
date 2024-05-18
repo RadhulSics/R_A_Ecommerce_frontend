@@ -1,4 +1,5 @@
 import React from 'react'
+import './ProfeditUser.css'
 
 function ProfeditUser() {
   return (

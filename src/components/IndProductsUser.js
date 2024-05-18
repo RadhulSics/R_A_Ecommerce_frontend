@@ -4,7 +4,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import image1 from "../images/image1.jpg";
 import image2 from "../images/image2.jpg";
 import image3 from "../images/image3.jpg";
-import './StyleR.css'
+import './IndProductsUser.css'
 import { Link } from 'react-router-dom';
 
 function IndProductsUser() {
@@ -46,7 +46,9 @@ function IndProductsUser() {
         <br/> <br/> <br/> <br/>
         <div>
         <button className='indprodU-buy-btn'type='submit'><Link className="Link-decoration" to='/BuyingprodUser'>BUY NOW</Link></button>
+        <button className='indprodU-cart-btn'>Add to cart</button>
         </div>
+        
       </div>
 
       <div className="col-7">

@@ -26,6 +26,7 @@ import IndProductsUser from './components/IndProductsUser.js'
 import BuyingprodUser from './components/BuyingprodUser.js'
 import OwnprodSeller from './components/ownprodSeller.js';
 import ProfileeditSeller from './components/ProfeditSeller.js'
+import CartUser from './components/CartUser.js';
 
 
 function App() {
@@ -44,7 +45,8 @@ function App() {
 
       <Route path='/User' element={[<Navbaruser/>,<FullproductsUser/>]} />
       <Route path='/ProfileUser' element={[<Navbaruser/>,<ProfUser/>]} />
-      <Route path='/OrderDetailsUSer' element={[<Navbaruser/>,<OrderDetailsUSer/>]} />
+      <Route path='/OrderDetailsUser' element={[<Navbaruser/>,<OrderDetailsUSer/>]} />
+      <Route path='/CartUser' element={[<Navbaruser/>,<CartUser/>]} />
       
       <Route path='/Seller' element={[<NavbarSeller/>,<FullProductsSeller/>]} />
       <Route path='/IndProductsSeller' element={[<NavbarSeller/>,<IndProductsSeller/>]} />

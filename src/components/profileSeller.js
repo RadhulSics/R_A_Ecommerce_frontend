@@ -1,5 +1,5 @@
 import React from 'react'
-import './login.css'
+import './ProfileSeller.css'
 import profilepic from '../images/profileseller.jpg'
 import { Link } from 'react-router-dom'
 

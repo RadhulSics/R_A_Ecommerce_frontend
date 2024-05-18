@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
+import './BuyingprodUser.css'
 
 function BuyingprodUser() {
   const[Product,setProduct]=useState({});
