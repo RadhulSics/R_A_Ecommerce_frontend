@@ -3,26 +3,40 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import axios from 'axios';
 import './Indproducts.css';
-import image1 from '../images/image1.jpg'
-import image2 from '../images/image2.jpg'
-import image3 from '../images/image3.jpg'
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 function Indproducts() {
-  
+  const[State,SetState]=useState({
+    image1:{filename:''},
+    image2:{filename:''},
+    image3:{filename:''}
+  })
+
+  const {id}=useParams()
+  console.log(id);
+
+useEffect(()=>{
+  axios.post(`http://localhost:3000/viewIndividualproducts/${id}`)
+  .then((rec)=>{
+    SetState(rec.data)
+  })
+  .catch((err)=>{
+    console.log(err)
+  })
+},[])
 
   return (
     <div className='row'>
       <div id="carouselExample" class="carousel slide col-6 " style={{width:'50%'}}>
   <div class="carousel-inner">
     <div class="carousel-item active caro-change">
-      <img src={image1} class="d-block w-100 indprod-img" alt="..."/>
+      <img src={`http://localhost:3000/${State.image1.filename}`} class="d-block w-100 indprod-img" alt="..."/>
     </div>
     <div class="carousel-item caro-change">
-      <img src={image2} class="d-block w-100 indprod-img" alt="..."/>
+      <img src={`http://localhost:3000/${State.image2.filename}`} class="d-block w-100 indprod-img" alt="..."/>
     </div>
     <div class="carousel-item caro-change">
-      <img src={image3} class="d-block w-100 indprod-img" alt="..."/>
+      <img src={`http://localhost:3000/${State.image3.filename}`} class="d-block w-100 indprod-img" alt="..."/>
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">

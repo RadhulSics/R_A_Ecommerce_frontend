@@ -1,47 +1,66 @@
-import React from "react";
+import React, { useEffect, useState } from 'react'
+import axios from 'axios'
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
-import image1 from "../images/image1.jpg";
-import image2 from "../images/image2.jpg";
-import image3 from "../images/image3.jpg";
 import './IndProductsUser.css'
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 function IndProductsUser() {
+
+  const[State,SetState]=useState({
+    image1:{filename:''},
+    image2:{filename:''},
+    image3:{filename:''}
+  })
+
+  const {id}=useParams()
+  console.log(id);
+
+useEffect(()=>{
+  axios.post(`http://localhost:3000/viewIndividualproducts/${id}`)
+  .then((rec)=>{
+    SetState(rec.data)
+  })
+  .catch((err)=>{
+    console.log(err)
+  })
+},[])
+
+console.log(State);
   return (
     <div className="row">
       <div
         id="carouselExample"
-        class="carousel slide col-5  "
+        className="carousel slide col-5  "
       >
-        <div class="carousel-inner " >
-          <div class="carousel-item active caro-change" >
-            <img src={image1} class="d-block w-100 indprodU-img" alt="..." />
+        <div className="carousel-inner " >
+          <div className="carousel-item active caro-change" >
+            <img src={`http://localhost:3000/${State.image1.filename}`} className="d-block w-100 indprodU-img" alt="img1" />
           </div>
-          <div class="carousel-item caro-change">
-            <img src={image2} class="d-block w-100 indprodU-img" alt="..." />
+          <div className="carousel-item caro-change">
+          <img src={`http://localhost:3000/${State.image2.filename}`} className="d-block w-100 indprodU-img" alt="img2" />
           </div>
-          <div class="carousel-item caro-change">
-            <img src={image3} class="d-block w-100 indprodU-img" alt="..." />
+          <div className="carousel-item caro-change">
+          <img src={`http://localhost:3000/${State.image3.filename}`} className="d-block w-100 indprodU-img" alt="img3" />
           </div>
         </div>
         <button
-          class="carousel-control-prev"
+          className="carousel-control-prev"
           type="button"
           data-bs-target="#carouselExample"
           data-bs-slide="prev"
         >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
         </button>
         <button
-          class="carousel-control-next"
+          className="carousel-control-next"
           type="button"
           data-bs-target="#carouselExample"
           data-bs-slide="next"
         >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
+          <span className="carousel-control-next-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Next</span>
         </button>
         <br/> <br/> <br/> <br/>
         <div>
@@ -53,13 +72,13 @@ function IndProductsUser() {
 
       <div className="col-7">
         <div className="indprodU-title">
-      <h2><b>Stormborn</b></h2>
-  <p>Graphic Printed Oversized t-shirt </p>
+      <h2><b>{State.brand}</b></h2>
+  <p>{State.name} </p>
   </div>
   <hr style={{width:'50rem'}}/>
 
   <div>
-  <p className='indprodU-price'>Rs : 299 </p>
+  <p className='indprodU-price'>Rs : {State.price} </p>
   </div>
   <div className='indprodU-rating'>
   <h6>RATING : 4.2 ⭐ </h6>
@@ -83,31 +102,12 @@ function IndProductsUser() {
 </div>
 
 <div className='indprodU-details'>
-  <h5 className='indprodU-det'>
-  PRODUCT DETAILS 
-  </h5>
-  <p>
-Black T-shirt for men
-Graphic printed
-Regular length
-Round neck
-Short, drop shoulder sleeves
-Knitted cotton fabric
-</p>
-Size & Fit
-Oversized
-The model (height 6') is wearing a size M
 
-Material & Care
-100% Cotton
-Machine Wash
-<br/>
 
 <h6 className='indprodU-spec'>
 Specifications :
 </h6>
-Fabric Cotton Fit Oversized Length Regular Main Trend Graphic Print Others Multipack Set Single Neck Round Neck Number of Items 1
- 
+<p>{State.specifications}</p>
 </div>
       </div>
     </div>

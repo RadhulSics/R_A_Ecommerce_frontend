@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import'./components/StyleR.css';
 import Login from './components/Login';
 import NavAdmin from './components/NavbarAdmin.js';
 import Register from './components/Registration.js';
@@ -36,28 +37,31 @@ function App() {
     <Routes>
       <Route path='/' element={[<Login/>]} />
       <Route path='/Register' element={[<Register/>]} />
+
+
       <Route path='/Admin' element={[<NavAdmin/>,<FullProdAdmin/>]} />
       <Route path='/Ban' element={[<NavAdmin/>,<Ban/>]} />
       <Route path='/OrderDetails' element={[<NavAdmin/>,<OrderDetails/>]}/>
       <Route path='/ProdApproval' element={[<NavAdmin/>,<ProdApproval/>]} />
       <Route path='/UserAdmin' element={[<NavAdmin/>,<Selleruser/>]} />
       <Route path='/SellerAdmin' element={[<NavAdmin/>,<Selleruser/>]} />
+      <Route path='/IndProductsAdmin/:id' element={[<NavbarAdmin/>,<Indproducts/>]} />
+
 
       <Route path='/User' element={[<Navbaruser/>,<FullproductsUser/>]} />
       <Route path='/ProfileUser' element={[<Navbaruser/>,<ProfUser/>]} />
       <Route path='/OrderDetailsUser' element={[<Navbaruser/>,<OrderDetailsUSer/>]} />
       <Route path='/CartUser' element={[<Navbaruser/>,<CartUser/>]} />
-      
-      <Route path='/Seller' element={[<NavbarSeller/>,<FullProductsSeller/>]} />
-      <Route path='/IndProductsSeller' element={[<NavbarSeller/>,<IndProductsSeller/>]} />
-      <Route path='/OrderDetailsSeller' element={[<NavbarSeller/>,<OrderdetailsSeller/>]} />
-      <Route path='/ProfileSeller' element={[<NavbarSeller/>,<ProfileSeller/>]} />
-      <Route path='/NewprodSeller' element={[<NavbarSeller/>,<NewprodSeller/>]} />
-      <Route path='/IndProductsAdmin' element={[<NavbarAdmin/>,<Indproducts/>]} />
-      <Route path='/IndProductsUser' element={[<Navbaruser/>,<IndProductsUser/>]} />
+      <Route path='/IndProductsUser/:id' element={[<Navbaruser/>,<IndProductsUser/>]} />
       <Route path='/BuyingprodUser' element={[<Navbaruser/>,<BuyingprodUser/>]} />
       <Route path='/ProfileeditUser' element={[<Navbaruser/>,<ProfileeditUser/>]} />
       <Route path='/OwnprodSeller' element={[<NavbarSeller/>,<OwnprodSeller/>]} />
+      
+      <Route path='/Seller' element={[<NavbarSeller/>,<FullProductsSeller/>]} />
+      <Route path='/IndProductsSeller/:id' element={[<NavbarSeller/>,<IndProductsSeller/>]} />
+      <Route path='/OrderDetailsSeller' element={[<NavbarSeller/>,<OrderdetailsSeller/>]} />
+      <Route path='/ProfileSeller' element={[<NavbarSeller/>,<ProfileSeller/>]} />
+      <Route path='/NewprodSeller' element={[<NavbarSeller/>,<NewprodSeller/>]} />
       <Route path='/ProfileeditSeller' element={[<NavbarSeller/>,<ProfileeditSeller/>]} />
     </Routes>
     </BrowserRouter>
