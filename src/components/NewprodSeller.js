@@ -7,14 +7,23 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 
 function NewprodSeller() {
 
-  const[data,SetData]=useState({name:'',brand:'',quantity:'',material:'',specifications:'',price:'',image:'null'})
+  const[data,SetData]=useState({name:'',brand:'',quantity:'',material:'',specifications:'',price:'',image1:'null',image2:'null',image3:'null'})
 
   const change=(b)=>{
 
-    if(b.target.name === "image"){
+    if(b.target.name === "image1"){
       // handleImageUpload(e);
-      SetData({...data,image:b.target.files[0]});
-  }else {
+      SetData({...data,image1:b.target.files[0]});
+  }
+  else if(b.target.name === "image2"){
+    // handleImageUpload(e);
+    SetData({...data,image2:b.target.files[0]});
+}
+else if(b.target.name === "image3"){
+  // handleImageUpload(e);
+  SetData({...data,image3:b.target.files[0]});
+}
+else {
       SetData({...data,[b.target.name]:b.target.value})
   }
   console.log(data);
@@ -79,9 +88,18 @@ function productAdd(b){
        <td> <input  className='prod-sellerinput' type='number'  name='price' value={data.price} onChange={change} required></input></td>
       </tr>
       <tr>
-       <td><label  className='prod-sellerlabel'>Photo : </label></td> 
-       <td> <input   className='prod-sellerinput'type='file' name='image' onChange={change} required></input></td> 
+       <td><label  className='prod-sellerlabel'>Photo 1 : </label></td> 
+       <td> <input   className='prod-sellerinput'type='file' name='image1' onChange={change} required></input></td> 
         </tr>
+        <tr>
+       <td><label  className='prod-sellerlabel'>Photo 2 : </label></td> 
+       <td> <input   className='prod-sellerinput'type='file' name='image2' onChange={change} required></input></td> 
+        </tr>
+        <tr>
+       <td><label  className='prod-sellerlabel'>Photo 3 : </label></td> 
+       <td> <input   className='prod-sellerinput'type='file' name='image3' onChange={change} required></input></td> 
+        </tr>
+        
       
       <button type='submit' className='new-prod-btn' >Add</button>
 

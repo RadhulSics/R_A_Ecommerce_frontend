@@ -22,28 +22,32 @@ function FullproductsUser() {
 
   return (
     <div >
-        <Link to='/IndProductsUser' className='Link-decoration' >
+        
         <div className='row fullU-main'>
             {state.map((c)=>{
                 return(
-                    <div className="card col-2 fullU-col">
-           <img className="card-img-top fullU-img" src={`http://localhost:3000/${c.image.filename}`} alt='image' />
+                 
+            <div className="card col-2 fullU-col">
+               <Link to={`/IndProductsUser/${c._id}`} className='Link-decoration' >
+           <img className="card-img-top fullU-img" src={`http://localhost:3000/${c.image1.filename}`} alt='image' />
            <div className="card-body">
             <div className='fullU-name'>
             {c.name+" "}
-            </div> 
-            <hr/>
             <div className='fullU-price'>
             {'Rs. '+c.price+" "}
             </div> 
-           
             </div> 
+           
+            
+            </div> 
+            </Link>
           </div>
+          
                 )
 
             })}
         </div>
-        </Link>
+      
     </div>
   )
 }
