@@ -1,13 +1,14 @@
 
   
   /* ----- Profile User Starts ----- */
-
+.profS-main{
+  margin-top: 4rem;
+}
   .profU-name{
     width: 30rem;
     border: 1px solid rgb(180, 179, 179);
     border-radius: .5rem;
     padding: 1rem;
-    margin:5%;
     background-color: rgba(209, 209, 209, 0.515);
     box-shadow: 2px 2px 10px rgb(143, 144, 144);
     position: relative;
@@ -30,13 +31,8 @@
     align-items: center;
   }
 
-  .profU-img{
-    border: black;
-    border-radius: 50%;
-    object-fit: contain;
-    width: 7rem;
-    height: 7rem;
-  
+  .profU-welcome{
+  margin: 0%;
   }
 
   .profU-left{
@@ -47,10 +43,11 @@
   }
 
   .profU-left1{
-  margin-left: 1rem;
+  margin-left: -4rem;
+  margin-top: 1rem;
   font-size: large;
   font-weight: bold;
-  text-align: left;
+
   }
 
   .profU-logout{

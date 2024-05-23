@@ -18,7 +18,7 @@
    flex-wrap: wrap;
    justify-content: space-between;
    align-items: center;
-   border-top: 1px solid rgba(0, 0, 0, 0.455);
+   border-bottom: 1px solid rgba(0, 0, 0, 0.455);
    margin: 0.5rem;
    width: 90rem;
 }

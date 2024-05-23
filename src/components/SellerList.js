@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react'
-import './Selleruser.css';
+import './SellerList.css';
 import axios from 'axios'
 import { Link } from 'react-router-dom';
 
-function Selleruser() {
+function SellerList() {
 
   const [state,setState]=useState([]);
 
  useEffect(()=>{
-  axios.get('https://api.escuelajs.co/api/v1/users')
+  axios.post('http://localhost:3000/allSeller')
   .then((res)=>{
     setState(res.data)
   })
@@ -18,13 +18,13 @@ function Selleruser() {
  },[])
  console.log(state)
   return (
-    <div className='selleruser-main'>
+    <div className='SellerList-main'>
       <div>
         {state.map((b)=>{
           return(
-          <div className='selleruser-flex'>
+          <div className='SellerList-flex'>
             <div>
-             <img className='selleruser-image' src={b.avatar} />
+             <img className='SellerList-image' src={b.avatar} />
              </div>
              <div>
               {'Name : '+b.name}
@@ -34,8 +34,8 @@ function Selleruser() {
               </div>
               <div>
               <label>Reason :</label>
-              <select className='select-reason'>
-                <option className='opt-select'></option>
+              <select className='SellerList-select-reason'>
+                <option className='SellerList-opt-select'></option>
                 <option>spam</option>
                 <option>poor product quality</option>
                 <option>damaged products</option>
@@ -44,10 +44,10 @@ function Selleruser() {
               </div>
             
               <div>
-                <Link className='view-button' to='/OrderDetails'>Order detsils</Link>
+                <Link className='SellerList-view-button' to='/OrderDetails'>Order detsils</Link>
               </div>
               <div>
-              <button className='selleruser-banbutton'>BAN</button>
+              <button className='SellerList-banbutton'>BAN</button>
               </div>
               
           </div>
@@ -59,4 +59,4 @@ function Selleruser() {
   )
 }
 
-export default Selleruser
+export default SellerList

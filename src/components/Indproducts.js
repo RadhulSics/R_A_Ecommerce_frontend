@@ -50,9 +50,8 @@ useEffect(()=>{
 </div>
 
 <div className='col-6 ind-part'>
-  <h2 className='ind-title'>Stormborn</h2>
-  <p>Graphic Printed Oversized t-shirt </p>
-  
+  <h2 className='ind-title'>{State.brand}</h2>
+  <p>{State.name} </p>
   <hr/>
 
   <div>
@@ -79,43 +78,12 @@ useEffect(()=>{
     <label className='ind-label'  for="radioXL">XL</label> 
 </div>
 <div className='ind-details'>
-  <h5 className='ind-det'>
-  PRODUCT DETAILS 
-  </h5>
-  <p>
-Black T-shirt for men
-Graphic printed
-Regular length
-Round neck
-Short, drop shoulder sleeves
-Knitted cotton fabric
-</p>
-Size & Fit
-Oversized
-The model (height 6') is wearing a size M
-
-Material & Care
-100% Cotton
-Machine Wash
-<br/>
+ 
 
 <h6 className='ind-spec'>
 Specifications :
 </h6>
-Fabric
-Cotton
-Fit
-Oversized
-Length
-Regular
-Main Trend
-Graphic Print Others
-Multipack Set
-Single
-Neck
-Round Neck
-Number of Items
-1
+{State.specifications}
  
 </div>
 <hr/>

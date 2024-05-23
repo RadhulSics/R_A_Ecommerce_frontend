@@ -1,7 +1,7 @@
 
 
   /* selleruser starts */
-  .selleruser-main{
+  .SellerList-main{
     position: relative;
     right: -2rem;
     top: 3.5rem;
@@ -11,7 +11,7 @@
     margin-left: 2rem;
    }
  
-   .selleruser-flex{
+   .SellerList-flex{
      display: flex;
      justify-content: space-between;
      align-items: center;
@@ -27,7 +27,7 @@
      border-right-style: dotted;
    }
  
-   .selleruser-image{
+   .SellerList-image{
      width: 8rem;
      height: 8rem;
      margin: 1rem;
@@ -39,7 +39,7 @@
  
    
  
-   .selleruser-banbutton{
+   .SellerList-banbutton{
      color: white;
      background-color: #44949F;
      border: 1px solid transparent;
@@ -52,15 +52,15 @@
      margin: 10px 150px 10px 0px;
    }
    
-   .selleruser-banbutton:hover{
+   .SellerList-banbutton:hover{
      background-color: #E35F14;
    }
    
-   .selleruser-banbutton:active { 
+   .SellerList-banbutton:active { 
      transform: scale(0.98); 
      box-shadow: 3px 2px 22px 1px #E35F14; 
    }
-   .view-button{
+   .SellerList-view-button{
     color: white;
      background-color: #44949F;
      border: 1px solid transparent;
@@ -73,14 +73,14 @@
      margin: 10px 15px 10px 0px;
      text-decoration: none;
    }
-   .view-button:hover{
+   .SellerList-view-button:hover{
     background-color: #E35F14;
    }
-   .view-button:active { 
+   .SellerList-view-button:active { 
     transform: scale(0.98); 
     box-shadow: 3px 2px 22px 1px #E35F14; 
   }
-  .select-reason{
+  .SellerList-select-reason{
     color: #E35F14;
     border-radius: 10px;
     margin-left: 5px;

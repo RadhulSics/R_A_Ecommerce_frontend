@@ -14,7 +14,9 @@ function IndProductsUser() {
   })
 
   const {id}=useParams()
-  console.log(id);
+  console.log("prodid",id);
+  const uid = localStorage.getItem("uid")
+  console.log("userid",uid);
 
 useEffect(()=>{
   axios.post(`http://localhost:3000/viewIndividualproducts/${id}`)
@@ -25,6 +27,18 @@ useEffect(()=>{
     console.log(err)
   })
 },[])
+
+  const addItem=()=>{
+    axios.post(`http://localhost:3000/addCart/${uid}/${id}`)
+    .then((rec)=>{
+      console.log('Item added to cart');
+    })
+    .catch((err)=>{
+      console.log(err)
+    })
+  }
+    
+  
 
 console.log(State);
   return (
@@ -65,7 +79,7 @@ console.log(State);
         <br/> <br/> <br/> <br/>
         <div>
         <button className='indprodU-buy-btn'type='submit'><Link className="Link-decoration" to='/BuyingprodUser'>BUY NOW</Link></button>
-        <button className='indprodU-cart-btn'>Add to cart</button>
+        <button className='indprodU-cart-btn' onClick={addItem}>Add to cart</button>
         </div>
         
       </div>

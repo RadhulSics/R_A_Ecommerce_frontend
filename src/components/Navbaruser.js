@@ -1,11 +1,25 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './Navbaruser.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import cart from '../images/cart.png'
 
 function Navbaruser() {
+    const [Data,setData]=useState({search:''})
+    const navigate = useNavigate()
+    const change=(a)=>{
+        const {name,value}=a.target;
+        setData(prevData=>({
+            ...prevData,
+            [name]:value
+        }))
+        console.log(Data.search);
+    }
+    const searchFunction=()=>{
+        navigate(`/userSearch/${Data.search}`)
+    }
+
   return (
     <div>
         <nav>
@@ -22,14 +36,16 @@ function Navbaruser() {
                 <div>
                     <li className='navuser-li'><Link className='nav-ahref' to='/OrderDetailsUser'>HISTORY</Link></li>
                 </div>
-                <div>
-                    <form>
-                    <input type="text" class="search-barnav" placeholder="search..." aria-label="search" /> </form></div>
-                    <div>
-                        <form>
 
-                <button class="btn-search" type="submit">SEARCH</button></form>
+                    <form className='search-box'>
+                <div >
+                    <input type="text" class="search-barnav" placeholder="search..." aria-label="search" name='search' onChange={change} /> 
+                    </div>
+                <div>
+                <button class="btn-search" type="submit" onClick={searchFunction}>SEARCH</button>
                 </div>
+                </form>
+                
                 <div>
                   <Link to='/cartUser'><img className='cart-icon' src={cart}/></Link>  
                 </div>
