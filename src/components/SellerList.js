@@ -24,7 +24,8 @@ function SellerList() {
           return(
           <div className='SellerList-flex'>
             <div>
-             <img className='SellerList-image' src={b.avatar} />
+             
+             <img className='SellerList-image' src={`http://localhost:3000/${b.image.filename}`} alt='profile image' />
              </div>
              <div>
               {'Name : '+b.name}

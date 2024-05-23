@@ -57,6 +57,7 @@ function App() {
       <Route path='/ProfileeditUser' element={[<Navbaruser/>,<ProfileeditUser/>]} />
       <Route path='/userSearch/:data' element={[<Navbaruser/>,<UserSearch/>]} />
       
+      
       <Route path='/Seller' element={[<NavbarSeller/>,<FullProductsSeller/>]} />
       <Route path='/IndProductsSeller/:id' element={[<NavbarSeller/>,<IndProductsSeller/>]} />
       <Route path='/OrderDetailsSeller' element={[<NavbarSeller/>,<OrderdetailsSeller/>]} />
