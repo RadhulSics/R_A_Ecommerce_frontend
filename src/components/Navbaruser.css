@@ -71,4 +71,8 @@
    background-color: #44949F;
    font-weight: bold;
   }
+
+  .search-box{
+    display: flex;
+  }
   /* ......navbaruser ends...... */

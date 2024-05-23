@@ -6,8 +6,9 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 
 
 function NewprodSeller() {
-
-  const[data,SetData]=useState({name:'',brand:'',quantity:'',material:'',specifications:'',price:'',image1:'null',image2:'null',image3:'null'})
+const sid = localStorage.getItem('sid')
+console.log(sid);
+  const[data,SetData]=useState({name:'',brand:'',quantity:'',material:'',specifications:'',price:'',image1:'null',image2:'null',image3:'null',sid:sid})
 
   const change=(b)=>{
 

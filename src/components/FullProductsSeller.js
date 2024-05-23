@@ -23,24 +23,26 @@ function FullProductsSeller() {
   
 console.log(Products)
   return (
-    <div >
+    <div className='fullS-bg'>
       
     <div >
     
-        <div className='row fullU-main'>
+        <div className='row fullS-main'>
             {Products.map((c)=>{
                 return(
-                    <div className="card col-2 fullU-col">
+                    <div className="card col-2 fullS-col">
              <Link to={`/IndProductsSeller/${c._id}`} className='Link-decoration' >
-           <img className="card-img-top fullU-img" src={`http://localhost:3000/${c.image1.filename}`} alt='image' />
+           <img className="card-img-top fullS-img" src={`http://localhost:3000/${c.image1.filename}`} alt='image' />
            <div className="card-body">
-            <div className='fullU-name'>
+            <div className='fullS-name'>
+              <hr/>
             {c.name+" "}
-            </div> 
-            <hr/>
-            <div className='fullU-price'>
+            <div className='fullS-price'>
             {'Rs. '+c.price+" "}
             </div> 
+            </div> 
+  
+            
            
             </div> 
             </Link>

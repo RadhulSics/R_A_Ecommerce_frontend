@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import'./components/StyleR.css';
 import Login from './components/Login';
@@ -12,7 +11,6 @@ import OrderDetails from './components/OrderDetailsAdmin.js'
 import ProfUser from './components/ProfileUser.js'
 import { Route,Routes,BrowserRouter } from 'react-router-dom';
 import Indproducts from './components/Indproducts.js';
-import Selleruser from './components/Selleruser.js';
 import ProfileeditUser from './components/ProfeditUser.js'
 import ProdApproval from './components/Productapproval.js'
 import OrderDetailsUSer from './components/orderHistory.js'
@@ -28,7 +26,9 @@ import BuyingprodUser from './components/BuyingprodUser.js'
 import OwnprodSeller from './components/ownprodSeller.js';
 import ProfileeditSeller from './components/ProfeditSeller.js'
 import CartUser from './components/CartUser.js';
-
+import UserSearch from './components/UserSearch.js';
+import SellerList from './components/SellerList.js';
+import UserList from './components/UserList.js';
 
 function App() {
   return (
@@ -43,8 +43,8 @@ function App() {
       <Route path='/Ban' element={[<NavAdmin/>,<Ban/>]} />
       <Route path='/OrderDetails' element={[<NavAdmin/>,<OrderDetails/>]}/>
       <Route path='/ProdApproval' element={[<NavAdmin/>,<ProdApproval/>]} />
-      <Route path='/UserAdmin' element={[<NavAdmin/>,<Selleruser/>]} />
-      <Route path='/SellerAdmin' element={[<NavAdmin/>,<Selleruser/>]} />
+      <Route path='/UserAdmin' element={[<NavAdmin/>,<UserList/>]} />
+      <Route path='/SellerAdmin' element={[<NavAdmin/>,<SellerList/>]} />
       <Route path='/IndProductsAdmin/:id' element={[<NavbarAdmin/>,<Indproducts/>]} />
 
 
@@ -55,7 +55,7 @@ function App() {
       <Route path='/IndProductsUser/:id' element={[<Navbaruser/>,<IndProductsUser/>]} />
       <Route path='/BuyingprodUser' element={[<Navbaruser/>,<BuyingprodUser/>]} />
       <Route path='/ProfileeditUser' element={[<Navbaruser/>,<ProfileeditUser/>]} />
-      <Route path='/OwnprodSeller' element={[<NavbarSeller/>,<OwnprodSeller/>]} />
+      <Route path='/userSearch/:data' element={[<Navbaruser/>,<UserSearch/>]} />
       
       <Route path='/Seller' element={[<NavbarSeller/>,<FullProductsSeller/>]} />
       <Route path='/IndProductsSeller/:id' element={[<NavbarSeller/>,<IndProductsSeller/>]} />
@@ -63,6 +63,7 @@ function App() {
       <Route path='/ProfileSeller' element={[<NavbarSeller/>,<ProfileSeller/>]} />
       <Route path='/NewprodSeller' element={[<NavbarSeller/>,<NewprodSeller/>]} />
       <Route path='/ProfileeditSeller' element={[<NavbarSeller/>,<ProfileeditSeller/>]} />
+      <Route path='/OwnprodSeller' element={[<NavbarSeller/>,<OwnprodSeller/>]} />
     </Routes>
     </BrowserRouter>
   );

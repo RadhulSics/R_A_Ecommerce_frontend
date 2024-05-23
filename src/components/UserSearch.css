@@ -1,23 +1,23 @@
 
 
 /* ----- fullproducts user starts---- */
-.fullU-bg{
+.userSearch-bg{
   background: rgb(0,0,0);
  background: linear-gradient(119deg, rgba(0,0,0) 10%, rgba(212,20,35),rgb(39, 39, 227) 100%);
 }
-.fullU-main{
+.userSearch-main{
  width: 100%;
  padding-left: 2rem;
  text-decoration: none;
 }
 
-.fullU-col {
+.userSearch-col {
   margin: 1.7rem; 
   width: 15rem !important;
   height: 17rem;
 }
 
-.fullU-img{
+.userSearch-img{
   width: 12rem;
   height: 10rem;
   object-fit: cover;
@@ -26,7 +26,7 @@
   border-radius: 5px;
 }
 
-.fullU-name{
+.userSearch-name{
   font-size: small ;
   color: rgba(51, 49, 49, 0.812) !important;
   font-weight: bold;
@@ -35,7 +35,7 @@
   text-align: center;
 }
 
-.fullU-price{
+.userSearch-price{
   text-align: center;
   font-weight: 660;
   color: black;

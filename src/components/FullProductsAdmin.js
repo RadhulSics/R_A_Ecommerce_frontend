@@ -22,34 +22,37 @@ function FullProductsAdmin() {
    },[])
 console.log(Products)
   return (
-    <div >
-      
-    <div >
-   
-      {Products.map((a)=>{
-        return(
-          <div className="card col-2 fullA-col">
-
-          <Link to={`/IndProductsAdmin/${a._id}`} className="row fullA-main">
-           <img className="card-img-top fullA-img" src={`http://localhost:3000/${a.image1.filename}`} alt='image' />
-           <div className="card-body">
-          
-            <div className='fullA-name'>
-            {a.name+" "}
-            </div> 
-            <hr/>
-            <div className='fullA-price'>
-            {'Rs. '+a.price+" "}
-            </div> 
-            </div> 
-            </Link>
-          </div>
-        )
-      })}
+    <div className='fullA-bg' >
+        
+    <div className='row fullA-main'>
+        {Products.map((c)=>{
+            return(
+             
+        <div className="card col-2 fullA-col">
+           <Link to={`/IndProductsAdmin/${c._id}`} className='Link-decoration' >
+       <img className="card-img-top fullA-img" src={`http://localhost:3000/${c.image1.filename}`} alt='image' />
        
+       <div className="card-body">
+        
+        <div className='fullA-name'>
+        <hr/>
+        {c.name+" "}
+        <div className='fullA-price'>
+        <b>{'Rs : '+c.price+" "}</b>
+        </div> 
+        </div> 
+       
+        
+        </div> 
+        </Link>
+      </div>
+      
+            )
+
+        })}
     </div>
-   
-    </div>
+  
+</div>
    
   )
 }

@@ -2,42 +2,48 @@
 
  /* ----- Full products Admin starts ----- */
 
+.fullA-bg{
+  background: rgb(0,0,0);
+  background: linear-gradient(119deg, rgba(0,0,0) 10%, rgba(212,20,35),rgb(39, 39, 227) 100%);
+}
+ 
  .fullA-main{
-  position: relative;
-  right: -2rem;
- top: 5rem;
- width: 100%;
- padding: 1rem;
- text-decoration: none;
-}
-
-.fullA-col {
-  margin: .5rem; 
-  width: 12rem !important;
+  width: 100%;
+  padding-left: 2rem;
+  text-decoration: none;
+  margin-top: 4rem;
 
 }
-
-.fullA-img{
-  width: 12rem;
-  height: 10rem;
-  object-fit: contain;
-  padding-top: .25rem;
-  margin: 0;
-}
-
-.fullA-name{
-  font-size: small ;
-  color: rgba(51, 49, 49, 0.812) !important;
-  font-weight: bold;
-  width: 9rem;
-  height: 2.5rem;
-  overflow: hidden;
-}
-
-.fullA-price{
-  text-align: center;
-  font-weight: 660;
-}
-
+ 
+ .fullA-col {
+   margin: 1.7rem; 
+   width: 15rem !important;
+   height: 17rem;
+ }
+ 
+ .fullA-img{
+   width: 12rem;
+   height: 10rem;
+   object-fit: cover;
+   padding: .25rem;
+   margin: 10px 0 0 10px;
+   border-radius: 5px;
+ }
+ 
+ .fullA-name{
+   font-size: small ;
+   color: rgba(51, 49, 49, 0.812) !important;
+   font-weight: bold;
+   width: 9rem;
+   height: 2.5rem;
+   text-align: center;
+ }
+ 
+ .fullA-price{
+   text-align: center;
+   font-weight: 660;
+   color: black;
+ }
+ 
 
  /* ----- Full products Admin Ends ----- */

@@ -32,6 +32,7 @@ const validateField = (fieldName, value) => {
 };
 const navigate=useNavigate()
 
+
 let signin=(a)=>{
   a.preventDefault()
 
@@ -49,6 +50,7 @@ let signin=(a)=>{
         axios.post('http://localhost:3000/userLogin',data)
         .then((rec)=>{
           console.log(rec);
+          localStorage.setItem('uid',rec.data.data._id)
           navigate('/user')
         })
         .catch((err)=>{
@@ -59,11 +61,15 @@ let signin=(a)=>{
         axios.post('http://localhost:3000/sellerLogin',data)
         .then((rec)=>{
           console.log(rec);
+          localStorage.setItem('sid',rec.data.data._id)
           navigate('/seller')
         })
         .catch((err)=>{
           console.log(err)
         })
+  }
+    else if(data.email === 'admin' && data.password ==='admin'){
+      navigate('/admin')
   }
        else{
         alert('Please select account type')

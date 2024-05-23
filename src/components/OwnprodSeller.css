@@ -1,0 +1,84 @@
+.ownS-main{
+  position: relative;
+  right: -2rem;
+ top: 5rem;
+ width: 100%;
+ padding: 1rem;
+ text-decoration: none;
+}
+
+.ownS-col {
+  margin: .5rem; 
+  width: 12rem !important;
+  height: 11rem;
+}
+
+.ownS-img{
+  width: 12rem;
+  height: 10rem;
+  object-fit: contain;
+  padding-top: .25rem;
+  margin: 0;
+}
+
+.ownS-name{
+  font-size: small ;
+  color: rgba(51, 49, 49, 0.812) !important;
+  font-weight: bold;
+  width: 9rem;
+  height: 2.5rem;
+  overflow: hidden;
+}
+
+.ownS-price{
+  text-align: center;
+  font-weight: 660;
+}
+/* ----- orderdetails seller starts----- */
+.orderS-main{
+  position: relative;
+  right: -2rem;
+  top: 2rem;
+  width: 100%;
+  padding: 1rem;
+  text-decoration: none;
+ }
+
+ .orderS-img{
+   width: 12rem;
+   height: 10rem;
+   object-fit: contain;
+   padding: 1rem;
+ }
+ 
+ .orderS-flex {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   align-items: center;
+   border-top: 1px solid rgba(0, 0, 0, 0.455);
+   margin: 0.5rem;
+   width: 90rem;
+}
+
+.orderS-details{
+ color: #E35F14 !important;
+ font-weight: bold;
+ height: 2.5rem;
+ width: 20rem;
+}
+
+.orderS-price{
+ text-align: center;
+ font-weight: 660;
+ color: black;
+}
+
+.orderS-rating{
+ color: black;
+}
+.orderS-date{
+ margin-right: 2rem;
+ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
