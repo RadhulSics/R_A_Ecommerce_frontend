@@ -24,7 +24,8 @@ function UserList() {
           return(
           <div className='UserList-flex'>
             <div>
-             <img className='UserList-image' src={b.avatar} />
+           
+             <img className='UserList-image' src={`http://localhost:3000/${b.image.filename}`} alt='profile image' />
              </div>
              <div>
               {'Name : '+b.name}

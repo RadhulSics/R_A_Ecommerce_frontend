@@ -16,6 +16,14 @@
     top: 3rem;
     align-items: center;
   }
+  .profU-img{
+    border: black;
+    border-radius: 50%;
+    object-fit: contain;
+    width: 9rem;
+    height: 9rem;
+  
+  }
 
   .profU-name1{
     width: 30rem;
@@ -43,7 +51,7 @@
   }
 
   .profU-left1{
-  margin-left: -4rem;
+  margin-left: 1rem;
   margin-top: 1rem;
   font-size: large;
   font-weight: bold;

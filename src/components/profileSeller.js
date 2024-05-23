@@ -27,7 +27,8 @@ function ProfileSeller() {
         <div className='row profS-main'>
           <div className='col-4'>
             <div className='profS-name row'>
-              <h5 className='col-5 profS-welcome'>Welcome!</h5>
+              {/* <h5 className='col-5 profS-welcome'>Welcome!</h5> */}
+              <img className='col-5 profS-img' src={`http://localhost:3000/${profile.data.image.filename}`} alt='profile image' />
               <p className='col-5 profS-left1'>{profile.data.name}</p>
             </div>
             <div className='profS-name1'>

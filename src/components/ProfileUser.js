@@ -31,7 +31,9 @@ function ProfileUser() {
         <div className='row'>
           <div className='col-4'>
             <div className='profU-name row'>
-              <h5 className='col-5 profU-welcome'> Welcome ! </h5>
+              {/* <h5 className='col-5 profU-welcome'> Welcome ! </h5> */}
+              <img className='col-5 profU-img' src={`http://localhost:3000/${profile.data.image.filename}`} alt='profile image' />
+
               <p className='col-5 profU-left1'>{profile.data.name}</p>
             </div>
             <div className='profU-name1'>
