@@ -1,18 +1,24 @@
 import React, { useState } from 'react'
 import './login.css';
 import './Registration.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios'
 
 function Registration() {
 
-  const [data,SetData]=useState({name:'',email:'',number:'',password:''})
+  const [data,SetData]=useState({name:'',email:'',number:'',password:'',image:'null',gender:''})
   const [userType, setUserType] = useState('user');
+  const navigate = useNavigate()
   
   const change=(b)=>{
-    setUserType(b.target.value);
+    if(b.target.name === "image"){
+      // handleImageUpload(e);
+      SetData({...data,image:b.target.files[0]});
+  }
+  else
+    {setUserType(b.target.value);
     SetData({...data,[b.target.name]:b.target.value})
-    console.log(data);
+    console.log(data);}
   }
 
   let signup=(a)=>{
@@ -21,18 +27,30 @@ function Registration() {
       console.log("data", data);
 
       if(userType === 'user'){
-        axios.post('http://localhost:3000/newuser',data)
+        axios.post('http://localhost:3000/newuser',data,{ 
+          headers:{
+                "Content-Type": "multipart/form-data",
+              }
+            })
         .then((rec)=>{
           console.log(rec);
+          alert("registration successfull")
+          navigate('/')
         })
         .catch((err)=>{
           console.log(err)
         })
       }
       else if(userType === 'seller'){
-        axios.post('http://localhost:3000/newseller',data)
+        axios.post('http://localhost:3000/newseller',data,{ 
+          headers:{
+                "Content-Type": "multipart/form-data",
+              }
+            })
         .then((rec)=>{
           console.log(rec);
+          alert("registration successfull")
+          navigate('/')
         })
         .catch((err)=>{
           console.log(err)
@@ -69,13 +87,20 @@ function Registration() {
               <input className='reg-input'  type='email' placeholder='Email...'  value={data.email} name='email' onChange={change}/>
           
               <input className='reg-input'  type='password' placeholder='Password...'value={data.password} name='password' onChange={change}/>
+
+              
          
               <div>
                 <label  className='reg-label'>Male</label>
-                <input type='radio' name='gender' value={'male'}/>
+                <input type='radio' name='gender' value={'male'} onChange={change}/>
                 <label  className='reg-label'>Female</label>
-                <input type='radio' name='gender' value={'female'} />
+                <input type='radio' name='gender' value={'female'} onChange={change}/>
               </div>
+              <div className='reg-imageupload-box'>
+                <label className='reg-imageupload-label'>Upload image :</label>
+                <input   type='file' name='image' onChange={change} required/>
+              </div>
+             
 
             <div >
               <button type='submit' className='reg-button' >REGISTER</button>

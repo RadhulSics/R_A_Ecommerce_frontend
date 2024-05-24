@@ -4,7 +4,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 function ProfileSeller() {
-  const uid = localStorage.getItem("uid");
+  const sid = localStorage.getItem("sid");
   const [profile, setProfile] = useState(null);
 
   useEffect(() => {
@@ -12,14 +12,17 @@ function ProfileSeller() {
   }, []);
 
   const fetchProfile = () => {
-    axios.post(`http://localhost:3000/viewUser/${uid}`)
+    axios.post(`http://localhost:3000/viewSeller/${sid}`)
       .then(response => {
         setProfile(response.data);
+        console.log(response.data);
       })
       .catch(err => {
         console.log(err);
       });
   };
+
+
 
   return (
     <div>
@@ -28,8 +31,10 @@ function ProfileSeller() {
           <div className='col-4'>
             <div className='profS-name row'>
               {/* <h5 className='col-5 profS-welcome'>Welcome!</h5> */}
-              <img className='col-5 profS-img' src={`http://localhost:3000/${profile.data.image.filename}`} alt='profile image' />
-              <p className='col-5 profS-left1'>{profile.data.name}</p>
+              <img className='col-5 profS-img' src={`http://localhost:3000/${profile.image.filename}`} alt='profile image' />
+
+            
+              <p className='col-5 profS-left1'>{profile.name}</p>
             </div>
             <div className='profS-name1'>
               <p className='profS-left'>CART ➡️</p>
@@ -40,19 +45,17 @@ function ProfileSeller() {
             <div className='profS-name1'>
               <p className='profS-left'>Help center ➡️</p>
             </div>
-            <div>
-              <button className='profS-logout'>LOG OUT</button>
-            </div>
+           
           </div>
 
           <div className='col-7 profS-details'>
             <h3 className='profS-head'><b>DETAILS</b></h3>
             <hr />
             <div className='profS-body'>
-              <p>Name: {profile.data.name}</p>
-              <p>Mobile: {profile.data.number}</p>
-              <p>Email: {profile.data.email}</p>
-              <p>Gender: {profile.data.gender}</p>
+              <p>Name: {profile.name}</p>
+              <p>Mobile: {profile.number}</p>
+              <p>Email: {profile.email}</p>
+              <p>Gender: {profile.gender}</p>
             </div>
             <div>
               <button className='profS-edit'>

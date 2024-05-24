@@ -57,20 +57,29 @@ let signin=(a)=>{
           console.log(err)
         })
       }
-      else if(loginType === 'seller'){
-        axios.post('http://localhost:3000/sellerLogin',data)
-        .then((rec)=>{
-          console.log(rec);
-          localStorage.setItem('sid',rec.data.data._id)
-          navigate('/seller')
-        })
-        .catch((err)=>{
-          console.log(err)
-        })
-  }
+    
+  else if(loginType === 'seller' ){
+   
+    axios.post('http://localhost:3000/sellerLogin',data)
+    .then((rec)=>{
+      if(rec.data.data == 'pending'){
+      alert('Your registration is still pending ... contact admin')
+     }
+      else{
+      console.log(rec);
+      localStorage.setItem('sid',rec.data.data._id)
+      navigate('/seller')
+      }
+      
+    })
+    .catch((err)=>{
+      console.log(err)
+    })
+}
     else if(data.email === 'admin' && data.password ==='admin'){
       navigate('/admin')
   }
+  
        else{
         alert('Please select account type')
        }
