@@ -53,5 +53,17 @@
     transform: scale(0.98); 
     box-shadow: 3px 2px 22px 1px #E35F14; 
   }
-
+  .profeditU-imageupload-label{
+    color: white;
+   
+  }
+  
+  .profeditU-imageupload-box{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+    display:flex;
+    gap: 1rem;
+    width: 27rem;
+  }
   /* ----- Profile Edit User Ends ----- */

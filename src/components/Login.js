@@ -46,24 +46,42 @@ let signin=(a)=>{
 
   if (formIsValid) {
       console.log("data", data);
+
+
       if(loginType === 'user'){
         axios.post('http://localhost:3000/userLogin',data)
         .then((rec)=>{
-          console.log(rec);
-          localStorage.setItem('uid',rec.data.data._id)
-          navigate('/user')
+          if(rec.data.msg == "User not found"){
+            alert(rec.data.msg)
+          }
+          else if(rec.data.msg =='Password mismatch'){
+            alert(rec.data.msg)
+          }
+          else{
+            console.log(rec);
+            localStorage.setItem('uid',rec.data.data._id)
+            navigate('/user')
+          }
+         
         })
         .catch((err)=>{
           console.log(err)
         })
       }
     
+
   else if(loginType === 'seller' ){
    
     axios.post('http://localhost:3000/sellerLogin',data)
     .then((rec)=>{
       if(rec.data.data == 'pending'){
       alert('Your registration is still pending ... contact admin')
+     }
+     else if(rec.data.msg == "User not found"){
+      alert(rec.data.msg)
+     }
+     else if(rec.data.msg == "Password mismatch"){
+      alert(rec.data.msg)
      }
       else{
       console.log(rec);
@@ -119,7 +137,7 @@ let signin=(a)=>{
               <button type='submit' className='buttons'>login</button>
             </div>
             <div className='forgotlink'>
-              <a className='a-tag' href='#'>forgot password? </a>or<Link to='/Register' className='a-tag'> Sign up</Link>
+              <Link className='a-tag' to='/ForgotPassword'>forgot password? </Link>or<Link to='/Register' className='a-tag'> Sign up</Link>
             </div>
           </div>
         </div>
