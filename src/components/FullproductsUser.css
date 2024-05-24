@@ -4,6 +4,7 @@
 .fullU-bg{
   background: rgb(0,0,0);
  background: linear-gradient(119deg, rgba(0,0,0) 10%, rgba(212,20,35),rgb(39, 39, 227) 100%);
+ min-height: 695px;
 }
 .fullU-main{
  width: 100%;

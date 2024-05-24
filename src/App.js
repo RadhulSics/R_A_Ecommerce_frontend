@@ -29,6 +29,7 @@ import UserSearch from './components/UserSearch.js';
 import SellerList from './components/SellerList.js';
 import UserList from './components/UserList.js';
 import SellerApproval from './components/SellerApproval.js';
+import ForgotPassword from './components/ForgotPassword.js';
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
     <Routes>
       <Route path='/' element={[<Login/>]} />
       <Route path='/Register' element={[<Register/>]} />
+      <Route path='/ForgotPassword' element={[<ForgotPassword/>]} />
 
 
       <Route path='/Admin' element={[<NavAdmin/>,<FullProdAdmin/>]} />
