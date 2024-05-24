@@ -21,7 +21,7 @@ function NavbarAdmin() {
           <li className='nav-li'><Link className='nav-a' to='/Admin' >HOME</Link></li>
           </div>
           <div>
-          <li className='nav-li'><Link className='nav-a' to='/ProdApproval'>PENDING</Link></li>
+          <li className='nav-li'><Link className='nav-a' to='/sellerApproval'>PENDING</Link></li>
           </div>
           <div>
           <li className='nav-li'><Link className='nav-a' to='/UserAdmin'>USERS</Link></li>

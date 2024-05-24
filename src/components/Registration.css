@@ -12,7 +12,7 @@
 }
 .reg-main{
   width: 30%;
-  height: 68%;
+  min-height: 75%;
   padding: 20px;
   /* margin-left: 35rem; */
   margin-top: 9rem;
@@ -140,5 +140,21 @@ input.reg-number::-webkit-outer-spin-button {
     -moz-appearance: none;
     appearance: none;
     margin: 0; 
+}
+
+
+
+.reg-imageupload-label{
+  color: white;
+ 
+}
+
+.reg-imageupload-box{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 2rem;
+  display:flex;
+  gap: 1rem;
+  width: 27rem;
 }
  /* ----- Registration Ends ----- */

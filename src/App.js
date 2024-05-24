@@ -12,7 +12,6 @@ import ProfUser from './components/ProfileUser.js'
 import { Route,Routes,BrowserRouter } from 'react-router-dom';
 import Indproducts from './components/Indproducts.js';
 import ProfileeditUser from './components/ProfeditUser.js'
-import ProdApproval from './components/Productapproval.js'
 import OrderDetailsUSer from './components/orderHistory.js'
 import NavbarSeller from './components/NavbarSeller.js';
 import ProfileSeller from './components/profileSeller.js';
@@ -29,6 +28,7 @@ import CartUser from './components/CartUser.js';
 import UserSearch from './components/UserSearch.js';
 import SellerList from './components/SellerList.js';
 import UserList from './components/UserList.js';
+import SellerApproval from './components/SellerApproval.js';
 
 function App() {
   return (
@@ -42,10 +42,11 @@ function App() {
       <Route path='/Admin' element={[<NavAdmin/>,<FullProdAdmin/>]} />
       <Route path='/Ban' element={[<NavAdmin/>,<Ban/>]} />
       <Route path='/OrderDetails' element={[<NavAdmin/>,<OrderDetails/>]}/>
-      <Route path='/ProdApproval' element={[<NavAdmin/>,<ProdApproval/>]} />
       <Route path='/UserAdmin' element={[<NavAdmin/>,<UserList/>]} />
       <Route path='/SellerAdmin' element={[<NavAdmin/>,<SellerList/>]} />
       <Route path='/IndProductsAdmin/:id' element={[<NavbarAdmin/>,<Indproducts/>]} />
+      <Route path='/sellerApproval' element={[<NavbarAdmin/>,<SellerApproval/>]} />
+      
 
 
       <Route path='/User' element={[<Navbaruser/>,<FullproductsUser/>]} />

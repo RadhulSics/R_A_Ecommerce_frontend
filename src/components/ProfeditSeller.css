@@ -13,6 +13,7 @@
   padding: 5rem;
 }
 
+
 .profeditS-input{
   width: 300px;
   height: 50px;
@@ -51,5 +52,20 @@
 }
 .profeditS-input::placeholder{
   text-align: center;
+}
+
+
+.profeditS-imageupload-label{
+  color: white;
+ 
+}
+
+.profeditS-imageupload-box{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 2rem;
+  display:flex;
+  gap: 1rem;
+  width: 27rem;
 }
 /* ----profile edit seller ends----- */

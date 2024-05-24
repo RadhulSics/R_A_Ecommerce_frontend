@@ -1,16 +1,16 @@
 
 
   /* ......productapproval starts...... */
-  .proapp-main{
+  .SellerApproval-main{
     width: 100% !important;
    
   }
-  .pro-main{
+  .SellerApproval-main{
     margin-top: 70px;
     margin-left: 4rem;
   
   }
-  .proapp-accept{
+  .SellerApproval-accept{
     
     border-radius: 8px;
     color: white;
@@ -23,10 +23,10 @@
     font-weight: bold;
 
   }
-  .proapp-accept:hover{
+  .SellerApproval-accept:hover{
     background-color: #E35F14;
   }
-  .proapp-decline{
+  .SellerApproval-decline{
 
     border-radius: 8px;
     color: white;
@@ -39,36 +39,36 @@
     font-weight: bold;
     
   }
-  .proapp-btnflex{
+  .SellerApproval-btnflex{
        display: flex;
     justify-content: space-between;
 
   }
-  .proapp-decline:hover{
+  .SellerApproval-decline:hover{
     background-color: #E35F14;
   }
-  .proapp-price{
+  .SellerApproval-price{
     font-weight: bold;
   }
-  .proapp-det{
-    font-style: italic;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  .SellerApproval-det{
+    
     font-weight: bold;
   }
-  .proapp-name{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  .SellerApproval-name{
+    text-align: center;
     
   }
-  .proapp-card{
+  .SellerApproval-card{
     margin: 0.5rem;
     width: 23% !important;
     margin-bottom: 1rem;
   
   }
-  .proapp-img{
+  .SellerApproval-img{
     height: 70%;
     width: 50%;
     object-fit: contain;
+    margin-left: 5rem;
   }
 
   

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import profilepic from '../images/profileseller.jpg';
+
 import { Link } from 'react-router-dom';
 import './ProfileUser.css';
 import axios from 'axios';
@@ -11,10 +11,10 @@ function ProfileUser() {
   const [profile, setProfile] = useState(null);
 
   useEffect(() => {
-    fetchProfile();
+    fetchProfile2();
   }, []);
 
-  const fetchProfile = () => {
+  const fetchProfile2 = () => {
     axios.post(`http://localhost:3000/viewUser/${uid}`)
       .then(response => {
         setProfile(response.data);
@@ -45,9 +45,7 @@ function ProfileUser() {
             <div className='profU-name1'>
               <p className='profU-left'>Help center ➡️</p>
             </div>
-            <div>
-              <button className='profU-logout'>LOG OUT</button>
-            </div>
+           
           </div>
 
           <div className='col-7 profU-details'>
