@@ -3,18 +3,19 @@ import './NavbarSeller.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import { Link } from 'react-router-dom';
-
+import sicsLogo from '../images/sics.png'
 function NavbarSeller() {
   return (
     <div>
       
     <nav  className='nav-Seller' >
-        <div>
-          <h4 className='navS-title'>SICS-kart</h4>
-        </div>
+      
 
       <ul className='navS-flex'>
-
+      <div>
+          {/* <h4 className='navS-title'>SICS-kart</h4> */}
+          <img className='nav-heading-sics1' src={sicsLogo} alt='logo' />
+        </div>
         <div>
         <li className='navS-li'><Link  className='navS-a' to='/Seller'>HOME</Link></li>
         </div>

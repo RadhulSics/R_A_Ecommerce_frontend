@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import { Link, useNavigate } from 'react-router-dom';
 import cart from '../images/cart.png'
+import sicsLogo from '../images/sics.png'
 
 function Navbaruser() {
     const [Data,setData]=useState({search:''})
@@ -21,12 +22,14 @@ function Navbaruser() {
     }
 
   return (
-    <div>
+    <div className='nav-user'>
         <nav>
-            <div>
-                <h1 className='nav-heading'>SICS-kart</h1>
-            </div>
+            
             <ul className='nav-position'>
+            <div>
+                {/* <h1 className='nav-heading'>SICS-kart</h1> */}
+                <img className='nav-heading-sics' src={sicsLogo} alt='logo' />
+            </div>
                 <div>
                     <li className='navuser-li'><Link className='nav-ahref' to="/User">HOME</Link></li>
                 </div>

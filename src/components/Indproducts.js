@@ -26,7 +26,7 @@ useEffect(()=>{
 },[])
 
   return (
-    <div className='row'>
+    <div className='row ind-main-div'>
       <div id="carouselExample" class="carousel slide col-6 " style={{width:'50%'}}>
   <div class="carousel-inner">
     <div class="carousel-item active caro-change">

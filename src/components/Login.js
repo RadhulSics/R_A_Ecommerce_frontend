@@ -137,6 +137,7 @@ let signin=(a)=>{
               <button type='submit' className='buttons'>login</button>
             </div>
             <div className='forgotlink'>
+            <Link className='home-tag' to='/'>Home page ,</Link> 
               <Link className='a-tag' to='/ForgotPassword'>forgot password? </Link>or<Link to='/Register' className='a-tag'> Sign up</Link>
             </div>
           </div>

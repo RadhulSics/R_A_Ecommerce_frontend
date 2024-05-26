@@ -182,4 +182,13 @@ input.nav-searchbar{
   }
 }
 
+.nav-heading-sics2{
+  width: 6rem;
+  margin: 0%;
+  padding: 0%;
+  position: absolute;
+  top: -.5rem;
+  left: 6rem;
+}
+
 /* ----- Navbar of admin Ends ----- */

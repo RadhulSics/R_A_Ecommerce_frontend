@@ -67,7 +67,7 @@ function Registration() {
 
        <div className='row reg-oldUser'>
         <p className='col-9 reg-loginText'>Already have an account?</p>
-        <button className='col-3 reg-login'><Link className='Link-decoration' to='/'>LOG IN</Link></button>
+        <button className='col-3 reg-login'><Link className='Link-decoration' to='/login'>LOG IN</Link></button>
        </div>
        
         <div className='reg-submain'>

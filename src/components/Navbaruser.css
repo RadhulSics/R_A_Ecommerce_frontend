@@ -1,5 +1,11 @@
 
 /* ...... navbaruser starts...... */
+.nav-user{
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  top: 0;
+}
 
 .nav-position{
   display: flex;
@@ -8,7 +14,7 @@
   height: 80px;
   gap: 6%;
   padding: 10px;
-  margin: 0;
+  margin-top: 0;
   background-color: #28373A;
   padding-top: 15px;
   text-decoration: none;
@@ -74,5 +80,14 @@
 
   .search-box{
     display: flex;
+  }
+
+  .nav-heading-sics{
+    width: 7rem;
+    margin: 0%;
+    padding: 0%;
+    position: absolute;
+    top: -.4rem;
+    left: 6rem;
   }
   /* ......navbaruser ends...... */
