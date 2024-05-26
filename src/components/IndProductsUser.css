@@ -4,12 +4,14 @@
   .carousel-control-next,
   .carousel-control-prev {
       filter: invert(100%);
+      
   }
 
   .indprodU-img{
     width: 40rem;
     height: 30rem;
     object-fit: contain;
+    margin-left: 10rem;
   }
 
   

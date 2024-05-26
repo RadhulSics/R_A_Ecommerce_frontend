@@ -61,7 +61,7 @@ const submit =(a)=>{
     <div className='ForgotPassword-main-bg'>
     <form className='ForgotPassword-main' onSubmit={submit}>
       <div className='ForgotPassword-submain'>
-      <button className='col-3 ForgotPassword-login'><Link className='Link-decoration' to='/'>Go back</Link></button>
+      <button className='col-3 ForgotPassword-login'><Link className='Link-decoration' to='/login'>Go back</Link></button>
         <div class className="login">
           <p className='ForgotPassword-title'>RESET PASSWORD</p>
 

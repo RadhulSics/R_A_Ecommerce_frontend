@@ -3,6 +3,10 @@
 
 
   /* ......individualproduct starts...... */
+  .ind-main-div{
+margin-top: 3rem;
+  }
+
   .caro-change{
     margin-top: 20px;
     width: 50%;
@@ -14,6 +18,7 @@
     width: 40rem;
     height: 30rem;
     object-fit: contain;
+    margin-left: 10rem;
   }
   .caro-flex{
     display: flex;

@@ -16,6 +16,9 @@ html {
 html, body {
   margin: 0;
   padding: 0;
+ background: rgb(0,0,0);
+ background: linear-gradient(119deg, rgb(194, 66, 66) 10%, rgb(237, 51, 66),rgb(67, 67, 154) 100%);
+ 
 }
 
 

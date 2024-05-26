@@ -137,6 +137,13 @@
     text-decoration: none;
     font-size: 1rem;
 }
+
+.home-tag{
+  text-decoration: none;
+    font-size: 1rem;
+    color: white;
+    margin-right: .3rem;
+}
 /* ..... login ends...... */
 
 

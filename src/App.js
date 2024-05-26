@@ -30,13 +30,18 @@ import SellerList from './components/SellerList.js';
 import UserList from './components/UserList.js';
 import SellerApproval from './components/SellerApproval.js';
 import ForgotPassword from './components/ForgotPassword.js';
+import Footer from './components/Footer.js';
+import HomePage from './components/HomePage.js';
+import NavbarHomePage from './components/NavbarHomePage.js';
 
 function App() {
   return (
 
     <BrowserRouter>
     <Routes>
-      <Route path='/' element={[<Login/>]} />
+
+      <Route path='/' element={[<NavbarHomePage/>,<HomePage/>,<Footer/>]} />
+      <Route path='/login' element={[<Login/>]} />
       <Route path='/Register' element={[<Register/>]} />
       <Route path='/ForgotPassword' element={[<ForgotPassword/>]} />
 
@@ -61,7 +66,7 @@ function App() {
       <Route path='/userSearch/:data' element={[<Navbaruser/>,<UserSearch/>]} />
       
       
-      <Route path='/Seller' element={[<NavbarSeller/>,<FullProductsSeller/>]} />
+      <Route path='/Seller' element={[<NavbarSeller/>,<FullProductsSeller/>,<Footer/>]} />
       <Route path='/IndProductsSeller/:id' element={[<NavbarSeller/>,<IndProductsSeller/>]} />
       <Route path='/OrderDetailsSeller' element={[<NavbarSeller/>,<OrderdetailsSeller/>]} />
       <Route path='/ProfileSeller' element={[<NavbarSeller/>,<ProfileSeller/>]} />
