@@ -23,10 +23,10 @@ function NavbarHomePage() {
           <li className='nav-li-HomePage'><Link className='nav-a-HomePage' to='/' >HOME</Link></li>
           </div>
           <div>
-          <li className='nav-li-HomePage'><Link className='nav-a-HomePage' to='/'>About Us</Link></li>
+          <li className='nav-li-HomePage'><Link className='nav-a-HomePage' to='/about'>About Us</Link></li>
           </div>
           <div>
-          <li className='nav-li-HomePage'><Link className='nav-a-HomePage' to='/'>Contact Us</Link></li>
+          <li className='nav-li-HomePage'><Link className='nav-a-HomePage' to='/contact'>Contact Us</Link></li>
           </div> 
           <div>
             <button type="button" className="nav-login-HomePage" onClick={login}>LOG IN</button>
