@@ -7,7 +7,7 @@
   right: 2rem;
   width: 3rem;
   height: 3rem;
-  background-color: #d7cc2e6d;
+  background-color: transparent;
   border-radius: 50%;
   border: none;
   cursor: pointer;
@@ -288,7 +288,7 @@ width: 43rem;
 /* -------------------------------- */
 
 .HomePage-background7{
-  background-image: url(../images/hp5.jpg) !important;
+  background-image: url(../images/hp.jpeg) !important;
   background-repeat: no-repeat; 
   width: 100%;
   height: 30rem !important;

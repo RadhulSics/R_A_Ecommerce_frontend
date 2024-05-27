@@ -33,6 +33,8 @@ import ForgotPassword from './components/ForgotPassword.js';
 import Footer from './components/Footer.js';
 import HomePage from './components/HomePage.js';
 import NavbarHomePage from './components/NavbarHomePage.js';
+import AboutUs from './components/AboutUs.js';
+import ContactUs from './components/ContactUs.js';
 
 function App() {
   return (
@@ -41,9 +43,12 @@ function App() {
     <Routes>
 
       <Route path='/' element={[<NavbarHomePage/>,<HomePage/>,<Footer/>]} />
+      <Route path='/about' element={[<NavbarHomePage/>,<AboutUs/>,<Footer/>]} />
+      <Route path='/contact' element={[<NavbarHomePage/>,<ContactUs/>,<Footer/>]} />
       <Route path='/login' element={[<Login/>]} />
       <Route path='/Register' element={[<Register/>]} />
       <Route path='/ForgotPassword' element={[<ForgotPassword/>]} />
+
 
 
       <Route path='/Admin' element={[<NavAdmin/>,<FullProdAdmin/>]} />
