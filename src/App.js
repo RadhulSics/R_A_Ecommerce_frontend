@@ -75,7 +75,7 @@ function App() {
       <Route path='/IndProductsSeller/:id' element={[<NavbarSeller/>,<IndProductsSeller/>]} />
       <Route path='/OrderDetailsSeller' element={[<NavbarSeller/>,<OrderdetailsSeller/>]} />
       <Route path='/ProfileSeller' element={[<NavbarSeller/>,<ProfileSeller/>]} />
-      <Route path='/NewprodSeller' element={[<NavbarSeller/>,<NewprodSeller/>]} />
+      <Route path='/NewprodSeller' element={[<NavbarSeller/>,<NewprodSeller/>,<Footer/>]} />
       <Route path='/ProfileeditSeller' element={[<NavbarSeller/>,<ProfileeditSeller/>]} />
       <Route path='/OwnprodSeller' element={[<NavbarSeller/>,<OwnprodSeller/>]} />
     </Routes>
