@@ -8,7 +8,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 function NewprodSeller() {
 const sid = localStorage.getItem('sid')
 console.log(sid);
-  const[data,SetData]=useState({name:'',brand:'',quantity:'',material:'',specifications:'',price:'',image1:'null',image2:'null',image3:'null',sid:sid})
+  const[data,SetData]=useState({name:'',brand:'',quantity:'',material:'',specifications:'',price:'',image1:'null',image2:'null',image3:'null',sid:sid,gender:'male',category:'Formal',size:'S'})
 
   const change=(b)=>{
 
@@ -81,10 +81,39 @@ function productAdd(b){
       <tr>
      
        <td> <label  className='prod-sellerlabel'>Specifications</label></td>
-        <td><input  className='prod-sellerinput' type='text'  name='specifications' value={data.specifications} onChange={change} required></input></td>
+        <td><textarea  className='prod-sellerinput' rows={3} cols={30} type='text'  name='specifications' value={data.specifications} onChange={change} required></textarea></td>
       
       </tr>
       <tr>
+      <td> <label  className='prod-sellerlabel'>Gender</label></td>
+      <td><select name='gender'  onChange={change} required>
+          <option  value={'male'} >MALE</option>
+          <option  value={'female'} >FEMALE</option>
+        </select></td>
+      </tr>
+
+      <tr>
+      <td> <label  className='prod-sellerlabel'>Category</label></td>
+      <td><select  name='category'  onChange={change}>
+          <option  value={'Formal'} >Formal</option>
+          <option  value={'Casual'} >Casual</option>
+          <option  value={'Shoe'} >Shoe</option>
+          <option  value={'Watch'} >Watch</option>
+        </select></td>
+      </tr>
+
+      <tr>
+      <td> <label  className='prod-sellerlabel'>Size</label></td>
+      <td><select  name='category'  onChange={change}>
+          <option  value={'S'} >S</option>
+          <option  value={'M'} >M</option>
+          <option  value={'L'} >L</option>
+          <option value={'XL'} >XL</option>
+        </select></td>
+      </tr>
+          
+          <tr>
+
        <td> <label  className='prod-sellerlabel'>Price</label></td>
        <td> <input  className='prod-sellerinput' type='number'  name='price' value={data.price} onChange={change} required></input></td>
       </tr>
@@ -100,6 +129,18 @@ function productAdd(b){
        <td><label  className='prod-sellerlabel'>Photo 3 : </label></td> 
        <td> <input   className='prod-sellerinput'type='file' name='image3' onChange={change} required></input></td> 
         </tr>
+
+
+        {/* <div className='new-prod-label-box'>
+            <label  className='new-prod-label'>Male</label>
+            <input type='radio' name='gender' value={'male'} onChange={change}/>
+            <label  className='new-prod-label'>Female</label>
+            <input type='radio' name='gender' value={'female'} onChange={change}/>
+        </div> */}
+
+        
+
+          
         
       
       <button type='submit' className='new-prod-btn' >Add</button>
