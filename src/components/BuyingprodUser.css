@@ -2,25 +2,16 @@
   /* -----Buying prod user Starts ----- */
 
   .buy-maindiv{
-    position: relative;
-    top: 2rem;
-    left: 5rem; 
+    margin-top: 4rem;
+    margin-left: 2rem;
   }
   
-  .buying-main{
-    margin: 2rem;
-    width: 90rem; 
-    border: 1px solid rgb(180, 179, 179);
-    border-radius: .5rem;
-    background-color: rgba(209, 209, 209, 0.515);
-    box-shadow: 2px 2px 10px rgb(143, 144, 144);
-  }
-  
+
   .buying-img{
-    width: 5rem;
+    width: 25rem;
     object-fit: contain;
     margin-left: 10rem;
-    height: 20rem;
+    margin-top: 5rem;
   }
   
   .buying-payment{
@@ -33,43 +24,60 @@
     padding: 1rem;
   }
   
-  .buy-input{
-    color: white;
-    border: 1px solid #EE9F43;
-    border-radius: 100px;
-    width: 22rem;
-    height: 3rem;
-    font-size: small;
-    font-weight: bold;
-    margin-top: 1rem;
-    margin-right: 1rem;
-  }
+ 
   
-  .buy-input::placeholder{
-    text-indent: 2rem;
-  }
-  
-  .buy-savebtn{
-    color: white;
-    background-color: #44949F;
-    border: 1px solid transparent;
-    border-radius: 100px;
-    padding: 8px;
-    width: 85px;
-    height: 40px;
-    font-size: small;
-    font-weight: bold;
-    margin-top: 10px;
-    margin-left: 20rem;
-  }
-  
-  .buy-savebtn:hover{
-    background-color: #EE9F43;
-  }
-  
-  .buy-savebtn:active { 
-    transform: scale(0.98); 
-    box-shadow: 3px 2px 22px 1px #E35F14; 
-  }
-  
+
+
+  /* BuyingprodUser.css */
+
+.address-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.address-radio {
+  margin-right: 10px;
+}
+
+
+.address-name {
+  font-size: 16px;
+  margin: 0;
+}
+.address-city, .address-details {
+  font-size: 14px;
+  margin: 0;
+}
+
+
+.product-details {
+  text-align: center;
+}
+.buying-payment {
+  margin-top: 20px;
+  margin-left: 9rem;
+}
+
+
+/* BuyingprodUser.css */
+.card-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.payment-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.payment-btn:hover {
+  background-color: #0056b3;
+}
+
     /* ----- Buying prod user Ends ----- */
