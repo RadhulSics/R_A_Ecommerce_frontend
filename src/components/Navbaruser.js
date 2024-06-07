@@ -23,7 +23,7 @@ function Navbaruser() {
 
   return (
     <div className='nav-user'>
-        <nav>
+        <nav className='nav-user2'>
             
             <ul className='nav-position'>
             <div>

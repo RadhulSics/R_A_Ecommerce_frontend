@@ -1,48 +1,54 @@
-import React,{ useEffect,useState } from 'react'
-import axios from 'axios'
-import './OrderdetailsSeller.css'
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import './OrderdetailsSeller.css';
 
 function OrderdetailsSeller() {
-    const [Order,SetOrder] = useState([])
+  const [orders, setOrders] = useState([]);
+  const sid = localStorage.getItem('sid')
 
-useEffect(()=>{
-  axios.get('https://fakestoreapi.com/products')
-  .then((rec)=>{
-    SetOrder(rec.data)
-  })
-  .catch((err)=>{
-    console.log(err)
-  })
-},[])
+  useEffect(() => {
+    axios.post(`http://localhost:3000/sellerHistory/${sid}`)
+      .then((response) => {
+        if (response.data && response.data.data) {
+          setOrders(response.data.data);
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
 
-console.log(Order)
+  console.log(orders);
 
   return (
     <div className='orderS-main'>
-        {Order.map((a)=>{
-        return(
-          <div className="orderS-flex"> 
-          <div>
-           <img className="orderS-img" src={a.image+" "} />
-           </div> 
-          <div className='orderS-details'>
-            {a.title+" "}
+      {Array.isArray(orders) && orders.length > 0 ? (
+        orders.map((order, index) => (
+          <div key={index} className="orderS-flex"> 
+            <div>
+              {order.pid && order.pid.image1 && (
+                <img className="orderS-img" src={`http://localhost:3000/${order.pid.image1.filename}`} alt="Product" />
+              )}
+            </div> 
+            <div className='orderS-details'>
+              {order.pid ? order.pid.name : 'Product name not available'}
             </div>
             <div className='orderS-price'>
-            {'Rs. '+a.price+" "} 
+              {order.pid ? 'Rs. ' + order.pid.price : 'Price not available'}
             </div>
             <div className='orderS-rating'>
-              {a.rating.rate+'⭐'}
+              {order.pid && order.pid.rating ? order.pid.rating.rate + '⭐' : 'Rating not available'}
             </div>
             <div className='orderS-date'>
-              <p>Ordered date :<b> 12/01/2012</b></p>
+              <p>Ordered date: <b>{new Date(order.date).toLocaleDateString()}</b></p>
             </div>  
           </div>
-        )
-      })}
-
+        ))
+      ) : (
+        <p>No orders found</p>
+      )}
     </div>
-  )
+  );
 }
 
-export default OrderdetailsSeller
+export default OrderdetailsSeller;

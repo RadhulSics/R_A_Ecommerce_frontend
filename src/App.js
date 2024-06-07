@@ -66,7 +66,7 @@ function App() {
       <Route path='/OrderDetailsUser' element={[<Navbaruser/>,<OrderDetailsUSer/>]} />
       <Route path='/CartUser' element={[<Navbaruser/>,<CartUser/>]} />
       <Route path='/IndProductsUser/:id' element={[<Navbaruser/>,<IndProductsUser/>]} />
-      <Route path='/BuyingprodUser' element={[<Navbaruser/>,<BuyingprodUser/>]} />
+      <Route path='/BuyingprodUser/:id' element={[<Navbaruser/>,<BuyingprodUser/>]} />
       <Route path='/ProfileeditUser' element={[<Navbaruser/>,<ProfileeditUser/>]} />
       <Route path='/userSearch/:data' element={[<Navbaruser/>,<UserSearch/>]} />
       

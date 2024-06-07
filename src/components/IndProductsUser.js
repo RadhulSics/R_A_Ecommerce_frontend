@@ -78,7 +78,7 @@ console.log(State);
         </button>
         <br/> <br/> <br/> <br/>
         <div>
-        <button className='indprodU-buy-btn'type='submit'><Link className="Link-decoration" to='/BuyingprodUser'>BUY NOW</Link></button>
+        <button className='indprodU-buy-btn'type='submit'><Link className="Link-decoration" to={`/BuyingprodUser/${State._id}`}>BUY NOW</Link></button>
         <button className='indprodU-cart-btn' onClick={addItem}>Add to cart</button>
         </div>
         
