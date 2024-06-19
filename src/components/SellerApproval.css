@@ -3,7 +3,7 @@
   /* ......productapproval starts...... */
   .SellerApproval-main{
     width: 100% !important;
-   
+   min-height: 30rem;
   }
   .SellerApproval-main{
     margin-top: 70px;

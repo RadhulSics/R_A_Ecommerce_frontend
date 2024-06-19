@@ -1,0 +1,148 @@
+/* -----Cart starts ----- */
+      
+.CartBuy-main{
+  padding:0 5rem 0 3rem;
+  width: 100%;
+  text-decoration: none;
+  margin-top: 4rem;
+  min-height: 30rem;
+ }
+
+ .CartBuy-img{
+   width: 12rem;
+   height: 10rem;
+   object-fit: contain;
+   padding: 1rem;
+ }
+
+ .CartBuy-mainbox{
+  width: 50%;
+  border: 1px solid black;
+ }
+ 
+ .CartBuy-flex {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   align-items: center;
+   /* border-bottom: 1px solid rgba(0, 0, 0, 0.455); */
+   margin: 0.5rem;
+   padding-right: 1rem;
+}
+
+.CartBuy-details{
+ color: #E35F14 !important;
+ font-weight: bold;
+ height: 2.5rem;
+}
+
+.CartBuy-price{
+ text-align: center;
+ font-weight: 660;
+ color: black;
+}
+
+.CartBuy-rating{
+ color: black;
+}
+.CartBuy-btn{
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #EE9F43;
+  color: #fff;
+  font-size: large;
+  border-style: solid;
+  border-color: #EE9F43;
+}
+.CartBuy-btn:hover{
+  background-color: #44949F;
+}
+
+.CartBuy-btn:active { 
+  transform: scale(0.98); 
+  box-shadow: 3px 2px 22px 1px #E35F14; 
+}
+
+.CartBuy-buy-btn{
+  width: 110px;
+  height: 60px;
+  border-radius: 10px;
+  background-color:#44949F;
+  color: #fff;
+  font-size: large;
+  border-style: solid;
+  border-color:#44949F;
+  margin: 1rem 0 2rem 50%;
+}
+.CartBuy-buy-btn:hover{
+  background-color: #EE9F43;
+}
+
+.CartBuy-buy-btn:active { 
+  transform: scale(0.98); 
+  box-shadow: 3px 2px 22px 1px #E35F14; 
+}
+
+.CartBuy-final-details{
+  margin-top: 0rem;
+  margin-bottom: 2rem;
+  width: 50rem;
+}
+
+.CartBuy-address-box{
+  /* border: 1px solid red;   */
+  padding: 1rem 0;
+}
+
+.CartBuy-address-item {
+  display: flex;
+  text-align: left;
+  
+}
+.CartBuy-address-radio {
+  margin-right: 10px;
+}
+
+
+.CartBuy-address-name {
+  font-size: 16px;
+  margin: 0;
+}
+.CartBuy-address-city, .CartBuy-address-details {
+  font-size: 14px;
+  margin: 0;
+}
+
+ 
+.CartBuy-buying-payment{
+  width: 40rem !important;
+  border: 1px solid rgb(180, 179, 179);
+  border-radius: .5rem;
+  background-color: rgba(209, 209, 209, 0.515);
+  box-shadow: 2px 2px 10px rgb(143, 144, 144);
+  padding: 1rem;
+  position: absolute;
+  left: 50rem;
+  top: 9rem;
+}
+
+.CartBuy-card-input {
+  width: 100%;
+  padding: 10px;  
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.CartBuy-payment-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.CartBuy-payment-btn:hover {
+  background-color: #0056b3;
+}

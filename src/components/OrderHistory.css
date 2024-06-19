@@ -3,12 +3,11 @@
 /* -----orderhistory starts------- */
 
 .orderH-main{
-  position: relative;
-  right: -2rem;
-  top: 8rem;
+
   width: 100%;
   padding: 1rem;
   text-decoration: none;
+  margin-left: 1rem;
  }
  .orderH-input{
   height: 40px;
@@ -45,7 +44,8 @@
    flex-wrap: wrap;
    justify-content: space-between;
    align-items: center;
-   border-top: 1px solid rgba(0, 0, 0, 0.455);
+   /* border-top: 1px solid rgba(0, 0, 0, 0.455); */
+   background-color: #c0bebea3;
    margin: 0.5rem;
    width: 90rem;
 }
@@ -53,8 +53,6 @@
 .orderH-details{
  color: #E35F14 !important;
  font-weight: bold;
- height: 2.5rem;
- width: 20rem;
 }
 
 .orderH-price{
@@ -70,4 +68,12 @@
  margin-right: 2rem;
  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
+}
+
+.orderH-rating-flex{
+    display: flex;
+    width: 12rem;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-direction: column;
 }

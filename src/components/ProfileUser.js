@@ -101,7 +101,7 @@ function ProfileUser() {
   return (
     <div>
       {profile ? (
-        <div className='row profS-main'>
+        <div className='row profU-main'>
           <div className='col-4'>
             <div className='profU-name row'>
               <img className='col-5 profU-img' src={`http://localhost:3000/${profile.data.image.filename}`} alt='profile' />
@@ -113,9 +113,9 @@ function ProfileUser() {
             <div className='profU-name1'>
               <button className='profU-left' onClick={() => { setPage(1); fetchAddress(); }}>Address</button>
             </div>
-            <div className='profU-name1'>
+            {/* <div className='profU-name1'>
               <p className='profU-left'>Help center ➡️</p>
-            </div>
+            </div> */}
           </div>
 
           {page === 0 ? (
@@ -136,7 +136,7 @@ function ProfileUser() {
             </div>
           ) : page === 2 ? (
             <div className='profU-buying-main col-6'>
-              <p>Edit ADDRESS</p>
+              <h4>EDIT ADDRESS</h4>
               <input className='profU-buy-input' placeholder='Enter Name' name='name' value={editAddressData.name} onChange={handleEdit} required />
               <input className='profU-buy-input' placeholder='Mobile Number' name='number' value={editAddressData.number} onChange={handleEdit} required />
               <input className='profU-buy-input' placeholder='Pin Code' name='pin' value={editAddressData.pin} onChange={handleEdit} required />
@@ -148,29 +148,35 @@ function ProfileUser() {
             </div>
           ) : (
             <div className='profU-buying-main col-6'>
-              <p>SAVED ADDRESS</p>
-              <ul>
+                <br/>
+              <h4>SAVED ADDRESS</h4>
+              <br/>  <br/>
+              
                 {savedAddresses.length > 0 ? (
                   savedAddresses.map((addr, index) => (
-                    <li key={index}>
-                      <div className='profU-buying-main2'>
-                        <p>Name: {addr.name}</p>
-                        <p>Pin: {addr.pin}</p>
-                        <p>Number: {addr.number}</p>
-                        <p>City: {addr.city}</p>
-                        <p>State: {addr.state}</p>
-                        <p>Landmark: {addr.landmark}</p>
-                        <button type='button' onClick={() => deleteAddress(addr._id)}>DELETE</button>
-                        <button type='button' onClick={() => startEditAddress(addr)}>EDIT</button>
+            
+                      <div className='profU-buying-main2 row'>
+                        <div className='profU-buying-main3 row'>
+                        <p className='col-6'>Name: <b>{addr.name}</b></p>
+                        <p className='col-6'>Pin: {addr.pin}</p>
+                        <p className='col-6'>Number: {addr.number}</p>
+                        <p className='col-6'>City: {addr.city}</p>
+                        <p className='col-6'>State: {addr.state}</p>
+                        <p className='col-6'>Landmark: {addr.landmark}</p>
+                        </div>
+                        <button type='button' className='profU-buy-editbtn col-5' onClick={() => deleteAddress(addr._id)}>DELETE</button>
+                        <button type='button' className='profU-buy-editbtn col-5' onClick={() => startEditAddress(addr)}>EDIT</button>
+                        <hr /> 
                       </div>
-                    </li>
+               
                   ))
                 ) : (
                   <p>No saved addresses</p>
                 )}
-              </ul>
-              <hr />
-              <p>NEW ADDRESS</p>
+              
+           
+              <h4>NEW ADDRESS</h4>
+              <br/>
               <input className='profU-buy-input' placeholder='Enter Name' name='name' onChange={handleChange} required />
               <input className='profU-buy-input' placeholder='Mobile Number' name='number' onChange={handleChange} required />
               <input className='profU-buy-input' placeholder='Pin Code' name='pin' onChange={handleChange} required />

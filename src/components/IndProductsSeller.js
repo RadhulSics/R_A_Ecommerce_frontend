@@ -65,7 +65,7 @@ console.log(State);
         </button>
         <br/> <br/> <br/> <br/>
         <div>
-        <button className='indprodS-buy-btn'type='submit'>BUY NOW</button>
+        {/* <button className='indprodS-buy-btn'type='submit'>BUY NOW</button> */}
         </div>
       </div>
 
@@ -79,13 +79,13 @@ console.log(State);
   <div>
   <p className='indprodS-price'>Rs : 299 </p>
   </div>
-  <div className='indprodS-rating'>
+  {/* <div className='indprodS-rating'>
   <h6>RATING : 4.2 ⭐ </h6>
   
-</div>
+</div> */}
   <hr style={{width:'50rem'}}/>
 
-  <div class="radio-toolbar">
+  {/* <div class="radio-toolbar">
     <h5>Select Size</h5>
     <input className='indprodS-input' type="radio" id="radioS" name="radiosize" value="S"/>
     <label className='indprodS-label' for="radioS">S</label>
@@ -98,7 +98,7 @@ console.log(State);
 
     <input className='indprodS-input' type="radio" id="radioXL" name="radiosize" value="XL"/>
     <label className='indprodS-label'  for="radioXL">XL</label> 
-</div>
+</div> */}
 
 <div className='indprodS-details'>
 

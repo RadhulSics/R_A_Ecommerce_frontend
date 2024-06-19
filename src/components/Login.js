@@ -77,6 +77,9 @@ let signin=(a)=>{
       if(rec.data.data == 'pending'){
       alert('Your registration is still pending ... contact admin')
      }
+     else if(rec.data.data == 'ban'){
+      alert('You have been banned ... contact admin')
+     }
      else if(rec.data.msg == "User not found"){
       alert(rec.data.msg)
      }

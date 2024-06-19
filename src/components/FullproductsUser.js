@@ -34,8 +34,9 @@ function FullproductsUser() {
            <div className="card-body">
             
             <div className='fullU-name'>
-            <hr/>
+          
             {c.name+" "}
+           
             <div className='fullU-price'>
             <b>{'Rs : '+c.price+" "}</b>
             </div> 

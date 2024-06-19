@@ -1,7 +1,7 @@
 
  /* ----- Navbar seller Starts ----- */
  .nav-Seller{
-  position: fixed;
+  position: relative;
   width: 100%;
   z-index: 999;
   top: 0;

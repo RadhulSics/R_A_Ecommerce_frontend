@@ -5,6 +5,7 @@
   width: 100%;
   text-decoration: none;
   margin-top: 4rem;
+  min-height: 20rem;
  }
 
  .cart-img{
@@ -28,7 +29,6 @@
  color: #E35F14 !important;
  font-weight: bold;
  height: 2.5rem;
- width: 20rem;
 }
 
 .cart-price{

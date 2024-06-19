@@ -9,6 +9,7 @@
     height: auto;
     padding: 1rem;
     margin-left: 2rem;
+    min-height: 30rem;
    }
  
    .ban-flex{
@@ -20,11 +21,11 @@
      font-weight: bold;
      font-size: large;
      border-bottom: 2px double black;
-     border-bottom-style: dotted;
+     border-bottom-style: groove;
      border-left: 2px double black;
-     border-left-style: dotted;
+     border-left-style: groove;
      border-right: 2px double black;
-     border-right-style: dotted;
+     border-right-style: groove;
    }
  
    .ban-image{
@@ -51,7 +52,7 @@
      height: 40px;
      font-size: small;
      font-weight: bold;
-     margin: 10px 150px 10px 0px;
+  
    }
    
    .ban-button:hover{

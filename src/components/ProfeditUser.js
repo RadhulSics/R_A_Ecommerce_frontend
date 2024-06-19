@@ -76,6 +76,7 @@ function ProfeditUser() {
   return (
     <div>
       <div className='profeditU-main'>
+        <h2 className='profeditU-main-title'>EDIT PROFILE</h2>
         <form onSubmit={handleSubmit}>
           <div>
             <input className='profeditU-input' type='text' value={data.name} name='name' onChange={change} />
@@ -96,7 +97,7 @@ function ProfeditUser() {
             <input type='radio' name='gender' value='female' checked={data.gender === 'female'} onChange={change} />
           </div>
           <div className='profeditU-imageupload-box'>
-            <label className='profeditU-imageupload-label'>Upload image :</label>
+            {/* <label className='profeditU-imageupload-label'>Upload image :</label> */}
             <input type='file' name='image' onChange={change} />
           </div>
           <div>

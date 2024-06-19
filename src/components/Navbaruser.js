@@ -18,7 +18,13 @@ function Navbaruser() {
         console.log(Data.search);
     }
     const searchFunction=()=>{
-        navigate(`/userSearch/${Data.search}`)
+        if(Data.search){
+            navigate(`/userSearch/${Data.search}`) 
+        }
+        else{
+          alert('Please enter an input...')
+        }
+       
     }
 
   return (
@@ -34,11 +40,12 @@ function Navbaruser() {
                     <li className='navuser-li'><Link className='nav-ahref' to="/User">HOME</Link></li>
                 </div>
                 <div>
-                    <li className='navuser-li'><Link className='nav-ahref' to='/ProfileUser'>PROFILE</Link></li>
-                </div>
-                <div>
                     <li className='navuser-li'><Link className='nav-ahref' to='/OrderDetailsUser'>HISTORY</Link></li>
                 </div>
+                <div>
+                    <li className='navuser-li'><Link className='nav-ahref' to='/ProfileUser'>PROFILE</Link></li>
+                </div>
+               
 
                     <form className='search-box'>
                 <div >

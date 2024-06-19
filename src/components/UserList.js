@@ -34,6 +34,12 @@ function UserList() {
               {'Email : '+b.email}
               </div>
               <div>
+              {'Number : '+b.number}
+              </div>
+              <div>
+              {'Gender : '+b.gender}
+              </div>
+              {/* <div>
               <label>Reason :</label>
               <select className='UserList-select-reason'>
                 <option className='UserList-opt-select'></option>
@@ -42,14 +48,14 @@ function UserList() {
                 <option>damaged products</option>
                 <option>other</option>
               </select>
-              </div>
+              </div> */}
             
               <div>
-                <Link className='UserList-view-button' to='/OrderDetails'>Order detsils</Link>
+                <Link className='UserList-view-button' to={`/OrderDetails/user/${b._id}`}>Order detsils</Link>
               </div>
-              <div>
+              {/* <div>
               <button className='UserList-banbutton'>BAN</button>
-              </div>
+              </div> */}
               
           </div>
           
