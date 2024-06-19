@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import './ProfileSeller.css';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function ProfileSeller() {
   const sid = localStorage.getItem("sid");
   const [profile, setProfile] = useState(null);
+  const navigate = useNavigate()
 
   useEffect(() => {
     fetchProfile();
@@ -22,6 +23,15 @@ function ProfileSeller() {
       });
   };
 
+  const ownProducts = ()=>{
+    navigate('/OwnprodSeller')
+  }
+
+  const OrderDetails = ()=>{
+    navigate('/OrderDetailsSeller')
+  }
+
+
 
 
   return (
@@ -37,14 +47,14 @@ function ProfileSeller() {
               <p className='col-5 profS-left1'>{profile.name}</p>
             </div>
             <div className='profS-name1'>
-              <p className='profS-left'>CART ➡️</p>
+              <button className='profS-left' onClick={ownProducts}>OWN PRODUCTS</button>
             </div>
             <div className='profS-name1'>
-              <p className='profS-left'>Warehouse ➡️</p>
+              <p className='profS-left' onClick={OrderDetails}>ORDER DETAILS</p>
             </div>
-            <div className='profS-name1'>
+            {/* <div className='profS-name1'>
               <p className='profS-left'>Help center ➡️</p>
-            </div>
+            </div> */}
            
           </div>
 

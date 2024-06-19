@@ -7,6 +7,10 @@ function SellerList() {
   const [state, setState] = useState([]);
 
   useEffect(() => {
+    fetchAlluser()
+  }, []);
+
+   const fetchAlluser =()=>{
     axios.post('http://localhost:3000/allSeller')
       .then((res) => {
         setState(res.data);
@@ -14,7 +18,18 @@ function SellerList() {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+   }
+
+  const banButton = (a)=>{
+    axios.post(`http://localhost:3000/banSeller/${a}`)
+    .then((res) => {
+      alert('User banned')
+      fetchAlluser()
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+  }
 
   console.log(state);
   return (
@@ -33,6 +48,12 @@ function SellerList() {
                 {'Email : ' + b.email}
               </div>
               <div>
+                {'Number : ' + b.number}
+              </div>
+              <div>
+                {'Gender : ' + b.gender}
+              </div>
+              {/* <div>
                 <label>Reason :</label>
                 <select className='SellerList-select-reason'>
                   <option className='SellerList-opt-select'></option>
@@ -41,12 +62,12 @@ function SellerList() {
                   <option>damaged products</option>
                   <option>other</option>
                 </select>
+              </div> */}
+              <div>
+                <Link className='SellerList-view-button'  to={`/OrderDetails/seller/${b._id}`}>Order details</Link>
               </div>
               <div>
-                <Link className='SellerList-view-button' to='/OrderDetails'>Order details</Link>
-              </div>
-              <div>
-                <button className='SellerList-banbutton'>BAN</button>
+                <button className='SellerList-banbutton' onClick={()=>banButton(b._id)}>BAN</button>
               </div>
             </div>
           )

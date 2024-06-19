@@ -61,18 +61,19 @@ function ProfeditSeller() {
       {profile && (
         <div className='profeditS-main'>
           <div>
-            <label>User name :</label>
+            <h3 style={{textAlign:'center'}}>EDIT PROFILE</h3>
+      
             <input className='profeditS-input' type='text' value={data.name} name='name' onChange={change} />
           </div>
           <div>
-          <label>number:</label>
+        
             <input className='profeditS-input reg-number' type='number' value={data.number} name='number' onChange={change} />
           </div>
           <div>
-          <label>email :</label>
+         
             <input className='profeditS-input' type='email' value={data.email} name='email' onChange={change} />
           </div>
-          <label>password:</label>
+         
           <input className='profeditS-input' type='password' value={data.password} name='password' onChange={change} />
           <div>
             <label className='profeditS-label'>Male</label>

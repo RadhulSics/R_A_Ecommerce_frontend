@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import { Link, useParams } from 'react-router-dom';
 
-function FullproductsUser() {
+function UserSearch() {
     const [state,setState]=useState([]);
     const data = useParams()
     console.log("2nd ",data);
@@ -58,4 +58,4 @@ function FullproductsUser() {
   )
 }
 
-export default FullproductsUser
+export default UserSearch

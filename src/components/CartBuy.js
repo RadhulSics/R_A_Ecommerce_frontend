@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { useParams, useNavigate } from 'react-router-dom';
-import './BuyingprodUser.css';
+import './CartBuy.css';
+import { useNavigate } from 'react-router-dom';
 
-function BuyingprodUser() {
+function CartBuy() {
+  const [Order, SetOrder] = useState([]);
   const uid = localStorage.getItem("uid");
-  const { id } = useParams();
-  const navigate = useNavigate();
-
+  const [totalItems, setTotalItems] = useState(0);
+  const [totalPrice, setTotalPrice] = useState(0);
   const [savedAddresses, setSavedAddresses] = useState([]);
-  const [State, setState] = useState({});
   const [selectedAddress, setSelectedAddress] = useState(null);
   const [cardDetails, setCardDetails] = useState({
     cardName: '',
@@ -17,11 +16,24 @@ function BuyingprodUser() {
     expiryDate: '',
     cardCvv: '',
   });
+  const [State, setState] = useState({});
+  const navigate = useNavigate();
 
   useEffect(() => {
+    fetchCartItems();
     fetchAddress();
-    fetchIndividualProduct();
-  }, [id, uid]);
+  }, []);
+
+  const fetchCartItems = () => {
+    axios.post(`http://localhost:3000/viewCart/${uid}`)
+      .then((rec) => {
+        SetOrder(rec.data);
+        calculateTotals(rec.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
   const fetchAddress = () => {
     axios.post(`http://localhost:3000/showAddress/${uid}`)
@@ -37,14 +49,16 @@ function BuyingprodUser() {
       });
   };
 
-  const fetchIndividualProduct = () => {
-    axios.post(`http://localhost:3000/viewIndividualproducts/${id}`)
-      .then(response => {
-        setState(response.data);
-      })
-      .catch(err => {
-        console.log(err);
-      });
+  const calculateTotals = (data) => {
+    let totalItemsCount = data.length;
+    let totalPriceAmount = 0;
+
+    data.forEach((item) => {
+      totalPriceAmount += item.pid?.price || 0;
+    });
+
+    setTotalItems(totalItemsCount);
+    setTotalPrice(totalPriceAmount);
   };
 
   const handleAddressSelect = (event) => {
@@ -79,11 +93,11 @@ function BuyingprodUser() {
       return;
     }
 
-    axios.post(`http://localhost:3000/buyProduct/${uid}/${id}/${selectedAddress._id}/${State.sid}`, cardDetails)
+    axios.post(`http://localhost:3000/cartBuy/${uid}/${selectedAddress._id}`, cardDetails)
       .then(response => {
         setState(response.data);
         alert(response.data.msg);
-        navigate(-1);
+        navigate('/OrderDetailsUser');
       })
       .catch(err => {
         console.log(err);
@@ -92,28 +106,61 @@ function BuyingprodUser() {
   };
 
   return (
-    <div className='buy-maindiv'>
-      <div className='buying-main'>
-      <div className='Buy-buying-payment'>
-        <div className='Buy-address-box'>
+    <div className='CartBuy-main'>
+      {Order.map((a) => {
+        return (
+          <div className='CartBuy-mainbox' key={a._id}>
+            <div className="CartBuy-flex">
+              <div>
+                <img
+                  className="CartBuy-img"
+                  src={a.pid?.image1?.filename ? `http://localhost:3000/${a.pid.image1.filename}` : 'default-image.jpg'}
+                  alt={a.pid?.name || 'Default product'}
+                />
+              </div>
+              <div className='CartBuy-details'>
+                {a.pid?.name || 'Unknown Product'}
+              </div>
+              <div className='CartBuy-rating'>
+                {a.pid?.brand || 'No Brand'}
+              </div>
+              <div className='CartBuy-price'>
+                {'Rs. ' + (a.pid?.price || 'N/A')}
+              </div>
+            </div>
+          </div>
+        );
+      })}
+
+      <div className='CartBuy-buying-payment'>
+        <div className='CartBuy-final-details row'>
+          <div className='col-5'>
+            <h5>Total items: {totalItems}</h5>
+          </div>
+          <div className='col-5'>
+            <h5>Total price: <b>{totalPrice}</b> rs</h5>
+          </div>
+        </div>
+        <hr/>
+        <div className='CartBuy-address-box'>
           <h4>ADDRESS</h4>
           {savedAddresses.length > 0 ? (
             <div className='row'>
               {savedAddresses.map((addr, index) => (
                 <div key={index} className='col-6'>
-                  <li className='Buy-address-item'>
+                  <li className='CartBuy-address-item'>
                     <input
                       type='radio'
                       name='address'
                       value={addr._id}
                       checked={selectedAddress?._id === addr._id}
                       onChange={handleAddressSelect}
-                      className='Buy-address-radio'
+                      className='CartBuy-address-radio'
                     />
                     <div>
-                      <p className='Buy-address-name'><strong>{addr.name}</strong></p>
-                      <p className='Buy-address-city'>{addr.city}, {addr.state}</p>
-                      <p className='Buy-address-details'>{addr.pin} - {addr.landmark}</p>
+                      <p className='CartBuy-address-name'><strong>{addr.name}</strong></p>
+                      <p className='CartBuy-address-city'>{addr.city}, {addr.state}</p>
+                      <p className='CartBuy-address-details'>{addr.pin} - {addr.landmark}</p>
                     </div>
                   </li>
                 </div>
@@ -131,7 +178,7 @@ function BuyingprodUser() {
           placeholder='Card holder name'
           value={cardDetails.cardName}
           onChange={handleCardDetailsChange}
-          className='Buy-card-input'
+          className='CartBuy-card-input'
         />
         <input
           type='number'
@@ -139,7 +186,7 @@ function BuyingprodUser() {
           placeholder='Card Number'
           value={cardDetails.cardNumber}
           onChange={handleCardDetailsChange}
-          className='Buy-card-input'
+          className='CartBuy-card-input'
         />
         <input
           type='date'
@@ -147,7 +194,7 @@ function BuyingprodUser() {
           placeholder='Expiry Date (MM/YY)'
           value={cardDetails.expiryDate}
           onChange={handleCardDetailsChange}
-          className='Buy-card-input'
+          className='CartBuy-card-input'
         />
         <input
           type='number'
@@ -155,24 +202,12 @@ function BuyingprodUser() {
           placeholder='CVV'
           value={cardDetails.cardCvv}
           onChange={handleCardDetailsChange}
-          className='Buy-card-input'
+          className='CartBuy-card-input'
         />
         <button onClick={handlePaymentSubmit} className='CartBuy-payment-btn'>Submit Payment</button>
       </div>
-
-        <div className='buy-image-container'>
-          {State.image1 && State.image1.filename && (
-            <img className='buying-img' src={`http://localhost:3000/${State.image1.filename}`} alt="Product" />
-          )}
-          <div className='product-details'>
-            <p>{State.name}</p>
-            <b>{'RS. ' + State.price}</b>
-          </div>
-        </div>
-      </div>
-     
     </div>
   );
 }
 
-export default BuyingprodUser;
+export default CartBuy;

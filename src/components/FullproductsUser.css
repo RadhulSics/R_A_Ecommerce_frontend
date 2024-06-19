@@ -10,35 +10,38 @@
  width: 100%;
  padding-left: 2rem;
  text-decoration: none;
- margin-top: 5rem;
+ margin-top: 2rem;
 }
 
 .fullU-col {
-  margin: 1.7rem; 
-  width: 15rem !important;
-  height: 17rem;
+  margin-top: 1rem;
+  margin-left: 1rem; 
+  margin-bottom: 3rem;
+  width: auto !important;
+  height: 20rem;
+  border: none;
+  background: none;
 }
 
 .fullU-img{
-  width: 12rem;
-  height: 10rem;
+  width: 15rem;
+  height: 18rem;
   object-fit: cover;
   padding: .25rem;
   margin: 10px 0 0 10px;
-  border-radius: 5px;
+  border-radius: 8px;
 }
 
 .fullU-name{
   font-size: small ;
-  color: rgba(51, 49, 49, 0.812) !important;
+  color: rgba(51, 49, 49, 0.886) !important;
   font-weight: bold;
-  width: 9rem;
-  height: 2.5rem;
   text-align: center;
 }
 
 .fullU-price{
   text-align: center;
-  font-weight: 660;
+  font-size: medium;
+  font-weight: 500;
   color: black;
 }

@@ -39,11 +39,11 @@ useEffect(()=>{
       <img src={`http://localhost:3000/${State.image3.filename}`} class="d-block w-100 indprod-img" alt="..."/>
     </div>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+  <button class="carousel-control-prev carousel-control-prev1" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
   </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+  <button class="carousel-control-next carousel-control-next1" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
@@ -57,13 +57,13 @@ useEffect(()=>{
   <div>
   <p className='ind-price'>Rs : 299 </p>
   </div>
-  <div className='ind-rating'>
+  {/* <div className='ind-rating'>
   <h6>RATING : </h6>
   <p>4.2 ⭐</p>
-</div>
+</div> */}
   <hr/>
 
-  <div class="radio-toolbar">
+  {/* <div class="radio-toolbar">
     <h5>Select Size</h5>
     <input className='ind-input' type="radio" id="radioS" name="radiosize" value="S"/>
     <label className='ind-label' for="radioS">S</label>
@@ -76,7 +76,7 @@ useEffect(()=>{
 
     <input className='ind-input' type="radio" id="radioXL" name="radiosize" value="XL"/>
     <label className='ind-label'  for="radioXL">XL</label> 
-</div>
+</div> */}
 <div className='ind-details'>
  
 

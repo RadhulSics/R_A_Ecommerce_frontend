@@ -1,0 +1,40 @@
+
+
+/* ----- fullproducts user starts---- */
+
+.sellerSearch-main{
+  width: 100%;
+  padding-left: 2rem;
+  text-decoration: none;
+ }
+ 
+ .sellerSearch-col {
+   margin: 1.7rem; 
+   width: 15rem !important;
+   height: 17rem;
+ }
+ 
+ .sellerSearch-img{
+   width: 12rem;
+   height: 10rem;
+   object-fit: cover;
+   padding: .25rem;
+   margin: 10px 0 0 10px;
+   border-radius: 5px;
+ }
+ 
+ .sellerSearch-name{
+   font-size: small ;
+   color: rgba(51, 49, 49, 0.812) !important;
+   font-weight: bold;
+   width: 9rem;
+   height: 2.5rem;
+   text-align: center;
+ }
+ 
+ .sellerSearch-price{
+   text-align: center;
+   font-weight: 660;
+   color: black;
+ }
+  

@@ -3,6 +3,19 @@
 
 
   /* ......individualproduct starts...... */
+  .carousel-control-prev1{
+    position: absolute;
+    left: 5rem;
+    top:-0rem !important;
+
+  }
+
+  .carousel-control-next1{
+      position: absolute;
+      left: 33rem;
+      top:-0rem !important;
+  }
+
   .ind-main-div{
 margin-top: 3rem;
   }

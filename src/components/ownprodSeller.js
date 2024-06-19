@@ -135,40 +135,44 @@ function OwnprodSeller() {
         ))}
       </div>
 
+      <div className='ownS-main-bg'>
       {open && editData && (
-        <div className='ownS-main-bg'>
+        <div >
           <form onSubmit={productAdd}>
             <div className='ownS-main2'>
-            <button style={{border:'',background:''}} onClick={() => setIsOpen(false)} className='close-btn'>Cancel</button>
+           
               <h3 className='ownS-sellerhead'>EDIT ITEM</h3>
-              <button  onClick={() => {
-                                deleteProduct(editData._id);
-                                setIsOpen(false);
-                                }} className='new-prod-btn'>Delete</button>
+             
               <table>
-                <tbody>
-                  <tr>
-                    <td><label className='ownS-sellerlabel'>Product name</label></td>
+                <tbody className="edit-product-flex2">
+                  <tr  >
+                    <td><label className='ownS-sellerlabel'>Product name :</label></td>
                     <td><input className='ownS-sellerinput' type='text' name='name' value={editData.name} onChange={change} required /></td>
                   </tr>
                   <tr>
-                    <td><label className='ownS-sellerlabel'>Product brand</label></td>
+                    <td><label className='ownS-sellerlabel'>Product brand :</label></td>
                     <td><input className='ownS-sellerinput' type='text' name='brand' value={editData.brand} onChange={change} required /></td>
                   </tr>
-                  <tr>
-                    <td><label className='ownS-sellerlabel'>Quantity</label></td>
+                  <tr >
+                    <td><label className='ownS-sellerlabel'>Quantity :</label></td>
                     <td><input className='ownS-sellerinput' type='number' name='quantity' value={editData.quantity} onChange={change} required /></td>
+                    
                   </tr>
-                  <tr>
-                    <td><label className='ownS-sellerlabel'>Material</label></td>
+                 
+                  <tr >
+                    <td><label className='ownS-sellerlabel'>Material :</label></td>
                     <td><input className='ownS-sellerinput' type='text' name='material' value={editData.material} onChange={change} required /></td>
                   </tr>
-                  <tr>
-                    <td><label className='ownS-sellerlabel'>Specifications</label></td>
+                  <tr >
+                    <td><label className='ownS-sellerlabel'>Specifications :</label></td>
                     <td><textarea className='ownS-sellerinput' rows={3} cols={30} name='specifications' value={editData.specifications} onChange={change} required /></td>
                   </tr>
-                  <tr>
-                    <td><label className='ownS-sellerlabel'>Gender</label></td>
+                  <tr >
+                    <td><label className='ownS-sellerlabel'>Price :</label></td>
+                    <td><input className='ownS-sellerinput' type='number' name='price' value={editData.price} onChange={change} required /></td>
+                  </tr>
+                  <tr >
+                    <td><label className='ownS-sellerlabel'>Gender :</label></td>
                     <td>
                       <select name='gender' value={editData.gender} onChange={change} required>
                         <option value='male'>MALE</option>
@@ -177,18 +181,20 @@ function OwnprodSeller() {
                     </td>
                   </tr>
                   <tr>
-                    <td><label className='ownS-sellerlabel'>Category</label></td>
+                    <td><label className='ownS-sellerlabel'>Category :</label></td>
                     <td>
                       <select name='category' value={editData.category} onChange={change}>
-                        <option value='Formal'>Formal</option>
-                        <option value='Casual'>Casual</option>
-                        <option value='Shoe'>Shoe</option>
-                        <option value='Watch'>Watch</option>
+                      <option  value={'Shirt'} >Shirt</option>
+          <option  value={'Pant'} >Pant</option>
+          <option  value={'Jacket'} >Jacket</option>
+          <option  value={'Shoe'} >Shoe</option>
+          <option  value={'Watch'} >Watch</option>
+          <option  value={'Belt'} >Belt</option>
                       </select>
                     </td>
                   </tr>
                   <tr>
-                    <td><label className='ownS-sellerlabel'>Size</label></td>
+                    <td><label className='ownS-sellerlabel'>Size :</label></td>
                     <td>
                       <select name='size' value={editData.size} onChange={change}>
                         <option value='S'>S</option>
@@ -199,13 +205,10 @@ function OwnprodSeller() {
                       </select>
                     </td>
                   </tr>
-                  <tr>
-                    <td><label className='ownS-sellerlabel'>Price</label></td>
-                    <td><input className='ownS-sellerinput' type='number' name='price' value={editData.price} onChange={change} required /></td>
-                  </tr>
+                
                 
                   <tr>
-                    <td><label className='ownS-sellerlabel'>Photo 1:</label></td>
+                    <td><label className='ownS-sellerlabel'>Photo 1 :</label></td>
                     <td>
                       <input className='ownS-sellerinput' type='file' name='image1' onChange={change} required/>
                       {editData.image1 && (
@@ -214,7 +217,7 @@ function OwnprodSeller() {
                     </td>
                   </tr>
                   <tr>
-                    <td><label className='ownS-sellerlabel'>Photo 2:</label></td>
+                    <td><label className='ownS-sellerlabel'>Photo 2 :</label></td>
                     <td>
                       <input className='ownS-sellerinput' type='file'  name='image2' onChange={change} required/>
                       {editData.image2 && (
@@ -223,7 +226,7 @@ function OwnprodSeller() {
                     </td>
                   </tr>
                   <tr>
-                    <td><label className='ownS-sellerlabel'>Photo 3:</label></td>
+                    <td><label className='ownS-sellerlabel'>Photo 3 :</label></td>
                     <td>
                       <input className='ownS-sellerinput' type='file'  name='image3' onChange={change} required/>
                       {editData.image3 && (
@@ -233,12 +236,18 @@ function OwnprodSeller() {
                   </tr>
                 </tbody>
               </table>
-              <button type='submit' className='new-prod-btn'>Update</button>
-             
+              <button type='submit' className='new-prod-btn2'>Update</button>
+              <button  onClick={() => {
+                                deleteProduct(editData._id);
+                                setIsOpen(false);
+                                }} className='new-prod-btn2'>Delete
+              </button>
+              <button className='new-prod-btn2' onClick={() => setIsOpen(false)} >Cancel</button>
             </div>
           </form>
         </div>
       )}
+      </div>
     </div>
   );
 }

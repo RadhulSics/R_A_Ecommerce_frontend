@@ -3,10 +3,12 @@ import './NewprodSeller.css';
 import axios from 'axios'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
+import { useNavigate } from 'react-router-dom';
 
 
 function NewprodSeller() {
 const sid = localStorage.getItem('sid')
+const navigate = useNavigate()
 console.log(sid);
   const[data,SetData]=useState({name:'',brand:'',quantity:'',material:'',specifications:'',price:'',image1:'null',image2:'null',image3:'null',sid:sid,gender:'male',category:'Formal',size:'S'})
 
@@ -43,6 +45,7 @@ function productAdd(b){
   .then((rec)=>{
     console.log(rec);
     alert("added successfully")
+    navigate('/OwnprodSeller')
   })
   .catch((err)=>{
     console.log(err)
@@ -53,7 +56,8 @@ function productAdd(b){
     <div className='prodseller-main-bg'>
       <form onSubmit={productAdd}>
       <div className='prodseller-main'>
-        <h3 className='prod-sellerhead'>Add a New Product to Store</h3>
+        <h3 className='prod-sellerhead'>ADD NEW PRODUCT</h3>
+        <div className='prodseller-main2'>
         <tr>
      
        <td><label  className='prod-sellerlabel'>Product name</label></td> 
@@ -84,7 +88,28 @@ function productAdd(b){
         <td><textarea  className='prod-sellerinput' rows={3} cols={30} type='text'  name='specifications' value={data.specifications} onChange={change} required></textarea></td>
       
       </tr>
+
       <tr>
+
+<td> <label  className='prod-sellerlabel'>Price</label></td>
+<td> <input  className='prod-sellerinput' type='number'  name='price' value={data.price} onChange={change} required></input></td>
+</tr>
+      <tr>
+       <td><label  className='prod-sellerlabel'>Photo 1 : </label></td> 
+       <td> <input   className='prod-sellerinput'type='file' name='image1' onChange={change} required></input></td> 
+        </tr>
+        <tr>
+       <td><label  className='prod-sellerlabel'>Photo 2 : </label></td> 
+       <td> <input   className='prod-sellerinput'type='file' name='image2' onChange={change} required></input></td> 
+        </tr>
+        <tr>
+       <td><label  className='prod-sellerlabel'>Photo 3 : </label></td> 
+       <td> <input   className='prod-sellerinput'type='file' name='image3' onChange={change} required></input></td> 
+        </tr>
+        </div>
+
+        <div className='prodseller-main3'>
+        <tr>
       <td> <label  className='prod-sellerlabel'>Gender</label></td>
       <td><select name='gender'  onChange={change} required>
           <option  value={'male'} >MALE</option>
@@ -95,10 +120,12 @@ function productAdd(b){
       <tr>
       <td> <label  className='prod-sellerlabel'>Category</label></td>
       <td><select  name='category'  onChange={change}>
-          <option  value={'Formal'} >Formal</option>
-          <option  value={'Casual'} >Casual</option>
+          <option  value={'Shirt'} >Shirt</option>
+          <option  value={'Pant'} >Pant</option>
+          <option  value={'Jacket'} >Jacket</option>
           <option  value={'Shoe'} >Shoe</option>
           <option  value={'Watch'} >Watch</option>
+          <option  value={'Belt'} >Belt</option>
         </select></td>
       </tr>
 
@@ -112,24 +139,9 @@ function productAdd(b){
         </select></td>
       </tr>
           
-          <tr>
-
-       <td> <label  className='prod-sellerlabel'>Price</label></td>
-       <td> <input  className='prod-sellerinput' type='number'  name='price' value={data.price} onChange={change} required></input></td>
-      </tr>
-      <tr>
-       <td><label  className='prod-sellerlabel'>Photo 1 : </label></td> 
-       <td> <input   className='prod-sellerinput'type='file' name='image1' onChange={change} required></input></td> 
-        </tr>
-        <tr>
-       <td><label  className='prod-sellerlabel'>Photo 2 : </label></td> 
-       <td> <input   className='prod-sellerinput'type='file' name='image2' onChange={change} required></input></td> 
-        </tr>
-        <tr>
-       <td><label  className='prod-sellerlabel'>Photo 3 : </label></td> 
-       <td> <input   className='prod-sellerinput'type='file' name='image3' onChange={change} required></input></td> 
-        </tr>
-
+       
+        </div>
+       
 
         {/* <div className='new-prod-label-box'>
             <label  className='new-prod-label'>Male</label>
@@ -141,7 +153,7 @@ function productAdd(b){
         
 
           
-        
+     
       
       <button type='submit' className='new-prod-btn' >Add</button>
 

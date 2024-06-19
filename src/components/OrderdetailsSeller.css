@@ -22,7 +22,7 @@
    flex-wrap: wrap;
    justify-content: space-between;
    align-items: center;
-   border-top: 1px solid rgba(0, 0, 0, 0.455);
+   border-bottom: 1px solid rgba(0, 0, 0, 0.455);
    margin: 0.5rem;
    width: 90rem;
 }
@@ -31,7 +31,6 @@
  color: #E35F14 !important;
  font-weight: bold;
  height: 2.5rem;
- width: 20rem;
 }
 
 .orderS-price{
@@ -46,5 +45,14 @@
 .orderS-date{
  margin-right: 2rem;
  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+.orderS-rating-flex{
+    display: flex;
+    width: 12rem;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-direction: column;
 
 }

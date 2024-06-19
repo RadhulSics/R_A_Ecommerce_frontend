@@ -1,20 +1,23 @@
 
   
   /* ----- Profile User Starts ----- */
-.profS-main{
-  margin-top: 4rem;
+.profU-main{
+  margin-top: 0rem;
+ 
 }
   .profU-name{
     width: 30rem;
     border: 1px solid rgb(180, 179, 179);
     border-radius: .5rem;
     padding: 1rem;
-    background-color: rgba(209, 209, 209, 0.515);
+    /* background-color: rgba(209, 209, 209, 0.515); */
     box-shadow: 2px 2px 10px rgb(143, 144, 144);
     position: relative;
     left: 2.3rem;
     top: 3rem;
     align-items: center;
+    background-color: white;
+    text-align: center;
   }
   .profU-img{
     border: black;
@@ -31,12 +34,14 @@
     border-radius: .5rem;
     padding: 1rem;
     margin:5%;
-    background-color: rgba(209, 209, 209, 0.515);
+    /* background-color: rgba(209, 209, 209, 0.515); */
     box-shadow: 2px 2px 10px rgb(143, 144, 144);
     position: relative;
     left: 0rem;
     top: 3rem;
     align-items: center;
+    background-color: white;
+    text-align: center;
   }
 
   .profU-welcome{
@@ -48,10 +53,12 @@
     font-size: large;
     font-weight: 500;
     text-align: center;
+    background: none;
+    border: none;
   }
 
   .profU-left1{
-  margin-left: 1rem;
+  margin-left: 0rem;
   margin-top: 1rem;
   font-size: large;
   font-weight: bold;
@@ -90,6 +97,7 @@
     background-color: rgba(209, 209, 209, 0.515);
     box-shadow: 2px 2px 10px rgb(143, 144, 144);
     padding: 1rem;
+    background-color: white;
   }
 
   .profU-head{
@@ -124,65 +132,77 @@
     box-shadow: 3px 2px 22px 1px  #44949F; 
   }
 /* ------------------------------- */
+.profU-buy-editbtn{
+  color: white;
+  background-color:  #EE9F43;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  padding: 8px;
+  width: 100px;
+  height: 40px;
+  font-weight: bold;
+  margin-top: .5rem;
+  margin-left: 25%;
+  letter-spacing: .1rem;
+  margin-bottom: 1rem;
+}
+
+.profU-buy-editbtn:hover{
+  background-color:  #44949F;
+}
+
+.profU-buy-editbtn:active { 
+  transform: scale(0.98); 
+  box-shadow: 3px 2px 22px 1px  #44949F; 
+}
+
+.profU-buying-main2{
+  text-align: left;
+  overflow: hidden;
+}
+.profU-buying-main3{
+  margin-left: 3rem;
+}
 
 .profU-buying-main{
+  margin-top: 3rem;
   width: 40rem;
   border: 1px solid rgb(180, 179, 179);
   border-radius: .5rem;
-  padding: 1rem;
-  background-color: rgba(209, 209, 209, 0.515);
   box-shadow: 2px 2px 10px rgb(143, 144, 144);
-  position: relative;
-  left: 8rem;
-  top: 3rem;
   align-items: center;
   text-align: center;
+  background-color: white;
+  margin-left: 8rem;
 }
 
 .profU-buy-input{
-  border: 1px solid #EE9F43;
-  border-radius: 100px;
-  width: 22rem;
-  height: 3rem;
-  margin-top: 1rem;
-  margin-right: 1rem;
-}
-
-.profU-buy-input::placeholder{
-  text-indent: 2rem;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
 }
 
 .profU-buy-savebtn{
   color: white;
-  background-color: #44949F;
+  background-color:  #44949F;
   border: 1px solid transparent;
-  border-radius: 100px;
+  border-radius: 3px;
   padding: 8px;
-  width: 85px;
+  width: 100px;
   height: 40px;
-  font-size: small;
   font-weight: bold;
-  margin-top: 10px;
+  margin-top: .5rem;
+  margin-left: 2%;
+  letter-spacing: .1rem;
+  margin-bottom: 1rem;
 }
 
 .profU-buy-savebtn:hover{
-  background-color: #EE9F43;
+  background-color: #EE9F43; 
 }
 
 .profU-buy-savebtn:active { 
   transform: scale(0.98); 
-  box-shadow: 3px 2px 22px 1px #E35F14; 
+  box-shadow: 3px 2px 22px 1px  #44949F; 
 }
-
-.profU-buying-main2{
-  border: 1px solid rgb(180, 179, 179);
-  border-radius: .5rem;
-  padding: 1rem;
-  background-color: rgba(209, 209, 209, 0.515);
-  align-items: center;
-  text-align: center;
-  margin-bottom: .5rem;
-}
-
   /* ----- Profile User Ends ----- */
 

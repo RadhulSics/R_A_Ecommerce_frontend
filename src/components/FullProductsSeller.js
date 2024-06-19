@@ -35,7 +35,7 @@ console.log(Products)
            <img className="card-img-top fullS-img" src={`http://localhost:3000/${c.image1.filename}`} alt='image' />
            <div className="card-body">
             <div className='fullS-name'>
-              <hr/>
+    
             {c.name+" "}
             <div className='fullS-price'>
             {'Rs. '+c.price+" "}

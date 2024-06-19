@@ -8,29 +8,32 @@
     margin-left: 30rem;
     border: 1px solid rgb(180, 179, 179);
     border-radius: .5rem;
-    background-color: rgba(209, 209, 209, 0.515);
+    /* background-color: rgba(209, 209, 209, 0.515); */
+    background-color: white;
     box-shadow: 2px 2px 10px rgb(143, 144, 144);
     align-items: center;
-    padding: 5rem;
+    padding:2rem 4rem;
   
   }
 
+  .profeditU-main-title{
+    text-align: center;
+  }
   .profeditU-input{
-    width: 280px;
-    height: 50px;
-    border-radius:.3rem;
-    box-shadow: inset 0px 0px 20px 0px white;
-    border: none;
-    outline: none;
-    background-color: #fff;
-    margin: .5rem 0rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 22rem;
+    height: 3rem;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    text-indent: 2rem;
   }
 
   .profeditU-label{
     color: #E35F14;
     text-transform: uppercase;
     font-weight: bold;
-    margin: 0rem 2rem;
+    margin: 1rem 1rem 0 4rem;
   }
 
   .profeditU-button{
@@ -43,7 +46,7 @@
     height: 40px;
     font-size: small;
     font-weight: bold;
-    margin: 30px 0px 10px 40px;
+    margin: 30px 0px 10px 60px;
   }
   
   .profeditU-button:hover{
@@ -62,7 +65,7 @@
   .profeditU-imageupload-box{
     margin-top: 1rem;
     margin-bottom: 1rem;
-    margin-left: 2rem;
+    margin-left: 4rem;
     display:flex;
     gap: 1rem;
     width: 27rem;

@@ -1,7 +1,7 @@
 
 /* ...... navbaruser starts...... */
 .nav-user{
-  position: fixed;
+  position: relative;
   width: 100%;
   z-index: 999;
   top: 0;
@@ -15,7 +15,7 @@
   gap: 6%;
   padding: 10px;
   margin-top: 0;
-  background-color: #28373A;
+  background-color: #28373a28;
   padding-top: 15px;
   text-decoration: none;
   flex-wrap: wrap;

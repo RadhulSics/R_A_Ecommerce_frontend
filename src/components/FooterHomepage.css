@@ -1,17 +1,17 @@
-.footer-main{
+.FooterHomepage-main{
   /* background-image: url('../images/footer.jpg'); */
   background-color: white;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
   height: 20rem;
-  margin-top: 10rem;
+ 
   position: relative;
   bottom: 0;
   
 }
 
-.footer-flex{
+.FooterHomepage-flex{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -19,23 +19,23 @@
     padding-top: 7rem;
 }
 
-.footer-a{
+.FooterHomepage-a{
   color: black ;
   text-decoration: none;
   font-size: large;
   font-weight: 400;
 }
 
-.footer-a:hover{
+.FooterHomepage-a:hover{
   text-decoration: underline;
   text-underline-offset: 0.5em;
 }
 
-.footer-copyright{
+.FooterHomepage-copyright{
   margin-top: 7rem;
 }
 
-.footer-copyright-text{
+.FooterHomepage-copyright-text{
   font-size: medium;
   text-align: center;
   color: rgba(0, 0, 0, 0.347);

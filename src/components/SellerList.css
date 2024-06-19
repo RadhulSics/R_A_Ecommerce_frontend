@@ -2,9 +2,7 @@
 
   /* selleruser starts */
   .SellerList-main{
-    position: relative;
-    right: -2rem;
-    top: 3.5rem;
+    margin-top: 3rem;
     width: 90%;
     height: auto;
     padding: 1rem;
@@ -20,11 +18,11 @@
      font-weight: bold;
      font-size: large;
      border-bottom: 2px double black;
-     border-bottom-style: dotted;
+     border-bottom-style:groove;
      border-left: 2px double black;
-     border-left-style: dotted;
+     border-left-style: groove;
      border-right: 2px double black;
-     border-right-style: dotted;
+     border-right-style:groove;
    }
  
    .SellerList-image{
@@ -49,7 +47,7 @@
      height: 40px;
      font-size: small;
      font-weight: bold;
-     margin: 10px 150px 10px 0px;
+     margin-right: 1rem;
    }
    
    .SellerList-banbutton:hover{
