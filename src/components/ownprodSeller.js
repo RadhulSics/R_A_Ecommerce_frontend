@@ -30,6 +30,13 @@ function OwnprodSeller() {
 
 
   const change = (e) => {
+    const { name, value, files } = e.target;
+    if (name === "name" || name === "brand" || name === "material") {
+      if (/\d/.test(value)) {
+        alert(`${name.charAt(0).toUpperCase() + name.slice(1)} cannot contain numbers.`);
+        return;
+      }
+    }
     
     if(e.target.name === "image1"){
         // handleImageUpload(e);

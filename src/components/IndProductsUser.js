@@ -99,7 +99,10 @@ console.log(State);
   
 </div> */}
   <hr style={{width:'50rem'}}/>
-
+  <div  className="radio-toolbar">
+  <label className='indprodU-label' for="radioS">{State.size}</label>
+  </div >
+{/* 
   <div class="radio-toolbar">
     <h5>Select Size</h5>
     <input className='indprodU-input' type="radio" id="radioS" name="radiosize" value="S"/>
@@ -113,7 +116,7 @@ console.log(State);
 
     <input className='indprodU-input' type="radio" id="radioXL" name="radiosize" value="XL"/>
     <label className='indprodU-label'  for="radioXL">XL</label> 
-</div>
+</div> */}
 
 <div className='indprodU-details'>
 

@@ -98,8 +98,8 @@ function App() {
       <Route path='/ProfileeditSeller' element={[<NavbarSeller/>,<ProfileeditSeller/>,<Footer/>]} />
       <Route path='/OwnprodSeller' element={[<NavbarSeller/>,<OwnprodSeller/>,<Footer/>]} />
       <Route path='/sellerSearch/:data' element={[<NavbarSeller/>,<SellerSearch/>,<Footer/>]} />
-    </Routes>
-    </BrowserRouter>
+      </Routes>
+      </BrowserRouter>
   );
 }
 

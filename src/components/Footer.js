@@ -12,10 +12,10 @@ function Footer() {
         </div>
         <div className='footer-flex'>
           <div>
-            <Link className='footer-a' to='/'>Home</Link>
+            <Link className='footer-a' to='#'>Home</Link>
           </div>
           <div>
-            <Link className='footer-a'  to='/about'>About us</Link>
+            <Link className='footer-a'  to='#'>About us</Link>
           </div>
           <div>
             <Link className='footer-a'  to='#'>Gallery</Link>
@@ -24,7 +24,7 @@ function Footer() {
             <Link className='footer-a'  to='#'>Careers</Link>
           </div>
           <div>
-            <Link className='footer-a'  to='/contact'>Contact us</Link>
+            <Link className='footer-a'  to='#'>Contact us</Link>
           </div>
         </div>
       </div>
