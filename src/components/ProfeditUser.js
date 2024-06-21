@@ -39,6 +39,7 @@ function ProfeditUser() {
 
   const change = (e) => {
     const { name, value, files } = e.target;
+
     setData(prevData => ({
       ...prevData,
       [name]: name === 'image' ? files[0] : value
@@ -47,6 +48,22 @@ function ProfeditUser() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (/\d/.test(data.name)) {
+      alert("Name cannot contain numbers.");
+      return;
+    }
+
+    if (!/^\d{10}$/.test(data.number)) {
+      alert("Phone number must be exactly 10 digits.");
+      return;
+    }
+
+    if (!/(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-zA-Z])(?=.{6,})/.test(data.password)) {
+      alert('Password must be at least 6 characters long and contain at least one special character, one number, and one letter.');
+      return;
+    }
+
     const formData = new FormData();
 
     formData.append('name', data.name);
@@ -79,16 +96,41 @@ function ProfeditUser() {
         <h2 className='profeditU-main-title'>EDIT PROFILE</h2>
         <form onSubmit={handleSubmit}>
           <div>
-            <input className='profeditU-input' type='text' value={data.name} name='name' onChange={change} />
+            <input
+              className='profeditU-input'
+              type='text'
+              value={data.name}
+              name='name'
+              onChange={change}
+            />
           </div> 
           <div>
-            <input className='profeditU-input reg-number' type='number' value={data.number} name='number' onChange={change} />
+            <input
+              className='profeditU-input reg-number'
+              type='text'
+              value={data.number}
+              name='number'
+              onChange={change}
+              maxLength="10"
+            />
           </div>
           <div>
-            <input className='profeditU-input' type='email' value={data.email} name='email' onChange={change} />
+            <input
+              className='profeditU-input'
+              type='email'
+              value={data.email}
+              name='email'
+              onChange={change}
+            />
           </div>
           <div>
-            <input className='profeditU-input' type='password' value={data.password} name='password' onChange={change} />
+            <input
+              className='profeditU-input'
+              type='password'
+              value={data.password}
+              name='password'
+              onChange={change}
+            />
           </div>
           <div>
             <label className='profeditU-label'>Male</label>
@@ -97,8 +139,7 @@ function ProfeditUser() {
             <input type='radio' name='gender' value='female' checked={data.gender === 'female'} onChange={change} />
           </div>
           <div className='profeditU-imageupload-box'>
-            {/* <label className='profeditU-imageupload-label'>Upload image :</label> */}
-            <input type='file' name='image' onChange={change} />
+            <input type='file' name='image' onChange={change} required />
           </div>
           <div>
             <button className='profeditU-button' type='submit'>DONE</button>

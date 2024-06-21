@@ -38,7 +38,7 @@ function OrderDetailsAdmin() {
       <hr />
       {Array.isArray(orders) && orders.length > 0 ? (
         orders.map((order, index) => (
-          <Link key={index} to='/OrderDetails' className="orderD-flex">
+          <div key={index} to='/OrderDetails' className="orderD-flex">
             <div>
               {order.pid && order.pid.image1 && (
                 <img className="orderD-img" src={`http://localhost:3000/${order.pid.image1.filename}`} alt="Order" />
@@ -78,7 +78,7 @@ function OrderDetailsAdmin() {
             <div className='orderD-date'>
               <p>Purchased date: <b>{new Date(order.date).toLocaleDateString()}</b></p>
             </div>
-          </Link>
+          </div>
         ))
       ) : (
         <p>No orders found</p>

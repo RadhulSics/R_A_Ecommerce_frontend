@@ -29,6 +29,14 @@ function ProfileUser() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
+
+    if (name === "city" || name === "name" || name === "landmark" || name === "state") {
+      if (/\d/.test(value)) {
+        alert(`${name.charAt(0).toUpperCase() + name.slice(1)} cannot contain numbers.`);
+        return;
+      }
+    }
+
     setAddress(prevData => ({
       ...prevData,
       [name]: value
@@ -50,6 +58,10 @@ function ProfileUser() {
   };
 
   const saveAddress = () => {
+    if (!validateAddressFields(address)) {
+      return;
+    }
+
     axios.post(`http://localhost:3000/newAddress/${uid}`, address)
       .then(() => {
         alert("Address added successfully");
@@ -61,6 +73,25 @@ function ProfileUser() {
       });
   };
 
+  const validateAddressFields = (addr) => {
+    if (!addr.name || !addr.pin || !addr.number || !addr.city || !addr.state || !addr.landmark) {
+      alert("All fields are required");
+      return false;
+    }
+
+    if (!/^\d{10}$/.test(addr.number)) {
+      alert("Mobile number should be 10 digits.");
+      return false;
+    }
+
+    if (!/^\d{6}$/.test(addr.pin)) {
+      alert("Pin should be 6 digits.");
+      return false;
+    }
+
+    return true;
+  };
+
   const deleteAddress = (id) => {
     axios.post(`http://localhost:3000/deleteAddress/${id}`)
       .then(() => {
@@ -70,9 +101,13 @@ function ProfileUser() {
       .catch(err => {
         console.log(err);
       });
-  }
+  };
 
   const editAddress = () => {
+    if (!validateAddressFields(editAddressData)) {
+      return;
+    }
+
     axios.post(`http://localhost:3000/editAddress/${editAddressData._id}`, editAddressData)
       .then(() => {
         alert("Address edited successfully");
@@ -83,10 +118,18 @@ function ProfileUser() {
       .catch(err => {
         console.log(err);
       });
-  }
+  };
 
   const handleEdit = (e) => {
     const { name, value } = e.target;
+
+    if (name === "city" || name === "name" || name === "landmark" || name === "state") {
+      if (/\d/.test(value)) {
+        alert(`${name.charAt(0).toUpperCase() + name.slice(1)} cannot contain numbers.`);
+        return;
+      }
+    }
+
     setEditAddressData(prevData => ({
       ...prevData,
       [name]: value
@@ -96,7 +139,7 @@ function ProfileUser() {
   const startEditAddress = (addr) => {
     setEditAddressData(addr);
     setPage(2);
-  }
+  };
 
   return (
     <div>
@@ -148,31 +191,29 @@ function ProfileUser() {
             </div>
           ) : (
             <div className='profU-buying-main col-6'>
-                <br/>
+              <br />
               <h4>SAVED ADDRESS</h4>
-              <br/>  <br/>
-              
-                {savedAddresses.length > 0 ? (
-                  savedAddresses.map((addr, index) => (
-            
-                      <div className='profU-buying-main2 row'>
-                        <div className='profU-buying-main3 row'>
-                        <p className='col-6'>Name: <b>{addr.name}</b></p>
-                        <p className='col-6'>Pin: {addr.pin}</p>
-                        <p className='col-6'>Number: {addr.number}</p>
-                        <p className='col-6'>City: {addr.city}</p>
-                        <p className='col-6'>State: {addr.state}</p>
-                        <p className='col-6'>Landmark: {addr.landmark}</p>
-                        </div>
-                        <button type='button' className='profU-buy-editbtn col-5' onClick={() => deleteAddress(addr._id)}>DELETE</button>
-                        <button type='button' className='profU-buy-editbtn col-5' onClick={() => startEditAddress(addr)}>EDIT</button>
-                        <hr /> 
-                      </div>
-               
-                  ))
-                ) : (
-                  <p>No saved addresses</p>
-                )}
+              <br /> <br />
+
+              {savedAddresses.length > 0 ? (
+                savedAddresses.map((addr, index) => (
+                  <div key={addr._id} className='profU-buying-main2 row'>
+                    <div className='profU-buying-main3 row'>
+                      <p className='col-6'>Name: <b>{addr.name}</b></p>
+                      <p className='col-6'>Pin: {addr.pin}</p>
+                      <p className='col-6'>Number: {addr.number}</p>
+                      <p className='col-6'>City: {addr.city}</p>
+                      <p className='col-6'>State: {addr.state}</p>
+                      <p className='col-6'>Landmark: {addr.landmark}</p>
+                    </div>
+                    <button type='button' className='profU-buy-editbtn col-5' onClick={() => deleteAddress(addr._id)}>DELETE</button>
+                    <button type='button' className='profU-buy-editbtn col-5' onClick={() => startEditAddress(addr)}>EDIT</button>
+                    <hr />
+                  </div>
+                ))
+              ): (
+                <p>No saved addresses</p>
+              )}
               
            
               <h4>NEW ADDRESS</h4>
