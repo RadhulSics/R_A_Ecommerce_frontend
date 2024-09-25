@@ -3,51 +3,57 @@ import axios from 'axios'
 import './login.css'
 
 function OrderHistory() {
-    const [Order,SetOrder] = useState([])
+  const [orders, setOrders] = useState([]);
+  const userid = localStorage.getItem("userid");
 
-useEffect(()=>{
-  axios.get('https://fakestoreapi.com/products')
-  .then((rec)=>{
-    SetOrder(rec.data)
-  })
-  .catch((err)=>{
-    console.log(err)
-  })
-},[])
+  useEffect(() => {
+      axios.post(`http://localhost:4030/viewHistory/${userid}`)
+          .then((response) => {
+              setOrders(response.data.data);
+          })
+          .catch((error) => {
+              console.log(error);
+          });
+  }, []);
 
-console.log(Order)
+  console.log( orders);
+
 
   return (
     <div className='orderH-main'>
-        <div>
-            <input type='text'placeholder='Search your orders here' className='orderH-input'></input>
-            <button className="orderH-btn "type='submit'>search</button>
+            {Array.isArray(orders) && orders.length > 0 ? (
+                orders.map((a, index) => (
+                    <div key={index} className="orderH-flex">
+                        <div>
+                            <img className="orderH-img" src={`http://localhost:4030/${a.productid.image1[0].filename}`}/>
+                           
+                        </div>
+                        <div className='orderH-details'>
+                            {a.productid?.productname || 'Unknown Product'}
+                        </div>
+                        <div className='orderH-price'>
+                            {a.productid?.productbrand || 'No Brand'}
+                        </div>
+                        <div className='orderH-price'>
+                            {'Rs. ' + (a.productid?.price || 'N/A')}
+                        </div>
+                        <div>
+                            <h5>Address</h5>
+                            <div>{a.aid ? 'Name: ' + a.aid.name : 'Not available'}</div>
+                            <div>{a.aid ? 'Pin code: ' + a.aid.pin : 'Not available'}</div>
+                            <div>{a.aid ? 'State: ' + a.aid.state : 'Not available'}</div>
+                            <div>{a.aid ? 'City: ' + a.aid.city : 'Not available'}</div>
+                        </div>
+                        <div className='orderH-date'>
+                            <p>Ordered date: <b>{a.date ? new Date(a.date).toLocaleDateString() : 'Unknown'}</b></p>
+                        </div>
+                    </div>
+                ))
+            ) : (
+                <p>No orders found</p>
+            )}
         </div>
-        {Order.map((a)=>{
-        return(
-          <div className="orderH-flex"> 
-          <div>
-           <img className="orderH-img" src={a.image+" "} />
-           </div> 
-          <div className='orderH-details'>
-            {a.title+" "}
-            </div>
-            <div className='orderH-price'>
-            {'Rs. '+a.price+" "} 
-            </div>
-            <div className='orderH-rating'>
-              {a.rating.rate+'⭐'}
-            </div>
-            <div className='orderH-date'>
-              <p>Delivered date:<b> 12/01/2012</b></p>
-            </div>  
-          </div>
-          
-        )
-      })}
-
-    </div>
-  )
+    );
 }
 
 export default OrderHistory

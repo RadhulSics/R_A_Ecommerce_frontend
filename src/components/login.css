@@ -1,26 +1,34 @@
-/* *{
-    background-color: #28373A;
-    background-size: cover;
-} */
 
-.main{
-    text-align: center;
-    justify-content: center;
-    display: flex;
-    padding-top: 60px;
-    
-    
+.main{ 
+   background: url('../images/log.jpg');
+   background-repeat: no-repeat;
+   background-size:cover;
+   height: 100vh;
+   padding-top: 5rem;
+     
 }
 .submain{
-    display: flex;
-    justify-content: center;
-    height: 500px;
-    width: 35%;
-    padding-top: 30px;
-    background-color: #EE9F43;
+    /* display: flex; */
+    justify-content:center;
+    text-align: center;
+    padding-top: 180px;
+    height: 462px;
+    width:30rem;
+    padding-top: 25px;
+    background-color:transparent ;
     border-radius: 10px;
+    margin-left: 10rem;
+    margin-top: 5rem;
+  
 
 }
+.login-label{
+  color: black;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 1rem .8rem;
+}
+
 
 .login-title{
     font-weight: 800;
@@ -63,7 +71,7 @@
     font-size: 15px;
 }
 .firstinput{
-    padding-top: 30px;
+    padding-top: 25px;
 }
 .secondinput{
     padding-top: 30px;
@@ -78,17 +86,14 @@
     border: none;
 }
 .buttons:hover{
-  background-color: #E35F14;
+  background-color: #0fb7b7;
 }
 .buttons:active{
-  background-color: #44949F;
-}
-.input-validation{
-  z-index: 999;
+  background-color: #6b9ca2;
 }
 
 .login-button{
-    padding-top: 40px;
+    padding-top: 25px;
 }
 .forgotlink{
     font-size: 15px;
@@ -96,9 +101,15 @@
     padding-top: 15px;
     text-align: center;
 }
-.a-tag{
-    text-decoration: none;
+.login-title-h6{
+  color: black;
+  font-style: italic;
+  font-weight: bold;
 }
+.input-validation{
+  margin-left: 2rem;
+ }
+
 /* ..... login ends...... */
 /* ...... navbaruser starts...... */
 
@@ -106,15 +117,16 @@
   display: flex;
   justify-content: flex-end;
   width: 100%;
-  height: 80px;
-  gap: 6%;
+  height: 90px;
+  gap: 7%;
   padding: 10px;
   margin: 0;
-  background-color: #28373A;
-  padding-top: 15px;
+  background-color:#1ca2cf;
+  padding-top: 18px;
   text-decoration: none;
   flex-wrap: wrap;
   align-content: center;
+  border:none;
   }
   .navuser-li{
     list-style-type: none;
@@ -125,18 +137,11 @@
     font-weight: bold;
    }
    .nav-ahref:hover{
-    color: #EE9F43;
+    color: #05677c;
     text-decoration: underline;
     text-underline-offset: 3px;
   }
-  .nav-heading{
-    color: #EE9F43;
-    font-family:courier; 
-    font-weight: bold;
-    font-size: 35px;
-    position: absolute;
-    margin: 20px 35px 0px 20px;
-  }
+  
   .nav-out{
     display: flex;
     color: white;
@@ -144,33 +149,19 @@
     border: 1px solid transparent;
     border-radius: 60px;
     padding-left: 13px;
-    padding-top: 4px;
-    width: 80px;
-    height: 30px;
+    padding-top: 5px;
+    width: 85px;
+    height: 33px;
     font-size: small;
     font-weight: bold;
     text-align: center;
+    margin-right: 2rem;
   }
   .nav-out:hover{
-    background-color: #EE9F43;
+    background-color: #11c8c8;
   }
-  .search-barnav{
-    color:black;
-    width: 200px;
-    display: flex;
-    margin-left: 5px;
-    border-radius: 6px;
-
-  }
-  /* .search-barnav:hover{
-    color: #EE9F43; */
-  /* } */
-  .btn-search{
-   margin: auto;
-   border-radius: 10px;
-   color: #EE9F43;
-   background-color: #44949F;
-   font-weight: bold;
+  .cart-icon{
+    height: 2rem;
   }
   /* ......navbaruser ends...... */
 
@@ -431,12 +422,12 @@
   border-radius: .5rem;
   padding: 1rem;
   margin:5%;
-  background-color: rgba(209, 209, 209, 0.515);
+  background-color: rgba(23, 200, 212, 0.515);
   box-shadow: 2px 2px 10px rgb(143, 144, 144);
   position: relative;
-  left: 2.3rem;
-  top: 3rem;
-  align-items: center;
+  left: 1rem;
+  top: 6rem;
+  align-items: center
 }
 .profS-img{
   border: black;
@@ -453,11 +444,11 @@
   border-radius: .5rem;
   padding: 1rem;
   margin:5%;
-  background-color: rgba(209, 209, 209, 0.515);
+  background-color: rgba(23, 200, 212, 0.515);
   box-shadow: 2px 2px 10px rgb(143, 144, 144);
   position: relative;
-  left: 0rem;
-  top: 3rem;
+  left: 0.7rem;
+  top: 6rem;
   align-items: center;
 }
 
@@ -485,7 +476,7 @@
   height: 40px;
   font-size: small;
   font-weight: bold;
-  margin-top: 3rem;
+  margin-top: 6rem;
   margin-left: 45%;
 }
 
@@ -501,10 +492,10 @@
 .profS-details{
   position: relative;
   left: 2rem;
-  top: 3rem;
+  top: 6rem;
   border: 1px solid rgb(180, 179, 179);
   border-radius: .5rem;
-  background-color: rgba(209, 209, 209, 0.515);
+  background-color: rgba(23, 200, 212, 0.515);
   box-shadow: 2px 2px 10px rgb(143, 144, 144);
   padding: 1rem;
 }
@@ -549,12 +540,13 @@
   width: 30rem;
   margin: 2rem;
   margin-left: 30rem;
+  margin-top: 6.5rem;
   border: 1px solid rgb(180, 179, 179);
   border-radius: .5rem;
-  background-color: #44949F;
+  background-color: rgba(23, 200, 212, 0.515);
   box-shadow: 2px 2px 10px rgb(143, 144, 144);
   align-items: center;
-  padding: 5rem;
+  padding: 6rem;
 }
 
 .profeditS-input{
@@ -565,7 +557,7 @@
   border: none;
   outline: none;
   background-color: #fff;
-  margin: .5rem 0rem;
+  margin: 1rem 0rem;
 }
 
 .profeditS-label{
@@ -597,91 +589,10 @@
   text-align: center;
 }
 /* ----profile edit seller ends----- */
-/* ----- fullproducts user starts---- */
-.fullU-main{
-  position: relative;
-  right: -2rem;
- top: 5rem;
- width: 100%;
- padding: 1rem;
- text-decoration: none;
-}
 
-.fullU-col {
-  margin: .5rem; 
-  width: 12rem !important;
-  height: 11rem;
-}
 
-.fullU-img{
-  width: 12rem;
-  height: 10rem;
-  object-fit: contain;
-  padding-top: .25rem;
-  margin: 0;
-}
 
-.fullU-name{
-  font-size: small ;
-  color: rgba(51, 49, 49, 0.812) !important;
-  font-weight: bold;
-  width: 9rem;
-  height: 2.5rem;
-  overflow: hidden;
-}
 
-.fullU-price{
-  text-align: center;
-  font-weight: 660;
-}
-/* ----- orderdetails seller starts----- */
-.orderS-main{
-  position: relative;
-  right: -2rem;
-  top: 2rem;
-  width: 100%;
-  padding: 1rem;
-  text-decoration: none;
- }
-
- .orderS-img{
-   width: 12rem;
-   height: 10rem;
-   object-fit: contain;
-   padding: 1rem;
- }
- 
- .orderS-flex {
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: space-between;
-   align-items: center;
-   border-top: 1px solid rgba(0, 0, 0, 0.455);
-   margin: 0.5rem;
-   width: 90rem;
-}
-
-.orderS-details{
- color: #E35F14 !important;
- font-weight: bold;
- height: 2.5rem;
- width: 20rem;
-}
-
-.orderS-price{
- text-align: center;
- font-weight: 660;
- color: black;
-}
-
-.orderS-rating{
- color: black;
-}
-.orderS-date{
- margin-right: 2rem;
- font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
-}
 /* -----orderhistory starts------- */
 
 .orderH-main{
@@ -841,34 +752,93 @@
 /* ------Newprodseller starts------ */
 
 .prodseller-main{
-
-    height: 500px;
-    width: 33%;
-    padding-top: 30px;
-    background-color: #EE9F43;
-    border-radius: 10px;
-     margin-top: 8rem;
-    margin-left: 32rem; 
+  min-height: 550px;
+  width: 80%;
+  padding-top: 30px;
+ 
+  border-radius: 10px;
+  margin-top: 6.5rem;
+  margin-left: 10rem;
+  /* margin-left: 32rem;  */
+  /* position:absolute;
+  right: 30rem;
+  top: 1.5rem; */
+  background-color:hsl(194, 81%, 49%);
+  box-shadow: 8px 8px 20px rgb(143, 144, 144);
+ padding: 3rem;
 }
-.prod-sellerhead{
- margin-left: 5rem;
- color: #44949F;
- font-weight: bold;
- text-decoration: underline;
 
+.prodseller-main2{
+display: flex;
+justify-content: space-between;
+gap: 3rem;
+flex-wrap: wrap;
+align-items: flex-end;
+}
+.prodseller-main3{
+display: flex;
+  justify-content: flex-start;
+  gap: 17rem;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  margin-top: 1rem;
+}
+
+.prod-sellerhead{
+text-align: center;
+margin-bottom: 2rem;
+color: white;
+font-weight: bold;
+text-decoration: underline;
+text-underline-offset: .5em;
 }
 .prod-sellerlabel{
-  margin-left: 5rem;
-  margin-top: 25px;
-  font-weight: 400;
+margin-top: 25px;
+font-weight: 600;
 
 }
 .prod-sellerinput{
-  border-radius: 5px;
-  border-color: transparent;
-  margin-left: 10px;
-  justify-content: center;
+width: 15rem;
+border-radius: 5px;
+border-color: transparent;
+margin-left: 10px;
+justify-content: center;
 }
+
+
+
+.new-prod-btn{
+color: white;
+background-color: #44949F;
+border: 1px solid transparent;
+border-radius: 100px;
+width: 10rem;
+height: 40px;
+font-size: medium;
+font-weight: bold;
+margin: 50px 0px 10px 500px;
+}
+
+.new-prod-btn:hover{
+background-color: #E35F14;
+}
+
+.new-prod-btn:active { 
+transform: scale(0.98); 
+box-shadow: 3px 2px 22px 1px #E35F14; 
+}
+
+.new-prod-label{
+color: white;
+text-transform: uppercase;
+font-weight: bold;
+margin: 0rem .8rem;
+}
+.new-prod-label-box{
+margin-top: 1rem;
+margin-left: 10rem;
+}
+
 /* -----newprod seller ends----- */
 .editprodseller-main{
 
@@ -899,3 +869,60 @@ border-color: transparent;
 margin-left: 10px;
 justify-content: center;
 }
+/* -----forgot password------------- */
+.forgot-main{
+  background: url('../images/forgot.jpg');
+  background-repeat: no-repeat;
+  background-size: 50%;
+  width: 100%;
+  height: 100vh;
+  padding-top: 6rem;
+}
+.forgot-sub {
+  justify-content:center;
+  text-align: center;
+  padding-top: 200px;
+  height: 530px;
+  width:30rem;
+  padding-top: 30px;
+  background-color: #d6e3e7 ;
+  border-radius: 10px;
+  margin-left: 52rem;
+}
+.forgot-head{
+  text-align: center;
+  margin-top: 1px;
+  font-weight: 600;
+
+}
+.forgot-label{
+  margin-left: 1rem;
+  margin-top: 1rem;
+  color: #1A728E;
+  font-weight: 600;
+}
+.forgot-input{
+  margin-left: 5rem;
+  margin-top: 16px;
+  width: 20rem;
+  height: 2.5rem;
+}
+ .forgot-input::placeholder{
+  text-indent: 2rem;
+  font-weight: lighter;
+ }
+ .forgot-btn{
+  width: 180px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #44949F;
+  color:white;
+  font-size: 20px;
+  border: none;
+  margin-top: 1rem;
+  margin-left: 9rem;
+ }
+ 
+ .fgt-input-validation{
+  margin-left: 5rem;
+ }

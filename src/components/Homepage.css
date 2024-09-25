@@ -1,0 +1,116 @@
+.HomePage-backgroundimg{
+    
+  background-image: url(../images/as4.jpg) !important;
+   background-repeat: no-repeat; 
+   width: 100%;
+   height: 50rem !important;
+   background-size: cover;
+   margin-top: -6rem !important;
+   background-attachment: fixed;
+   margin-bottom: 1rem;
+}
+.HomePage-text1{
+    color: white;
+    position: relative;
+    left: 22rem;
+    top: 20rem;
+  }
+  
+  .HomePage-text2{
+    color: white;
+    position: relative;
+    left: 6rem;
+    top: 20rem;
+    font-size: 400%;
+    font-family: brush script mt, cursive;
+  }
+  .HomePage-text3{
+    width: 45rem;
+    color: white;
+    font-size: 120%;
+    font-family:pacifico;
+    font-style: italic;
+    text-shadow: 8px 8px 30px rgb(81, 81, 81);
+    position: relative;
+    left: 8rem;
+    top: 20rem;
+    text-align: center;
+  }
+  .HomePage-button{
+    position: absolute;
+    left: 22rem;
+    top: 33rem;
+    width: 250px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #3e5cb7;
+    color:white;
+    font-size: 20px;
+    border: none;
+  }
+  .HomePage-button:hover{
+  background-color: #3bb8df;
+  }
+  .HomePage-button:active{
+  background-color: #257188;
+  }
+
+  .HomePage-text4{
+    color: black;
+    font-size: 500%;
+    font-family:pacifico;
+    font-style: italic;
+    text-align: center;
+    /* text-decoration: underline;
+    text-underline-offset: 1.2rem; */
+    padding: 3rem;
+  }
+  .HomePage-image-flex{
+    display: flex;
+  }
+  .HomePage-popular-img{
+    width: 20rem;
+    height: 25rem;
+    margin: 1rem 0 0 3rem;
+    box-shadow: 8px 8px 20px rgb(143, 144, 144);
+  }
+  
+  .HomePage-text5{
+    width: 30rem;
+    color: rgb(18, 1, 1);
+    font-size: 250%;
+    font-family:pacifico;
+    font-style: italic;
+    margin-left: 35rem;
+    margin-top: 5rem;
+    text-align: center;
+  }
+  .HomePage-watch-img{
+    width: 30rem;
+    margin: 1rem 0 0 34rem;
+    border-radius: 5px;
+  }
+  .HomePage-icon1{
+    margin-top: 5rem;
+  }
+  
+   .HomePage-icon-text{
+    margin-top: 1rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: bold;
+  } 
+  
+  .HomePage-icon-description{
+    font-size: 100%;
+    width: 15.5rem;
+    text-align: center;
+  } 
+  .HomePage-icons-desc{
+    background-color: white;
+    width: 100%;
+    height: 20rem !important;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+  }

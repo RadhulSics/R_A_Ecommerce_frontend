@@ -1,0 +1,48 @@
+
+
+/* ----- fullproducts user starts---- */
+/* .fullU-bg{
+  background: rgb(0,0,0);
+ background: linear-gradient(119deg, rgba(0,0,0) 10%, rgba(212,20,35),rgb(39, 39, 227) 100%);
+ min-height: 695px;
+} */
+.fullU-main{
+    width: 100%;
+    padding-left: 2rem;
+    text-decoration: none;
+    margin-top: 2rem;
+   }
+   
+   .fullU-col {
+     margin-top: 1rem;
+     margin-left: 1rem; 
+     margin-bottom: 3rem;
+     width: auto !important;
+     height: 20rem;
+     border: none;
+     background: none;
+   }
+   
+   .fullU-img{
+     width: 15rem;
+     height: 18rem;
+     object-fit: cover;
+     padding: .25rem;
+     margin: 10px 0 0 10px;
+     border-radius: 8px;
+   }
+   
+   .fullU-name{
+     font-size: small ;
+     color: rgba(51, 49, 49, 0.886) !important;
+     font-weight: bold;
+     text-align: center;
+   }
+   
+   .fullU-price{
+     text-align: center;
+     font-size: medium;
+     font-weight: 500;
+     color: black;
+   }
+   

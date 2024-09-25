@@ -1,0 +1,97 @@
+body{
+  margin: 0rem;
+}
+
+.AboutUs-background1{
+  background-image: url(../images/about.jpg) !important;
+  background-repeat: no-repeat; 
+  width: 100%;
+  height: 46.8rem;
+  background-size: cover;
+  margin-top: -6rem !important;
+  background-attachment: fixed;
+
+  
+}
+.AboutUs-text1{
+    color: rgb(26, 19, 19);
+    position: relative;
+    left: 42rem;
+    top: 5rem;
+    font-size: 530%;
+    font-family: brush script mt, cursive;
+  }
+  
+  
+  .AboutUs-text2{
+    width: 40rem;
+    color: black;
+    font-size: 320%;
+    /* font-family: brush script mt;  */
+    font-family:pacifico;
+    font-style: italic;
+    margin-left: 30rem;
+    padding-top: 6rem;
+    text-align: center;
+    font-weight: 550;
+  }
+  
+  .AboutUs-text4{
+    font-family: Cormorant Garamond, serif;
+    font-style: italic;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    margin-left: 22rem;
+  }
+  
+  .AboutUs-text5{
+  color: rgba(0, 0, 0, 0.507);
+  width: 63rem;
+  margin-left: 17rem;
+  margin-top: .5rem;
+  }
+  
+  .AboutUs-text16{
+    color: rgb(17, 2, 2);
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 23px;
+    font-weight: 700;
+    width: 60rem;
+    margin-left: 28rem;
+  
+    }
+  
+  .AboutUs-text17{
+    width: 50rem;
+    color: rgb(12, 0, 0);
+    font-size: 80%;
+    margin-left: 22rem;
+    }
+    .AboutUs-shopnow-btn{
+     position: relative;
+     left: 65rem;
+     bottom: 4.5rem;
+      width: 8rem;
+      height: 3rem;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      border: white;
+      font-weight: 700;
+      color:black;
+      background-color: transparent;
+      
+      
+      border-radius: 2px;
+    }
+    
+    .AboutUs-shopnow-btn:hover{
+      border: 1.6px double rgba(0, 0, 0, 0.386);
+    }
+    
+    .AboutUs-shopnow-btn:active{
+      background-color:rgba(33, 231, 235, 0.622);
+    }
+  

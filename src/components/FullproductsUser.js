@@ -1,49 +1,57 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import './login.css';
-import 'bootstrap/dist/css/bootstrap.min.css'
-import 'bootstrap/dist/js/bootstrap.bundle.min.js'
+import './FullproductsUser.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import { Link } from 'react-router-dom';
 
 function FullproductsUser() {
-    const [state,setState]=useState([]);
-    useEffect(()=>{
-        axios.get('https://fakestoreapi.com/products')
-        .then((res)=>{
-            setState(res.data)
-        })
-        .catch((error)=>{
-            console.log(error)
-        })
+    const [data, setData] = useState([]);
 
-    },[])
-    console.log(state)
+    useEffect(() => {
+        axios.post('http://localhost:4030/viewallproducts')
+            .then((res) => {
+                console.log(res);
+                setData(res.data.data);
+            })
+            .catch((err) => {
+                console.log(err);
+            });
+    }, []);
+    console.log(data)
 
-  return (
-    <div >
-        <Link to='/IndProductsUser' className='Link-decoration' >
+   
+    return (
         <div className='row fullU-main'>
-            {state.map((c)=>{
-                return(
+            {data.length > 0 ? (
+                data.map((e) => (
                     <div className="card col-2 fullU-col">
-           <img className="card-img-top fullU-img" src={c.image+" "} />
-           <div className="card-body">
-            <div className='fullU-name'>
-            {c.title+" "}
-            </div> 
-            <hr/>
-            <div className='fullU-price'>
-            {'Rs. '+c.price+" "}
-            </div> 
-            </div> 
-          </div>
-                )
+                        <Link to={`/IndProductsUser/${e._id}`} className='Link-decoration' >
+                         <img className="card-img-top fullU-img" src={`http://localhost:4030/${e.image1[0].filename}`}alt='image' />
+                         <div className="card-body">
+                         <div className='fullU-name'>
+                         {e.productname}
 
-            })}
+                         <div className='fullU-price'>
+                         <b>{'Rs : '+e.price+" "}</b>
+                         </div>
+                            </div>
+
+
+
+
+
+                         </div>
+                         </Link>
+                       
+                    </div>
+                ))
+            ) : (
+                <p>No products available</p>
+            )}
         </div>
-        </Link>
-    </div>
-  )
+    );
 }
-
-export default FullproductsUser
+        
+    
+export default FullproductsUser;

@@ -1,16 +1,37 @@
-import React from 'react'
+import React, { useEffect, useState } from "react";
 import './login.css'
-import profilepic from '../images/profileseller.jpg'
-import { Link } from 'react-router-dom'
+
+import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 function ProfileSeller() {
+
+  const sellerid=localStorage.getItem("sellerid")
+  console.log(sellerid);
+
+  const[data,setdata]=useState({}) 
+  useEffect(()=>{
+    axios.post(`http://localhost:4030/viewSellerById/${sellerid}`)
+    .then((res)=>{
+      console.log(res);
+      setdata(res.data.data)
+    })
+    .catch((err)=>{
+      console.log(err);
+    })
+  },[sellerid])
+
+
+
+
+
   return (
     <div>
         <div className='row'>
       <div className='col-4'>
         <div className='profS-name row'>
-        <img className='col-5 profS-img' src={profilepic} />
-          <p className='col-5 profS-left1'>Prakash Menon</p>
+        <img className='col-5 profS-img' src={`http://localhost:4030/${data?.image?.filename}`} />
+          <p className='col-5 profS-left1'>{data?.username}</p>
         </div>
         <div className='profS-name1'>
           <p className='profS-left'>CART ➡️</p>
@@ -30,11 +51,11 @@ function ProfileSeller() {
         <h3 className='profS-head'><b>DETAILS</b></h3>
         <hr/>
         <div className='profS-body'>
-          <p>Name : Prakash Menon </p>
-          <p>Mobile : 89xxxxx32</p>
-          <p>Email : praxxx@gmail.com</p>
-          <p>Gender : Male</p>
-          <p>DOB : 11/02/1993</p>
+          <p>Name :{data?.username} </p>
+          <p>Mobile : {data?.contact}</p>
+          <p>Email :{data?.email}</p>
+          <p>Gender :{data?.gender}</p>
+        
         </div>
         <div>
           <button className='profS-edit'><Link className='Link-decoration' to='/profileeditSeller'> EDIT</Link></button>

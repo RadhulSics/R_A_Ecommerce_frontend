@@ -139,7 +139,7 @@ input.nav-searchbar{
   pointer-events: none;
 }
 
-@media(max-width:62em){
+@media(max-width:60em){
   
   .nav-toggle{
     display: block;
@@ -150,6 +150,7 @@ input.nav-searchbar{
     visibility: visible;
     opacity: inherit;
   }
+
   
 
   .menu-container:focus-within .nav-toggle {
@@ -191,19 +192,81 @@ input.nav-searchbar{
     display: block;
   }
 }
+@media(max-width:65em){
+
+  .nav-toggle{
+    display: block;
+    z-index: 999;
+    position: absolute;
+    top:1em;
+    right:2em;
+    visibility: visible;
+    opacity: inherit;
+  
+  }
+  .menu-container:focus-within .nav-toggle {
+    display: block;
+    z-index: 999;
+    position: absolute;
+    top:1em;
+    right: 2em;
+    visibility: visible;
+    opacity: inherit;
+  }
+
+  .nav-flex{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+  }
+
+  input.nav-searchbar:focus {
+    background-color: #ee4c43;
+    color:white;
+  }
+
+  input.nav-searchbar{
+    height: 50px;
+    width: 180px;
+    margin: auto;
+  }
+
+   .nav-search,.nav-logout{
+    margin: auto;
+   }
+
+  .nav-li,.nav-search,.nav-searchbar,.nav-logout{
+    display: block;
+    color: red;
+
+}
+}
 
 /* ----- Navbar of admin Ends ----- */
 
 /* ----- Registration Starts ----- */
-
 .reg-main{
-  width: 30%;
-  height: 50%;
-  padding: 20px;
-  margin: auto;
-  margin-top: 5%;
-  border-radius: 10px;
-  background-color: #EE9F43;
+  background: url('../images/login.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 100%;
+  height: 100vh;
+padding-top: 2rem;
+
+}
+.reg-box{
+  width: 32%;
+  height: 40rem;
+  padding: 6px;
+  margin-left: 7rem;
+  margin-top: 1rem;
+  border-radius: 15px;
+  background-color: transparent ;
+  opacity: 0.8;
 }
 
 .reg-title{
@@ -211,7 +274,7 @@ input.nav-searchbar{
   font-size: 40px;
   text-decoration: underline;
   text-underline-offset: .3em;
-  margin: 25px;
+  margin: 20px;
 }
 
 .reg-submain{
@@ -219,37 +282,30 @@ input.nav-searchbar{
 }
 
 
-
-.reg-oldUser{
-  position: relative;
-  left: 50%;
-  width: 60%;    
-  padding: 0%;
-  margin: 5%;
-}
-
 .reg-loginText{
-  font-size: small;
-  padding: 3%;
-  margin: -7%;
+  font-size: 15px;
+ margin-left: -3rem;
+ margin-top: 1rem;
   text-align: center;
-  color: white;
+  color: rgb(19, 19, 19);
+  font-weight: 700;
+ 
+  
 }
 
 .reg-login{
   height: auto;
 }
 
-.reg-login{
-  color: white;
-  background-color: #44949F;
-  border: 1px solid transparent;
-  border-radius: 100px;
-  padding: 8px;
-  width: 85px;
-  height: 40px;
-  font-size: x-small;
+.reg-login-btn{
+  color: rgb(233, 30, 16);
+  font-size: large;
   font-weight: bold;
+ position: relative;
+ left: 20rem;
+ top: -2.5rem;
+ text-decoration: none;
+ 
 }
 
 .reg-login:hover{
@@ -271,7 +327,7 @@ input.nav-searchbar{
 .reg-input{
   width: 280px;
   height: 50px;
-  border-radius: 20px;
+  border-radius: 10px;
   box-shadow: inset 0px 0px 20px 0px white;
   border: none;
   outline: none;
@@ -284,15 +340,23 @@ input.reg-input{
   width: 250px;
 }
 
-input.reg-input:focus {
-  background-color: #44949F;
-  color:white;
-  font-size: large;
-  text-indent: 1.5rem;
-}
 
 .reg-input::placeholder {
   text-indent: 2rem;
+}
+.reg-imageupload-label{
+  color: balck;
+  font-weight: 700;
+ 
+}
+
+.reg-imageupload{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 3rem;
+  display:flex;
+  gap: 1rem;
+  width: 30rem;
 }
 
 .reg-button{
@@ -300,21 +364,21 @@ input.reg-input:focus {
   background-color: #44949F;
   border: 1px solid transparent;
   border-radius: 100px;
-  padding: 8px;
+  padding: 6px;
   width: 13rem;
   height: 40px;
   font-size: small;
   font-weight: bold;
-  margin: 20px 0px 10px 0px;
+  margin: 15px 0px 8px 0px;
 }
 
 .reg-button:hover{
-  background-color: #E35F14;
+  background-color: #0fb7b7
 }
 
 .reg-button:active { 
   transform: scale(0.98); 
-  box-shadow: 3px 2px 22px 1px #E35F14; 
+  box-shadow: 3px 2px 22px 1px  #6b9ca2;; 
 }
 
 input.reg-number::-webkit-inner-spin-button, 
@@ -323,6 +387,11 @@ input.reg-number::-webkit-outer-spin-button {
     -moz-appearance: none;
     appearance: none;
     margin: 0; 
+}
+
+.reg-dropdown{
+  margin-left: 1rem;
+  background-color: rgb(21, 148, 227);
 }
  /* ----- Registration Ends ----- */
 
@@ -515,7 +584,7 @@ input.reg-number::-webkit-outer-spin-button {
     border-radius: .5rem;
     padding: 1rem;
     margin:5%;
-    background-color: rgba(209, 209, 209, 0.515);
+    background-color: rgba(23, 200, 212, 0.515);
     box-shadow: 2px 2px 10px rgb(143, 144, 144);
     position: relative;
     left: 2.3rem;
@@ -529,7 +598,7 @@ input.reg-number::-webkit-outer-spin-button {
     border-radius: .5rem;
     padding: 1rem;
     margin:5%;
-    background-color: rgba(209, 209, 209, 0.515);
+    background-color: rgba(23, 200, 212, 0.515);
     box-shadow: 2px 2px 10px rgb(143, 144, 144);
     position: relative;
     left: 0rem;
@@ -544,6 +613,11 @@ input.reg-number::-webkit-outer-spin-button {
     width: 7rem;
     height: 7rem;
   
+  }
+  
+  .profU-link{
+    text-decoration: none;
+    color: white;
   }
 
   .profU-left{
@@ -560,20 +634,6 @@ input.reg-number::-webkit-outer-spin-button {
   text-align: left;
   }
 
-  .profU-logout{
-    color: white;
-    background-color: #44949F;
-    border: 1px solid transparent;
-    border-radius: 100px;
-    padding: 8px;
-    width: 85px;
-    height: 40px;
-    font-size: small;
-    font-weight: bold;
-    margin-top: 3rem;
-    margin-left: 45%;
-  }
-  
   .profU-logout:hover{
     background-color: #EE9F43;
   }
@@ -589,7 +649,7 @@ input.reg-number::-webkit-outer-spin-button {
     top: 3rem;
     border: 1px solid rgb(180, 179, 179);
     border-radius: .5rem;
-    background-color: rgba(209, 209, 209, 0.515);
+    background-color: rgba(23, 200, 212, 0.515);
     box-shadow: 2px 2px 10px rgb(143, 144, 144);
     padding: 1rem;
   }
@@ -605,8 +665,8 @@ input.reg-number::-webkit-outer-spin-button {
 
   .profU-edit{
     color: white;
-    background-color:  #EE9F43;
-    border: 1px solid transparent;
+    background-color:  #1d12e9;
+    border:  transparent;
     border-radius: 1rem;
     padding: 8px;
     width: 100px;
@@ -638,7 +698,7 @@ input.reg-number::-webkit-outer-spin-button {
     margin-left: 30rem;
     border: 1px solid rgb(180, 179, 179);
     border-radius: .5rem;
-    background-color: rgba(209, 209, 209, 0.515);
+    background-color: rgba(23, 200, 212, 0.515);
     box-shadow: 2px 2px 10px rgb(143, 144, 144);
     align-items: center;
     padding: 5rem;
@@ -656,10 +716,10 @@ input.reg-number::-webkit-outer-spin-button {
   }
 
   .profeditU-label{
-    color: #E35F14;
+    color:black;
     text-transform: uppercase;
     font-weight: bold;
-    margin: 0rem 2rem;
+    margin: 0rem 2.5rem 0rem ;
   }
 
   .profeditU-button{
@@ -668,11 +728,11 @@ input.reg-number::-webkit-outer-spin-button {
     border: 1px solid transparent;
     border-radius: 100px;
     padding: 8px;
-    width: 13rem;
+    width: 12rem;
     height: 40px;
     font-size: small;
     font-weight: bold;
-    margin: 30px 0px 10px 40px;
+    margin: 30px 0px 10px 48px;
   }
   
   .profeditU-button:hover{
@@ -683,6 +743,14 @@ input.reg-number::-webkit-outer-spin-button {
     transform: scale(0.98); 
     box-shadow: 3px 2px 22px 1px #E35F14; 
   }
+  .profeditU-imageupload-box{
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    margin-left: 4rem;
+    display:flex;
+    gap: 1rem;
+    width: 27rem;
+  }
 
   /* ----- Profile Edit User Ends ----- */
 
@@ -692,12 +760,26 @@ input.reg-number::-webkit-outer-spin-button {
   .carousel-control-next,
   .carousel-control-prev {
       filter: invert(100%);
+      
   }
 
+  .carousel-control-prev{
+    position: absolute;
+    left: 5rem;
+    top:-10rem;
+  }
+
+  .carousel-control-next{
+      position: absolute;
+      left: 33rem;
+      top:-10rem;
+  }
+  
   .indprodU-img{
-    width: 40rem;
-    height: 30rem;
+    width: 80rem;
+    height: 28rem;
     object-fit: contain;
+    margin-left: 10rem;
   }
 
   
@@ -741,8 +823,7 @@ input.reg-number::-webkit-outer-spin-button {
     font-size: large;
     border-style: solid;
     border-color: #EE9F43;
-    position: relative;
-    top: -70px;
+   margin-top: -1rem;
   }
   .indprodU-buy-btn:hover{
     background-color: #44949F;
@@ -760,12 +841,13 @@ input.reg-number::-webkit-outer-spin-button {
     margin-left: 40px;
   }
   .indprodU-details{
+    margin-left: 2rem;
     border: 1px solid rgb(180, 179, 179);
     border-radius: .5rem;
     background-color: rgba(209, 209, 209, 0.515);
     box-shadow: 2px 2px 10px rgb(143, 144, 144);
     padding: 1rem;
-    width: 50rem;
+    width: 40rem;
   }
   .indprodU-spec{
     font-weight: bold;
@@ -778,6 +860,29 @@ input.reg-number::-webkit-outer-spin-button {
   .indprodU-title{
     text-transform:uppercase;
     margin-top: 2rem;
+  }
+
+  .indprodU-cart-btn{
+    margin-left: 1rem;
+    width: 120px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #44949F;
+    color: #fff;
+    font-size: large;
+    border-style: solid;
+    border-color: #44949F;
+    position: relative;
+    margin-top: 1rem;
+  }
+  
+  .indprodU-cart-btn:hover{
+    background-color: #EE9F43;
+  }
+  
+  .indprodU-cart-btn:active { 
+    transform: scale(0.98); 
+    box-shadow: 3px 2px 22px 1px #E35F14; 
   }
   /* ----- Individual products user Ends ----- */
 
@@ -792,18 +897,19 @@ input.reg-number::-webkit-outer-spin-button {
   
   .navS-flex{
     display: flex;
-    justify-content: flex-end;
+    justify-content:flex-end;
     width: 100%;
-    height: 70px;
+    height: 80px;
     flex-wrap: wrap;
-    gap: 4%;
-    padding: 15px;
+    padding: 20px;
     margin: 0;
-    background-color: gray;
-    gap: 3.2rem;
+    background-color:#1ca2cf;
+    gap: 4rem;
   }
   .navS-li{
     list-style: none;
+    margin-left: 3rem;
+    margin-top: .5rem;
   }
   
   .navS-a{
@@ -813,32 +919,11 @@ input.reg-number::-webkit-outer-spin-button {
   }
   
   .navS-a:hover{
-    color: #EE9F43;
+    color: #05677c;
     text-decoration: underline;
     text-underline-offset: .5em
   }
   
-  .navS-search{
-    margin-left: -50px;
-    color: white;
-    border: 1px solid #EE9F43;
-    border-radius: 100px;
-    width: 80px;
-    height: 25px;
-    font-size: small;
-    font-weight: bold;
-    margin-top: 4px;
-    background-color: gray;
-  }
-  
-  .navS-search:hover{
-    background-color: #EE9F43;
-  }
-  
-  .navS-search:active { 
-    transform: scale(0.98); 
-    box-shadow: 3px 2px 22px 1px #EE9F43; 
-  }
   
   .navS-logout{
     color: white;
@@ -850,7 +935,9 @@ input.reg-number::-webkit-outer-spin-button {
     height: 40px;
     font-size: small;
     font-weight: bold;
-    margin-top: 0px;
+    margin-bottom: 1rem;
+    margin-right: 3rem;
+  
   }
   
   .navS-logout:hover{
@@ -862,53 +949,6 @@ input.reg-number::-webkit-outer-spin-button {
     box-shadow: 3px 2px 22px 1px #E35F14; 
   }
   
-  .sics-logo{
-    padding: 0%;
-    width: 100px;
-    height: 85px;
-    position: absolute;
-    top: 0px;
-    left: 20px;
-  }
-  
-  .navS-title{
-    color: #EE9F43;
-    font-family:courier; 
-    font-weight: bold;
-    font-size: 35px;
-    position: absolute;
-    margin: .5rem 0rem 0rem 5rem;
-    
-  }
-  
-  input.navS-searchbar:focus {
-    background-color: #EE9F43;
-    color:white;
-  }
-  
-  input.navS-searchbar{
-    height: 30px;
-    width: 10rem;
-  }
-  
-  .navS-toggle{
-    display: none;
-    visibility: hidden;
-    opacity: 0;
-    background-color: transparent;
-    pointer-events: none;
-  }
-  
-  
-  .navS-close{
-    display: none;
-    padding: 0%;
-    margin: 0%;
-    visibility: hidden;
-    opacity: 0;
-    background-color: transparent;
-    pointer-events: none;
-  }
   
 
   
@@ -968,6 +1008,7 @@ input.reg-number::-webkit-outer-spin-button {
 .buying-main{
   margin: 2rem;
   width: 90rem; 
+
   border: 1px solid rgb(180, 179, 179);
   border-radius: .5rem;
   background-color: rgba(209, 209, 209, 0.515);

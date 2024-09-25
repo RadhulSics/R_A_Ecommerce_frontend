@@ -1,48 +1,63 @@
-import React,{ useEffect,useState } from 'react'
-import axios from 'axios'
-import './login.css'
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import './OrderdetailsSeller.css';
 
 function OrderdetailsSeller() {
-    const [Order,SetOrder] = useState([])
+  const [orders, setOrders] = useState([]);
+  const sellerid = localStorage.getItem('sellerid');
 
-useEffect(()=>{
-  axios.get('https://fakestoreapi.com/products')
-  .then((rec)=>{
-    SetOrder(rec.data)
-  })
-  .catch((err)=>{
-    console.log(err)
-  })
-},[])
+  useEffect(() => {
+    const fetchSellerHistory = async () => {
+      try {
+        const response = await axios.post(`http://localhost:4030/sellerHistory/${sellerid}`);
+        if (response.data && response.data.data) {
+          setOrders(response.data.data.purchases); 
+        }
+      } catch (err) {
+        console.log(err);
+      }
+    };
 
-console.log(Order)
+    fetchSellerHistory();
+  }, [sellerid]);
+
+  console.log(orders);
 
   return (
     <div className='orderS-main'>
-        {Order.map((a)=>{
-        return(
-          <div className="orderS-flex"> 
-          <div>
-           <img className="orderS-img" src={a.image+" "} />
-           </div> 
-          <div className='orderS-details'>
-            {a.title+" "}
+      <hr/>
+      {Array.isArray(orders) && orders.length > 0 ? (
+        orders.map((order, index) => (
+          <div key={index} className="orderS-flex"> 
+            <div>
+              {order.productid && order.productid.image1 && (
+                <img className="orderS-img" src={`http://localhost:4030/${order.productid.image1[0].filename}`} alt="Product" />
+              )}
+            </div> 
+            <div className='orderS-details'>
+              {order.productid ? order.productid.productname : 'Product name not available'}
             </div>
             <div className='orderS-price'>
-            {'Rs. '+a.price+" "} 
+              {order.productid ? 'Rs. ' + order.productid.price : 'Price not available'}
             </div>
             <div className='orderS-rating'>
-              {a.rating.rate+'⭐'}
+              <div className='orderS-rating-flex'>
+                <h5>Buyer details</h5>
+                <div>{order.userid ?  'Name : ' + order.userid.username : 'Not available'}</div>
+                <div>{order.userid ?  'Email : ' + order.userid.email : 'Not available'}</div>
+                <div>{order.userid ?  'Number : ' + order.userid.contact : 'Not available'}</div>
+              </div>
             </div>
             <div className='orderS-date'>
-              <p>Ordered date :<b> 12/01/2012</b></p>
+              <p>Ordered date: <b>{new Date(order.date).toLocaleDateString()}</b></p>
             </div>  
           </div>
-        )
-      })}
-
+        ))
+      ) : (
+        <p>No orders found</p>
+      )}
     </div>
-  )
+  );
 }
 
-export default OrderdetailsSeller
+export default OrderdetailsSeller;

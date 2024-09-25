@@ -1,0 +1,94 @@
+.ContactUs-background1{
+    background-image: url(../images/hp12.jpg) !important;
+    background-repeat: no-repeat; 
+    width: 100%;
+    height: 48rem !important;
+    background-size: cover;
+    margin-top: -7rem !important;
+    background-attachment: fixed;
+    
+  }
+  
+  
+  .ContactUs-text1{
+    color: white;
+    position: relative;
+    left: 20rem;
+    top: 25rem;
+    font-size: 500%;
+    font-family: brush script mt, cursive;
+  }
+  
+  /* ------------------------------- */
+  
+  
+
+  
+  .ContactUs-text-box1{
+    margin-left: 25rem;
+    width: 40rem;
+    text-align: center;
+  }
+  
+  .ContactUs-text2{
+    font-size: 20px;
+    padding-top: 2.5rem;
+    padding-left: 2rem;
+   
+  }
+  .ContactUs-text3{
+    font-family: Cormorant Garamond, serif;
+    font-style: italic;
+    font-size: 30px;
+    font-weight: 550;
+    margin-top: 2rem;
+    margin-bottom: 8rem;
+  }
+  
+  .ContactUs-form-flex{
+    display: flex;
+    margin-left: 10rem;
+    gap: 8rem;
+  }
+  
+  .ContactUs-form-input{
+    width: 40rem;
+    padding: .5rem;
+    margin-bottom: 1.5rem;
+    border:1px solid black;
+  }
+  
+  .ContactUs-form-btn{
+    margin-top: 0.5rem;
+    width: 10rem;
+    padding: 1rem;
+    border: 1.5px solid rgb(0, 0, 0);
+    font-weight: 490;
+    color: white;
+    background-color: rgb(31, 143, 199);
+    border-radius: 3px;
+    margin-bottom: 1rem;
+  }
+  
+  .ContactUs-form-btn:hover{
+    border: 1.6px double black;
+  }
+  
+  .ContactUs-form-btn:active{
+    background-color:rgb(105, 103, 103);
+  }
+  
+  .ContactUs-label{
+  color: rgba(0, 0, 0, 0.403);
+  font-weight: 500;
+  margin-bottom: .5rem;
+  }
+  
+  .ContactUs-data{
+    font-size: large;
+    font-weight: 500;
+  }
+  
+  /* ---------------------------------- */
+  
+  

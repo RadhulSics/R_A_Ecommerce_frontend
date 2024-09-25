@@ -9,9 +9,6 @@ function NavbarSeller() {
     <div>
       
     <nav  className='nav-Seller' >
-        <div>
-          <h4 className='navS-title'>SICS-kart</h4>
-        </div>
 
       <ul className='navS-flex'>
 
@@ -34,24 +31,11 @@ function NavbarSeller() {
         <div>
         </div>
 
-        <div>
-            <form>
-             <input className="form-control mr-sm-2  navS-searchbar" type="search" placeholder="Search . . ." aria-label="Search" />
-             </form>
-        </div>
-        <div>
-             <form>
-             <button className="navS-search" type="submit">SEARCH→</button>
-            </form>
-        </div>
         
         <div>
           <button type="button" className="navS-logout"><Link className='nav-a' to='/'>LOG OUT</Link></button>
         </div>
-
-        <div>
-          <button type="button" className="navS-toggle">=</button>
-        </div>
+        
       </ul>
     </nav>
     

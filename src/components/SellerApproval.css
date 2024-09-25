@@ -1,0 +1,74 @@
+
+
+  /* ......productapproval starts...... */
+  .SellerApproval-main{
+    width: 100% !important;
+   min-height: 30rem;
+  }
+  .SellerApproval-main{
+    margin-top: 70px;
+    margin-left: 4rem;
+  
+  }
+  .SellerApproval-accept{
+    
+    border-radius: 8px;
+    color: white;
+    background-color: #44949F;
+    border: 1px solid transparent;
+    padding: 8px;
+    width: 6rem;
+    height: 40px;
+    font-size: small;
+    font-weight: bold;
+
+  }
+  .SellerApproval-accept:hover{
+    background-color: #E35F14;
+  }
+  .SellerApproval-decline{
+
+    border-radius: 8px;
+    color: white;
+    background-color: red;
+    border: 1px solid transparent;
+    padding: 8px;
+    width: 6rem;
+    height: 40px;
+    font-size: small;
+    font-weight: bold;
+    
+  }
+  .SellerApproval-btnflex{
+       display: flex;
+    justify-content: space-between;
+
+  }
+  .SellerApproval-decline:hover{
+    background-color: #E35F14;
+  }
+  .SellerApproval-price{
+    font-weight: bold;
+  }
+  .SellerApproval-det{
+    
+    font-weight: bold;
+  }
+  .SellerApproval-name{
+    text-align: center;
+    
+  }
+  .SellerApproval-card{
+    margin: 0.5rem;
+    width: 23% !important;
+    margin-bottom: 1rem;
+  
+  }
+  .SellerApproval-img{
+    height: 70%;
+    width: 50%;
+    object-fit: contain;
+    margin-left: 5rem;
+  }
+
+  

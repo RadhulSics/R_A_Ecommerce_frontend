@@ -7,46 +7,49 @@ import { Link } from 'react-router-dom';
 
 function FullProductsAdmin() {
 
-  const [Products,SetProducts]=useState([]);
+  const [data, setData] = useState([]);
 
-  useEffect(()=>{
-    axios.get('https://fakestoreapi.com/products')
-    .then((rec)=>{
-      SetProducts(rec.data)
-    })
-    .catch((err)=>{
-      console.log(err)
-    })
-  },[])
-console.log(Products)
+  useEffect(() => {
+      axios.post('http://localhost:4030/viewallproducts')
+          .then((res) => {
+              console.log(res);
+              setData(res.data.data);
+          })
+          .catch((err) => {
+              console.log(err);
+          });
+  }, []);
+  console.log(data)
+
   return (
-    <div >
-      
-    <div >
-    <Link to='/IndProductsAdmin' className="row fullA-main">
-      {Products.map((a)=>{
-        return(
-          <div className="card col-2 fullA-col">
-           <img className="card-img-top fullA-img" src={a.image+" "} />
-           <div className="card-body">
-          
-            <div className='fullA-name'>
-            {a.title+" "}
-            </div> 
-            <hr/>
-            <div className='fullA-price'>
-            {'Rs. '+a.price+" "}
-            </div> 
-            </div> 
-          </div>
-        )
-      })}
-       </Link>
+    <div className='row fullS-main'>
+        {data.length > 0 ? (
+            data.map((e) => (
+                <div className="card col-2 fullU-col">
+                     <img className="card-img-top fullU-img" src={`http://localhost:4030/${e.image1[0].filename}`}alt='image' />
+                     <div className="card-body">
+                     <div className='fullS-name'>
+                     {e.productname}
+
+                     <div className='fullS-price'>
+                     <b>{'Rs : '+e.price+" "}</b>
+                     </div>
+                        </div>
+
+
+
+
+
+                     </div>
+                     
+                   
+                </div>
+            ))
+        ) : (
+            <p>No products available</p>
+        )}
     </div>
-   
-    </div>
-   
-  )
+);
 }
 
 export default FullProductsAdmin
